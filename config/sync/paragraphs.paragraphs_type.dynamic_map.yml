@@ -1,0 +1,15 @@
+uuid: 7df73333-c85c-4ffa-bc47-a8742bc951ec
+langcode: fr
+status: true
+dependencies:
+  module:
+    - paragraphs_browser
+third_party_settings:
+  paragraphs_browser:
+    image_path: themes/custom/admin_custom/assets/paragraph_images/paragraph_dynamic_map.png
+id: dynamic_map
+label: 'Carte dynamique'
+icon_uuid: null
+icon_default: null
+description: 'Affiche la carte dynamique et le descriptif de son territoire sélectionné (au clic)'
+behavior_plugins: {  }

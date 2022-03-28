@@ -1,0 +1,59 @@
+uuid: 64d59f5c-3c6a-443e-99db-f88b092cde0d
+langcode: fr
+status: true
+dependencies:
+  config:
+    - image.style.paragraph_media_2
+    - image.style.paragraph_media_2_2x
+  theme:
+    - nord_evasion_theme
+id: paragraph_media_2
+label: 'Paragraph media (2) '
+image_style_mappings:
+  -
+    image_mapping_type: image_style
+    image_mapping: paragraph_media_2_2x
+    breakpoint_id: nord_evasion_theme.desktop
+    multiplier: 1.5x
+  -
+    image_mapping_type: image_style
+    image_mapping: paragraph_media_2
+    breakpoint_id: nord_evasion_theme.desktop
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: paragraph_media_2_2x
+    breakpoint_id: nord_evasion_theme.desktop
+    multiplier: 2x
+  -
+    image_mapping_type: image_style
+    image_mapping: paragraph_media_2_2x
+    breakpoint_id: nord_evasion_theme.tablet
+    multiplier: 1.5x
+  -
+    image_mapping_type: image_style
+    image_mapping: paragraph_media_2
+    breakpoint_id: nord_evasion_theme.tablet
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: paragraph_media_2_2x
+    breakpoint_id: nord_evasion_theme.tablet
+    multiplier: 2x
+  -
+    image_mapping_type: image_style
+    image_mapping: paragraph_media_2_2x
+    breakpoint_id: nord_evasion_theme.mobile
+    multiplier: 1.5x
+  -
+    image_mapping_type: image_style
+    image_mapping: paragraph_media_2_2x
+    breakpoint_id: nord_evasion_theme.mobile
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: paragraph_media_2_2x
+    breakpoint_id: nord_evasion_theme.mobile
+    multiplier: 2x
+breakpoint_group: nord_evasion_theme
+fallback_image_style: paragraph_media_2

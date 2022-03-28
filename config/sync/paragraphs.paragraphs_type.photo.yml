@@ -1,0 +1,10 @@
+uuid: 59fdc496-28b8-41f7-9d1e-d16456298a71
+langcode: fr
+status: true
+dependencies: {  }
+id: photo
+label: Photo
+icon_uuid: null
+icon_default: null
+description: 'Sert à être intégré dans le carrousel de photos'
+behavior_plugins: {  }

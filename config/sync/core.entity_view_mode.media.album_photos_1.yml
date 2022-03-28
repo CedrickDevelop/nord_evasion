@@ -1,0 +1,10 @@
+uuid: 7268deda-3337-4ab1-b498-61b976225095
+langcode: fr
+status: true
+dependencies:
+  module:
+    - media
+id: media.album_photos_1
+label: 'Album photos (1)'
+targetEntityType: media
+cache: true

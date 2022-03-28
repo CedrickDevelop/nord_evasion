@@ -1,0 +1,41 @@
+uuid: 98146c7b-2455-456a-897a-6004aa358025
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_result_inline
+    - field.field.node.vocabulary.field_chapo
+    - field.field.node.vocabulary.field_paragraphs
+    - field.field.node.vocabulary.field_tiles_subtitle
+    - field.field.node.vocabulary.field_tiles_title
+    - field.field.node.vocabulary.field_visual
+    - field.field.node.vocabulary.field_vocabulary
+    - node.type.vocabulary
+  module:
+    - user
+id: node.vocabulary.search_result_inline
+targetEntityType: node
+bundle: vocabulary
+mode: search_result_inline
+content:
+  field_visual:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: search_result
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  field_chapo: true
+  field_paragraphs: true
+  field_tiles_subtitle: true
+  field_tiles_title: true
+  field_vocabulary: true
+  langcode: true
+  links: true
+  search_api_excerpt: true

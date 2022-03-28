@@ -1,0 +1,19 @@
+uuid: 8b8fac60-b00e-4f3a-8e03-f579e46088bd
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_displayed_subtitle
+    - node.type.article
+id: node.article.field_displayed_subtitle
+field_name: field_displayed_subtitle
+entity_type: node
+bundle: article
+label: 'Sous-titre affiché'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

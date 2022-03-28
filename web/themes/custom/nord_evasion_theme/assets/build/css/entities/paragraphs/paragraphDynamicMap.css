@@ -1,0 +1,130 @@
+.ParagraphDynamicMap {
+  --max-content-width: 1280px;
+  background-color: #fff;
+  overflow-x: hidden;
+  padding-bottom: 0; }
+  @media (max-width: 1179px) {
+    .ParagraphDynamicMap {
+      --max-content-width: 1179px; } }
+  @media (max-width: 719px) {
+    .ParagraphDynamicMap {
+      --max-content-width: 719px; } }
+  .ParagraphDynamicMap-map {
+    position: absolute;
+    width: calc((100vw / 3) * 2);
+    height: 100%;
+    right: 0;
+    top: 0; }
+    @media (max-width: 1179px) {
+      .ParagraphDynamicMap-map {
+        position: relative;
+        width: 100%; } }
+    @media screen and (max-width: 450px) {
+      .ParagraphDynamicMap-map {
+        height: 30rem; } }
+    .ParagraphDynamicMap-map:after {
+      content: "";
+      background: -webkit-gradient(linear, left top, left bottom, from(white), to(rgba(255, 255, 255, 0)));
+      background: -o-linear-gradient(top, white 0%, rgba(255, 255, 255, 0) 100%);
+      background: linear-gradient(180deg, white 0%, rgba(255, 255, 255, 0) 100%);
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 0;
+      height: 20%;
+      width: 100%; }
+    .ParagraphDynamicMap-map:before {
+      content: "";
+      background: -webkit-gradient(linear, left top, right top, from(white), to(rgba(255, 255, 255, 0)));
+      background: -o-linear-gradient(left, white 0%, rgba(255, 255, 255, 0) 100%);
+      background: linear-gradient(90deg, white 0%, rgba(255, 255, 255, 0) 100%);
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      height: 100%;
+      width: 20%; }
+      @media (max-width: 1179px) {
+        .ParagraphDynamicMap-map:before {
+          content: none; } }
+    .ParagraphDynamicMap-map svg {
+      width: 100%;
+      height: 100%; }
+      @media (max-width: 1179px) {
+        .ParagraphDynamicMap-map svg {
+          width: auto; } }
+      @media (max-width: 719px) {
+        .ParagraphDynamicMap-map svg {
+          width: 100%;
+          height: auto; } }
+      @media screen and (max-width: 450px) {
+        .ParagraphDynamicMap-map svg {
+          margin-left: -50%;
+          height: 100%;
+          width: auto; } }
+    .ParagraphDynamicMap-map a.DynamicMap-link path {
+      -webkit-transition: all 0.25s ease-out;
+      -o-transition: all 0.25s ease-out;
+      transition: all 0.25s ease-out; }
+    .ParagraphDynamicMap-map a.DynamicMap-link:hover g.territory path.cdst5 {
+      fill: var(--theme-color-3); }
+    .ParagraphDynamicMap-map a.DynamicMap-link.is-active g.territory path.cdst5 {
+      fill: var(--theme-color-3); }
+  .ParagraphDynamicMap-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    background-color: #fff;
+    height: calc(100vw / 2.56);
+    max-height: 50rem; }
+    .ParagraphDynamicMap-content .container {
+      max-width: 128rem;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+      body.homepage .ParagraphDynamicMap-content .container {
+        max-width: 128rem; }
+      @media (max-width: 1179px) {
+        .ParagraphDynamicMap-content .container {
+          width: 100%; } }
+    @media (max-width: 1179px) {
+      .ParagraphDynamicMap-content {
+        max-height: initial;
+        height: initial;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column; } }
+    @media (max-width: 719px) {
+      .ParagraphDynamicMap-content {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column; }
+        .ParagraphDynamicMap-content > section {
+          -webkit-box-flex: 1;
+              -ms-flex: 1 0 100%;
+                  flex: 1 0 100%; } }
+    @media (max-width: 719px) and (max-width: 719px) {
+      .ParagraphDynamicMap-content > section.ParagraphDynamicMap-map {
+        -webkit-box-flex: unset;
+            -ms-flex: unset;
+                flex: unset; } }
+  .ParagraphDynamicMap-slides {
+    position: static;
+    background-color: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    margin-right: calc(calc((100vw /3) * 2) - calc((100vw - var(--max-content-width)) / 2)); }
+    @media (max-width: 1179px) {
+      .ParagraphDynamicMap-slides {
+        margin: 2rem; } }
+
+/*# sourceMappingURL=paragraphDynamicMap.css.map */

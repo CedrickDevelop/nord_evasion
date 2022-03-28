@@ -1,0 +1,17 @@
+uuid: 81d97259-2b84-4cbf-9ee7-5e0b357c11c0
+langcode: fr
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 9XP-cBng8D6WSYVRNAr45wgNbDoDoi4NrQsTjKgBak4
+name: landscape_full_page_900w
+label: 'Paysage full page (900w)'
+effects:
+  589670ea-c7b9-4982-b438-9de07a7ee338:
+    uuid: 589670ea-c7b9-4982-b438-9de07a7ee338
+    id: image_scale
+    weight: 1
+    data:
+      width: 900
+      height: null
+      upscale: false

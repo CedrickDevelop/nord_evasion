@@ -1,0 +1,19 @@
+uuid: 5a4d092f-e876-492b-a5d2-9f06886d6247
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_copyright
+    - media.type.svg_logo
+id: media.svg_logo.field_copyright
+field_name: field_copyright
+entity_type: media
+bundle: svg_logo
+label: Copyright
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

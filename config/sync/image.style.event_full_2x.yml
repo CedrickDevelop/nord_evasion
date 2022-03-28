@@ -1,0 +1,15 @@
+uuid: 0246edf7-9577-4b39-85af-d891bdc0dd88
+langcode: fr
+status: true
+dependencies: {  }
+name: event_full_2x
+label: 'Event Full (860x860)'
+effects:
+  6cbaff4e-4c03-47d9-a22e-a65f97e3215b:
+    uuid: 6cbaff4e-4c03-47d9-a22e-a65f97e3215b
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 860
+      height: 860
+      anchor: center-center

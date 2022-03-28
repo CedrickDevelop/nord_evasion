@@ -1,0 +1,33 @@
+uuid: f08ecd39-0245-41d9-8859-8002b28f316a
+langcode: fr
+status: true
+dependencies:
+  config:
+    - search_api.index.recherche_generale
+    - views.view.search
+  module:
+    - views
+    - search_api_autocomplete
+id: search
+label: Recherche
+index_id: recherche_generale
+suggester_settings:
+  server:
+    fields:
+      - name
+      - title
+suggester_weights:
+  server: 0
+suggester_limits: {  }
+search_settings:
+  'views:search':
+    displays:
+      default: true
+      selected: {  }
+options:
+  limit: 10
+  min_length: 3
+  show_count: true
+  delay: null
+  submit_button_selector: ':submit'
+  autosubmit: true

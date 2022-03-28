@@ -1,0 +1,15 @@
+uuid: 8c451753-5165-4850-a584-207b85c4e5f1
+langcode: fr
+status: true
+dependencies: {  }
+name: unavoidable_2x
+label: 'Incontournable (850x800)'
+effects:
+  8a5ee21c-c9b9-4b76-b8e7-b1764f9a8239:
+    uuid: 8a5ee21c-c9b9-4b76-b8e7-b1764f9a8239
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 850
+      height: 800
+      anchor: center-center

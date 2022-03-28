@@ -1,0 +1,15 @@
+uuid: 147cc7cc-061e-414c-b2f4-1df51e8d5044
+langcode: fr
+status: true
+dependencies: {  }
+name: unavoidable
+label: 'Incontournable (425x400)'
+effects:
+  8a93104f-e44a-425c-8e70-62f2c24729d7:
+    uuid: 8a93104f-e44a-425c-8e70-62f2c24729d7
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 425
+      height: 400
+      anchor: center-center

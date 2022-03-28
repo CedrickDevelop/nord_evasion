@@ -1,0 +1,31 @@
+uuid: 735293ee-cc06-4735-bf2a-190dfb7c675e
+langcode: fr
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - scheduler
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+  scheduler:
+    expand_fieldset: when_required
+    fields_display_mode: vertical_tab
+    publish_enable: false
+    publish_past_date: error
+    publish_past_date_created: false
+    publish_required: false
+    publish_revision: false
+    publish_touch: false
+    show_message_after_update: true
+    unpublish_enable: false
+    unpublish_required: false
+    unpublish_revision: false
+name: 'Page 403'
+type: page_403
+description: ''
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: true

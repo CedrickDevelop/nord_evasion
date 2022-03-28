@@ -1,0 +1,18 @@
+uuid: ba695f6c-5e75-4fd2-9640-7427fd2d6cdf
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.event_list
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: node.event_list
+target_entity_type_id: node
+target_bundle: event_list
+default_langcode: site_default
+language_alterable: false

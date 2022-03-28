@@ -1,0 +1,7 @@
+nord_evasion_global.contact_confirmation:
+  path: '/contact/confirm'
+  defaults:
+    _controller: '\Drupal\nord_evasion_global\Controller\FormConfirmationController::display'
+    _title: 'Votre message a bien été envoyé'
+  requirements:
+    _permission: 'access content'

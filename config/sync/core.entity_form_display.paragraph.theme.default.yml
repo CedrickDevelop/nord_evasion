@@ -1,0 +1,30 @@
+uuid: caae6125-65f6-41d6-a428-f6fb3a892246
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.theme.field_displayed_title
+    - field.field.paragraph.theme.field_taxonomy
+    - paragraphs.paragraphs_type.theme
+id: paragraph.theme.default
+targetEntityType: paragraph
+bundle: theme
+mode: default
+content:
+  field_displayed_title:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_taxonomy:
+    type: options_select
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

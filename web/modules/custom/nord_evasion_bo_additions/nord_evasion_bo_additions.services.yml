@@ -1,0 +1,5 @@
+services:
+
+  Drupal\nord_evasion_bo_additions\Manager\NordEvasionBoAdditionsManager:
+    class: Drupal\nord_evasion_bo_additions\Manager\NordEvasionBoAdditionsManager
+    arguments: [ ]

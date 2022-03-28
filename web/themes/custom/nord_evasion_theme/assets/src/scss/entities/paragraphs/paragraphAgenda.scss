@@ -1,0 +1,32 @@
+@import "../../helpers/helpers";
+@import "../../themes/buttons";
+
+.content-inner .NodeWrapper .ParagraphAgenda .container{
+  max-width: 128rem;
+}
+.ParagraphAgenda {
+    background-color: rgba(236, 244, 247, 0.4);
+    .container {
+        max-width: 128rem;
+    }
+    &-events {
+        display: flex;
+        justify-content: center;
+        & > .NodeEventTeaser {
+            flex: 0 1 calc((100% - 7rem) / 3);
+            margin-right: 3.5rem;
+            &:last-of-type {
+                margin-right: 0;
+            }
+        }
+        @include mobile {
+            flex-direction: column;
+            & > .NodeEventTeaser {
+                flex: 1 1 100%;
+                margin-right: 0;
+                margin-bottom: 2.5rem;
+            }
+        }
+    }
+
+}

@@ -1,0 +1,23 @@
+uuid: 15cf63e2-5458-4e98-98a4-59a046a6d5ca
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_taxonomy
+    - paragraphs.paragraphs_type.theme
+id: paragraph.theme.field_taxonomy
+field_name: field_taxonomy
+entity_type: paragraph
+bundle: theme
+label: Taxonomie
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_vocabulary'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: entity_reference

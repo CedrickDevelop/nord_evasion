@@ -1,0 +1,52 @@
+services:
+
+  Drupal\nord_evasion_global\Gateway\DestinationGateway:
+    class: Drupal\nord_evasion_global\Gateway\DestinationGateway
+    arguments: [ '@entity_type.manager', '@adimeo_tools.language' ]
+
+  Drupal\nord_evasion_global\Gateway\ActiveNatureGateway:
+    class: Drupal\nord_evasion_global\Gateway\ActiveNatureGateway
+    arguments: [ '@entity_type.manager', '@adimeo_tools.language' ]
+
+  Drupal\nord_evasion_global\Gateway\CulturalHistoryGateway:
+    class: Drupal\nord_evasion_global\Gateway\CulturalHistoryGateway
+    arguments: [ '@entity_type.manager', '@adimeo_tools.language' ]
+
+  Drupal\nord_evasion_global\Manager\DestinationManager:
+    class: Drupal\nord_evasion_global\Manager\DestinationManager
+    arguments: [
+      '@Drupal\nord_evasion_global\Gateway\DestinationGateway',
+      '@entity_type.manager',
+      '@Drupal\nord_evasion_page\Manager\PageManager'
+    ]
+
+  Drupal\nord_evasion_global\Manager\ActiveNatureManager:
+    class: Drupal\nord_evasion_global\Manager\ActiveNatureManager
+    arguments: [ '@Drupal\nord_evasion_global\Gateway\ActiveNatureGateway' ]
+
+  Drupal\nord_evasion_global\Manager\CulturalHistoryManager:
+    class: Drupal\nord_evasion_global\Manager\CulturalHistoryManager
+    arguments: [ '@Drupal\nord_evasion_global\Gateway\CulturalHistoryGateway' ]
+
+  Drupal\nord_evasion_global\Manager\ThematicsManager:
+    class: Drupal\nord_evasion_global\Manager\ThematicsManager
+    arguments: [
+      '@Drupal\nord_evasion_global\Manager\ActiveNatureManager',
+      '@Drupal\nord_evasion_global\Manager\CulturalHistoryManager',
+      '@Drupal\nord_evasion_vocabulary\Manager\VocabularyManager',
+      '@entity_type.manager'
+    ]
+
+  Drupal\nord_evasion_global\Manager\SearchManager:
+    class: Drupal\nord_evasion_global\Manager\SearchManager
+
+  Drupal\nord_evasion_global\Manager\SearchResultManager:
+    class: Drupal\nord_evasion_global\Manager\SearchResultManager
+    arguments: [ '@entity_type.manager']
+
+  #Breadcrumb
+  nord_evasion_global.custom_breadcrumb:
+    class: Drupal\nord_evasion_global\Service\BaseBreadcrumb
+    tags:
+      - { name: breadcrumb_builder, priority: 1010 }
+    arguments: [ '@router.admin_context', '@title_resolver' ]

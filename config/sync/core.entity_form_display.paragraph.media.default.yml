@@ -1,0 +1,33 @@
+uuid: 21256fda-74de-4f6a-9ba8-08f50619f7bc
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.media.field_displayed_title
+    - field.field.paragraph.media.field_media
+    - paragraphs.paragraphs_type.media
+  module:
+    - media_library
+id: paragraph.media.default
+targetEntityType: paragraph
+bundle: media
+mode: default
+content:
+  field_displayed_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_media:
+    type: media_library_widget
+    weight: 1
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

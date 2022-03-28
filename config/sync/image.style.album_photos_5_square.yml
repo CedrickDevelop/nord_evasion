@@ -1,0 +1,15 @@
+uuid: 2d4a96ba-876c-41cc-91a6-47de95c84918
+langcode: fr
+status: true
+dependencies: {  }
+name: album_photos_5_square
+label: 'Album photos (5) (215x215)'
+effects:
+  a44d0591-f70c-4293-b881-85ebd2ec8932:
+    uuid: a44d0591-f70c-4293-b881-85ebd2ec8932
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 215
+      height: 215
+      anchor: center-center

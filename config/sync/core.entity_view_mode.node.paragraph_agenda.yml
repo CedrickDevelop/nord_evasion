@@ -1,0 +1,10 @@
+uuid: 5e1bfbcf-9f39-4e8d-8fbe-e4b375b547d4
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+id: node.paragraph_agenda
+label: 'Paragraph Agenda'
+targetEntityType: node
+cache: true

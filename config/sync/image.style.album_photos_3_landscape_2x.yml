@@ -1,0 +1,15 @@
+uuid: be8799ce-cfa8-4f5b-830d-eadfda38d080
+langcode: fr
+status: true
+dependencies: {  }
+name: album_photos_3_landscape_2x
+label: 'Album photos (3) (1160x430)'
+effects:
+  447e1e6d-0040-437c-b058-bef43d2dddd6:
+    uuid: 447e1e6d-0040-437c-b058-bef43d2dddd6
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1160
+      height: 430
+      anchor: center-center

@@ -1,0 +1,33 @@
+uuid: fddf3194-414f-4cce-ae66-7176bf301b56
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.photo_album.field_displayed_title
+    - field.field.paragraph.photo_album.field_photos
+    - paragraphs.paragraphs_type.photo_album
+  module:
+    - media_library
+id: paragraph.photo_album.default
+targetEntityType: paragraph
+bundle: photo_album
+mode: default
+content:
+  field_displayed_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_photos:
+    type: media_library_widget
+    weight: 1
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

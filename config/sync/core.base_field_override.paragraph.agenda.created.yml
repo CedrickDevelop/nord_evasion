@@ -1,0 +1,18 @@
+uuid: 43bb161e-711d-4afa-b79d-9cdd33fb7626
+langcode: fr
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.agenda
+id: paragraph.agenda.created
+field_name: created
+entity_type: paragraph
+bundle: agenda
+label: 'Authored on'
+description: 'The time that the Paragraph was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

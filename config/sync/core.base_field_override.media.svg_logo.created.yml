@@ -1,0 +1,18 @@
+uuid: b0efd47d-a877-4c80-80d6-ef7d0a7a443a
+langcode: fr
+status: true
+dependencies:
+  config:
+    - media.type.svg_logo
+id: media.svg_logo.created
+field_name: created
+entity_type: media
+bundle: svg_logo
+label: 'Authored on'
+description: 'The time the media item was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\media\Entity\Media::getRequestTime'
+settings: {  }
+field_type: created

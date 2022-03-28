@@ -1,0 +1,50 @@
+services:
+  Drupal\nord_evasion_event\Gateway\EventListGateway:
+    class: Drupal\nord_evasion_event\Gateway\EventListGateway
+    arguments: [ '@entity_type.manager', '@adimeo_tools.language']
+
+  Drupal\nord_evasion_event\Gateway\EventGateway:
+    class: Drupal\nord_evasion_event\Gateway\EventGateway
+    arguments: [ '@entity_type.manager', '@adimeo_tools.language' ]
+
+  Drupal\nord_evasion_event\Gateway\EventTypeGateway:
+    class: Drupal\nord_evasion_event\Gateway\EventTypeGateway
+    arguments: [ '@entity_type.manager', '@adimeo_tools.language' ]
+
+  Drupal\nord_evasion_event\Manager\EventTypeManager:
+    class: Drupal\nord_evasion_event\Manager\EventTypeManager
+    arguments: [
+      '@Drupal\nord_evasion_event\Gateway\EventTypeGateway',
+      '@entity_type.manager'
+    ]
+
+  Drupal\nord_evasion_event\Manager\EventManager:
+    class: Drupal\nord_evasion_event\Manager\EventManager
+    arguments: [
+      '@entity_type.manager',
+      '@Drupal\nord_evasion_event\Gateway\EventGateway'
+    ]
+
+  Drupal\nord_evasion_event\Manager\EventListResultsTitleManager:
+    class: Drupal\nord_evasion_event\Manager\EventListResultsTitleManager
+    arguments: [
+      '@Drupal\nord_evasion_event\Manager\EventTypeManager',
+      '@Drupal\nord_evasion_global\Manager\DestinationManager',
+      '@date.formatter'
+    ]
+
+  Drupal\nord_evasion_event\Manager\EventListManager:
+    class: Drupal\nord_evasion_event\Manager\EventListManager
+    arguments: [
+      '@Drupal\nord_evasion_event\Gateway\EventListGateway',
+      '@Drupal\nord_evasion_event\Manager\EventManager',
+      '@Drupal\nord_evasion_event\Manager\EventListResultsTitleManager',
+      '@form_builder',
+      '@request_stack'
+    ]
+
+  Drupal\nord_evasion_event\BreadcrumbBuilder\EventBreadcrumbBuilder:
+    class: Drupal\nord_evasion_event\BreadcrumbBuilder\EventBreadcrumbBuilder
+    tags:
+      - { name: breadcrumb_builder, priority: 1011 }
+    arguments: [ '@url_generator', '@Drupal\nord_evasion_event\Manager\EventListManager' ]

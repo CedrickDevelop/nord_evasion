@@ -1,0 +1,47 @@
+@import "../helpers/helpers";
+#Page {
+    .swiper-button-prev,
+    .swiper-button-next {
+        background-color: var(--color-blue-2);
+        color: #fff;
+        height: 6rem;
+        z-index: 400;
+        &:after {
+            content: "\f054";
+            font-family: var(--font-icon);
+            font-size: 1.5rem;
+        }
+        &.swiper-button-disabled {
+            opacity: 0.5;
+        }
+        &:hover {
+            background-color: var(--theme-color-3);
+        }
+    }
+    .swiper-button-next {
+        right: 0;
+        padding-left: 2rem;
+        padding-right: 1.5rem;
+        border-top-left-radius: 10rem;
+        border-bottom-left-radius: 10rem;
+        
+    }
+    .swiper-button-prev {
+        left: 0;
+        padding-right: 2rem;
+        padding-left: 1.5rem;
+        border-top-right-radius: 10rem;
+        border-bottom-right-radius: 10rem;
+        &:after {
+            content: "\f053";
+        }
+    }
+    .swiper-pagination {
+        bottom: 2.5rem;
+        @include mobile {
+            --swiper-pagination-bullet-width: 0.6rem;
+            --swiper-pagination-bullet-height: 0.6rem;
+            --swiper-pagination-bullet-horizontal-gap: 0.3rem;
+        }
+    }
+}

@@ -1,0 +1,21 @@
+.ckeditorContent, .cke_editable {
+  @extend %_ckeditor;
+}
+
+html {
+  --font-size: 62.5%;
+
+  --font-main: 'Roboto', sans-serif;
+  --font-title: 'Roboto', sans-serif;
+  --font-cursive: 'mrs-eaves-xl-serif-narrow', 'Roboto', sans-serif;
+
+  --theme-color-1: #17323F;
+
+  --color-blue-1: #06475E;
+
+  --text-color: #212529;
+  --link-color: #006487;
+  --link-visited-color: #660099;
+  font-size: var(--font-size);
+  font-family: var(--font-main);
+}

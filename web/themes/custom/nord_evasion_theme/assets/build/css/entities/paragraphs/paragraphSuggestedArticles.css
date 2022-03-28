@@ -1,0 +1,186 @@
+button,
+input[type="submit"] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  cursor: pointer;
+  color: inherit;
+  padding: 0;
+  -webkit-transition: 0.3s ease-out;
+  -o-transition: 0.3s ease-out;
+  transition: 0.3s ease-out; }
+  button:hover, button:focus,
+  input[type="submit"]:hover,
+  input[type="submit"]:focus {
+    background-color: var(--theme-color-3); }
+
+#back {
+  width: 4rem;
+  height: 4rem;
+  background-color: var(--color-grey-1);
+  font-size: 2rem; }
+  #back:hover {
+    background-color: var(--theme-color-3); }
+  #back.visually-hidden {
+    display: none; }
+
+.btn, .btn-link:before, .NodeArticle-viewMode-unavoidable .NodeArticle-right > span:last-child {
+  background-color: var(--color-blue-2);
+  color: #fff;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 99rem;
+  line-height: 1em;
+  -webkit-transition: 0.3s ease-out;
+  -o-transition: 0.3s ease-out;
+  transition: 0.3s ease-out; }
+  .btn:hover, .btn-link:hover:before, .NodeArticle-viewMode-unavoidable .NodeArticle-right > span:hover:last-child, .btn:focus, .btn-link:focus:before, .NodeArticle-viewMode-unavoidable .NodeArticle-right > span:focus:last-child {
+    background-color: var(--theme-color-3); }
+
+.btn-link {
+  display: inline-block;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 500;
+  color: var(--color-blue-1);
+  text-decoration: underline;
+  vertical-align: middle; }
+  .btn-link:before {
+    content: '\2b';
+    margin-right: 1rem;
+    font-family: var(--font-icon);
+    text-decoration: none;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 2em;
+    text-align: center; }
+
+.ParagraphSuggestedArticles-events {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(3, 0.333fr);
+  gap: 3.5rem; }
+  @media (max-width: 719px) {
+    .ParagraphSuggestedArticles-events {
+      grid-template-columns: repeat(1, 1fr); } }
+
+.NodeArticle-viewMode-unavoidable {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-shadow: 0 0.3rem 0.8rem rgba(0, 0, 0, 0.25);
+          box-shadow: 0 0.3rem 0.8rem rgba(0, 0, 0, 0.25);
+  border-radius: 1rem;
+  overflow: hidden; }
+  .NodeArticle-viewMode-unavoidable > * {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 50%;
+            flex: 1 1 50%; }
+    @media (max-width: 719px) {
+      .NodeArticle-viewMode-unavoidable > * {
+        -webkit-box-flex: 1;
+            -ms-flex: 1 1 auto;
+                flex: 1 1 auto; } }
+  .NodeArticle-viewMode-unavoidable:hover img, .NodeArticle-viewMode-unavoidable:focus img {
+    -webkit-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+            transform: scale(1.05); }
+  .NodeArticle-viewMode-unavoidable:hover h3, .NodeArticle-viewMode-unavoidable:focus h3 {
+    text-decoration: underline; }
+  .NodeArticle-viewMode-unavoidable:hover .NodeArticle-right > span:last-of-type, .NodeArticle-viewMode-unavoidable:focus .NodeArticle-right > span:last-of-type {
+    background-color: var(--theme-color-3); }
+  @media (max-width: 719px) {
+    .NodeArticle-viewMode-unavoidable {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; } }
+  .NodeArticle-viewMode-unavoidable .Media {
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    overflow: hidden; }
+    @media (max-width: 719px) {
+      .NodeArticle-viewMode-unavoidable .Media {
+        height: 25rem;
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem;
+        border-bottom-left-radius: initial; } }
+    .NodeArticle-viewMode-unavoidable .Media img {
+      width: 100%;
+      height: 100%;
+      -o-object-fit: cover;
+         object-fit: cover;
+      will-change: transform;
+      -webkit-transition: 0.2s ease-out;
+      -o-transition: 0.2s ease-out;
+      transition: 0.2s ease-out; }
+  .NodeArticle-viewMode-unavoidable .NodeArticle-right {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: var(--color-blue-3);
+    padding: 5rem 4.5rem 3.5rem 4rem;
+    color: #fff;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem; }
+    @media (max-width: 719px) {
+      .NodeArticle-viewMode-unavoidable .NodeArticle-right {
+        padding: 2.5rem;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        text-align: center;
+        border-top-right-radius: initial;
+        border-bottom-left-radius: 1rem;
+        border-bottom-right-radius: 1rem; } }
+    .NodeArticle-viewMode-unavoidable .NodeArticle-right > span {
+      font-size: 2.5rem;
+      color: var(--color-blue-5);
+      font-family: var(--font-cursive);
+      margin-bottom: 1.5rem; }
+    .NodeArticle-viewMode-unavoidable .NodeArticle-right h3 {
+      font-size: 2.5rem;
+      font-weight: 500;
+      margin-bottom: 1.5rem; }
+      @media (max-width: 719px) {
+        .NodeArticle-viewMode-unavoidable .NodeArticle-right h3 {
+          font-size: 1.8rem; } }
+    .NodeArticle-viewMode-unavoidable .NodeArticle-right > p {
+      font-weight: 300;
+      font-size: 1.4rem;
+      margin-bottom: 1rem; }
+    .NodeArticle-viewMode-unavoidable .NodeArticle-right > span:last-child {
+      margin-top: auto;
+      font-size: 1.5rem; }
+      @media (max-width: 719px) {
+        .NodeArticle-viewMode-unavoidable .NodeArticle-right > span:last-child {
+          margin-top: 2rem; } }
+  .NodeArticle-viewMode-unavoidable .NodeArticle-link:hover {
+    text-decoration: underline; }
+
+/*# sourceMappingURL=paragraphSuggestedArticles.css.map */

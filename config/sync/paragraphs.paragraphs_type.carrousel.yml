@@ -1,0 +1,15 @@
+uuid: 0c2703d5-9de0-44f2-af41-31c8d4a807b3
+langcode: fr
+status: true
+dependencies:
+  module:
+    - paragraphs_browser
+third_party_settings:
+  paragraphs_browser:
+    image_path: themes/custom/admin_custom/assets/paragraph_images/paragraph_carrousel.png
+id: carrousel
+label: 'Carrousel photos'
+icon_uuid: null
+icon_default: null
+description: 'Affiche un carrousel de photos'
+behavior_plugins: {  }

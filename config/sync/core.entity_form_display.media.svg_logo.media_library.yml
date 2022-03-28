@@ -1,0 +1,25 @@
+uuid: 45a62a88-fe0f-4ad5-844d-128fa9cdb014
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.media.media_library
+    - field.field.media.svg_logo.field_caption
+    - field.field.media.svg_logo.field_copyright
+    - field.field.media.svg_logo.field_media_svg
+    - media.type.svg_logo
+id: media.svg_logo.media_library
+targetEntityType: media
+bundle: svg_logo
+mode: media_library
+content: {  }
+hidden:
+  created: true
+  field_caption: true
+  field_copyright: true
+  field_media_svg: true
+  langcode: true
+  name: true
+  path: true
+  status: true
+  uid: true

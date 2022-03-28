@@ -1,0 +1,15 @@
+uuid: 7bad0c3c-b87c-46ec-9a80-891701357287
+langcode: fr
+status: true
+dependencies:
+  module:
+    - paragraphs_browser
+third_party_settings:
+  paragraphs_browser:
+    image_path: themes/custom/admin_custom/assets/paragraph_images/paragraph_rich_text.png
+id: rich_text
+label: 'Texte riche'
+icon_uuid: null
+icon_default: null
+description: 'Affiche un bloc de texte formatté'
+behavior_plugins: {  }

@@ -1,0 +1,10 @@
+uuid: 90aa52dc-a12a-4a82-b211-b0607f433cf8
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+id: node.unavoidable
+label: Incontournable
+targetEntityType: node
+cache: true

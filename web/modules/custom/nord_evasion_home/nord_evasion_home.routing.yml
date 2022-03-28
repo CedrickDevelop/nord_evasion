@@ -1,0 +1,7 @@
+nord_evasion_home.home:
+  path: '/front'
+  defaults:
+    _controller: nord_evasion_home.home_controller:content
+    _title: 'Accueil'
+  requirements:
+    _permission: 'access content'

@@ -1,0 +1,29 @@
+services:
+  Drupal\nord_evasion_404_403\Gateway\Page404Gateway:
+    class: Drupal\nord_evasion_404_403\Gateway\Page404Gateway
+    arguments: [ '@entity_type.manager', '@adimeo_tools.language' ]
+
+  Drupal\nord_evasion_404_403\Gateway\Page403Gateway:
+    class: Drupal\nord_evasion_404_403\Gateway\Page403Gateway
+    arguments: [ '@entity_type.manager', '@adimeo_tools.language' ]
+
+  Drupal\nord_evasion_404_403\Manager\Page404Manager:
+    class: Drupal\nord_evasion_404_403\Manager\Page404Manager
+    arguments: [
+      '@Drupal\nord_evasion_404_403\Gateway\Page404Gateway',
+      '@entity_type.manager'
+    ]
+
+  Drupal\nord_evasion_404_403\Manager\Page403Manager:
+    class: Drupal\nord_evasion_404_403\Manager\Page403Manager
+    arguments: [
+      '@Drupal\nord_evasion_404_403\Gateway\Page403Gateway',
+      '@entity_type.manager'
+    ]
+
+  Drupal\nord_evasion_404_403\Controller\ErrorPagesController:
+    class: Drupal\nord_evasion_404_403\Controller\ErrorPagesController
+    arguments: [
+      '@Drupal\nord_evasion_404_403\Manager\Page404Manager',
+      '@Drupal\nord_evasion_404_403\Manager\Page403Manager'
+    ]

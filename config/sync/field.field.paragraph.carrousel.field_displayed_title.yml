@@ -1,0 +1,19 @@
+uuid: a9856cfb-848a-4f86-b77e-067fec7abfa1
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_displayed_title
+    - paragraphs.paragraphs_type.carrousel
+id: paragraph.carrousel.field_displayed_title
+field_name: field_displayed_title
+entity_type: paragraph
+bundle: carrousel
+label: 'Titre affiché'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,15 @@
+services:
+
+  Drupal\nord_evasion_vocabulary\Manager\VocabularyManager:
+    class: Drupal\nord_evasion_vocabulary\Manager\VocabularyManager
+    arguments: [
+      '@Drupal\nord_evasion_page\Manager\PageManager',
+      '@Drupal\nord_evasion_vocabulary\Gateway\VocabularyGateway',
+      '@entity_type.manager'
+    ]
+
+  Drupal\nord_evasion_vocabulary\Gateway\VocabularyGateway:
+    class: Drupal\nord_evasion_vocabulary\Gateway\VocabularyGateway
+    arguments: [
+      '@entity_type.manager',
+      '@adimeo_tools.language' ]

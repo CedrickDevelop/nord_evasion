@@ -1,0 +1,15 @@
+uuid: 0a03e2ce-d070-40fb-8d71-d8f2057d893e
+langcode: fr
+status: true
+dependencies: {  }
+name: event_full
+label: 'Event Full (430x430)'
+effects:
+  fac7bd70-0127-4579-810d-b5faebff9005:
+    uuid: fac7bd70-0127-4579-810d-b5faebff9005
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 430
+      height: 430
+      anchor: center-center

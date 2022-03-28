@@ -1,0 +1,115 @@
+.ContentHeader {
+  background-color: var(--theme-color-1);
+  color: #fff;
+  padding: 5rem 0 6.5rem;
+
+  .container {
+    max-width: calc(83.5rem + 5rem);
+    position: relative;
+  }
+
+  .NodeArticleFull &,
+  .NodeVocabularyFull & {
+    .Media-image {
+      border-radius: 0.8rem;
+      overflow: hidden;
+      display: flex;
+      margin: 2.5rem -2rem 2.5rem;
+
+      picture {
+        width: 100%;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  body.event &,
+  body.article &,
+  body.event_list & {
+    padding-bottom: 2rem;
+  }
+
+  #back {
+    position: absolute;
+    left: -7rem;
+    margin-top: 1.5rem;
+    width: 5rem;
+    height: 5rem;
+
+    body.event &,
+    body.article & {
+      margin-top: -1.2rem;
+    }
+
+    @include tablet {
+      left: 0;
+      width: 3rem;
+      height: 3rem;
+      font-size: 1.5rem;
+      position: relative;
+    }
+  }
+
+  &-chapo {
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  h1 {
+    font-size: 4.5rem;
+    font-weight: 700;
+    text-align: center;
+    @include mobile {
+      font-size: 2.5rem;
+    }
+
+    body.event &,
+    body.article & {
+      text-align: left;
+    }
+  }
+
+  .surtitle {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 1rem;
+    @include mobile {
+      font-size: 1.8rem;
+    }
+
+    body.event &,
+    body.article & {
+      text-align: left;
+        font-size: 3.5rem;
+        color: var(--color-blue-2);
+        font-family: var(--font-cursive);
+    }
+    
+  }
+
+  .subtitle {
+    font-weight: 300;
+    font-size: 3.5rem;
+    @include mobile {
+      font-size: 1.8rem;
+    }
+  }
+
+  p {
+    margin-top: 0.5rem;
+    font-size: 2rem;
+    @include mobile {
+      font-size: 1.6rem;
+    }
+  }
+}
+
+// .content-inner {
+//     margin-bottom: -3.8rem;
+// }

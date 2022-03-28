@@ -1,0 +1,52 @@
+uuid: 7dbe42c1-28ad-404a-9f2a-3e40283a5b9a
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.page_404.field_displayed_subtitle
+    - field.field.node.page_404.field_paragraphs
+    - field.field.node.page_404.field_visual
+    - node.type.page_404
+  module:
+    - entity_reference_revisions
+    - user
+id: node.page_404.default
+targetEntityType: node
+bundle: page_404
+mode: default
+content:
+  field_displayed_subtitle:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_paragraphs:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_visual:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  langcode: true

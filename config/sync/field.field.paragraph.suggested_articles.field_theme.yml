@@ -1,0 +1,31 @@
+uuid: fb6e923d-d373-4bb8-837c-d9530a01fbfd
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_theme
+    - paragraphs.paragraphs_type.suggested_articles
+    - taxonomy.vocabulary.active_nature
+    - taxonomy.vocabulary.cultural_history
+id: paragraph.suggested_articles.field_theme
+field_name: field_theme
+entity_type: paragraph
+bundle: suggested_articles
+label: Thème
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      cultural_history: cultural_history
+      active_nature: active_nature
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: cultural_history
+field_type: entity_reference

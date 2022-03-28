@@ -1,0 +1,18 @@
+uuid: d68631ae-9669-4d99-8bed-b21a4ba4e9d3
+langcode: fr
+status: true
+dependencies:
+  config:
+    - media.type.svg_logo
+id: media.svg_logo.changed
+field_name: changed
+entity_type: media
+bundle: svg_logo
+label: Changed
+description: 'The time the media item was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

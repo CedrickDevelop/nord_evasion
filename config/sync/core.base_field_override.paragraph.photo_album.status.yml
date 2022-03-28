@@ -1,0 +1,22 @@
+uuid: 2bba1506-b653-4123-b51a-366e133d880d
+langcode: fr
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.photo_album
+id: paragraph.photo_album.status
+field_name: status
+entity_type: paragraph
+bundle: photo_album
+label: Publié
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

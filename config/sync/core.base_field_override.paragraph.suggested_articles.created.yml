@@ -1,0 +1,18 @@
+uuid: 0fb05cfb-eca2-4e9b-8c8a-3bfbf309e130
+langcode: fr
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.suggested_articles
+id: paragraph.suggested_articles.created
+field_name: created
+entity_type: paragraph
+bundle: suggested_articles
+label: 'Authored on'
+description: 'The time that the Paragraph was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

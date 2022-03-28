@@ -1,0 +1,29 @@
+uuid: 89ecd60d-fba5-4ed6-88ac-0d8ffe2a5448
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_destination
+    - node.type.page
+    - taxonomy.vocabulary.destination
+id: node.page.field_destination
+field_name: field_destination
+entity_type: node
+bundle: page
+label: Destinations
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      destination: destination
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

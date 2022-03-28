@@ -1,0 +1,49 @@
+uuid: 9f9adafe-c28b-4c24-90cc-748c50dc0641
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.active_nature.field_alias
+    - field.field.taxonomy_term.active_nature.field_description
+    - field.field.taxonomy_term.active_nature.field_logo
+    - field.field.taxonomy_term.active_nature.field_subtitle
+    - taxonomy.vocabulary.active_nature
+  module:
+    - media
+id: taxonomy_term.active_nature.default
+targetEntityType: taxonomy_term
+bundle: active_nature
+mode: default
+content:
+  field_description:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_logo:
+    type: media_thumbnail
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_subtitle:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  description: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  field_alias: true
+  langcode: true
+  search_api_excerpt: true

@@ -1,0 +1,16 @@
+services:
+
+  #HomeManager
+  nord_evasion_home.home_manager:
+    class: Drupal\nord_evasion_home\Manager\HomeManager
+    arguments: [ '@entity_type.manager','@adimeo_tools.language','@nord_evasion_home.home_gateway' ]
+
+  #HomeGateway
+  nord_evasion_home.home_gateway:
+    class: Drupal\nord_evasion_home\Gateway\HomeGateway
+    arguments: [ '@entity_type.manager','@adimeo_tools.language' ]
+
+  #FrontPageController
+  nord_evasion_home.home_controller:
+    class: Drupal\nord_evasion_home\Controller\FrontPageController
+    arguments: [ '@nord_evasion_home.home_manager' ]

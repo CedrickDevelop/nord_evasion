@@ -1,0 +1,20 @@
+uuid: 2ab4e295-81cd-41fe-8271-a8d264dd0434
+langcode: fr
+status: true
+dependencies:
+  module:
+    - nord_evasion_pin
+  theme:
+    - nord_evasion_theme
+id: pin
+theme: nord_evasion_theme
+region: highlighted
+weight: -4
+provider: null
+plugin: nord_evasion_pin_pin
+settings:
+  id: nord_evasion_pin_pin
+  label: 'Epingle du moment'
+  label_display: '0'
+  provider: nord_evasion_pin
+visibility: {  }

@@ -1,0 +1,15 @@
+uuid: 55e0c1f5-6f0e-4c34-b035-545b45faba9a
+langcode: fr
+status: true
+dependencies: {  }
+name: teaser_article
+label: 'Article accroche (255x200)'
+effects:
+  3508f766-21f5-40b7-9284-04b4c5323cb5:
+    uuid: 3508f766-21f5-40b7-9284-04b4c5323cb5
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 255
+      height: 200
+      anchor: center-center

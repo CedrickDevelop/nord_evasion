@@ -1,0 +1,35 @@
+uuid: eb73d143-7dde-4cfb-95fe-f34dd05c6081
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.taxonomy_term.logo
+    - field.field.taxonomy_term.destination.field_description
+    - field.field.taxonomy_term.destination.field_logo
+    - field.field.taxonomy_term.destination.field_subtitle
+    - field.field.taxonomy_term.destination.field_terminology
+    - taxonomy.vocabulary.destination
+id: taxonomy_term.destination.logo
+targetEntityType: taxonomy_term
+bundle: destination
+mode: logo
+content:
+  field_logo:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: teaser_event
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  description: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  field_description: true
+  field_subtitle: true
+  field_terminology: true
+  langcode: true
+  search_api_excerpt: true

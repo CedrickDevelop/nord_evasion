@@ -1,0 +1,59 @@
+uuid: 03868b4b-691a-4e61-9ece-fdd6a45c86fc
+langcode: fr
+status: true
+dependencies:
+  config:
+    - image.style.teaser_event
+    - image.style.teaser_event_2x
+  theme:
+    - nord_evasion_theme
+id: teaser_event
+label: 'Evènement accroche'
+image_style_mappings:
+  -
+    image_mapping_type: image_style
+    image_mapping: teaser_event_2x
+    breakpoint_id: nord_evasion_theme.desktop
+    multiplier: 1.5x
+  -
+    image_mapping_type: image_style
+    image_mapping: teaser_event
+    breakpoint_id: nord_evasion_theme.desktop
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: teaser_event_2x
+    breakpoint_id: nord_evasion_theme.desktop
+    multiplier: 2x
+  -
+    image_mapping_type: image_style
+    image_mapping: teaser_event_2x
+    breakpoint_id: nord_evasion_theme.tablet
+    multiplier: 1.5x
+  -
+    image_mapping_type: image_style
+    image_mapping: teaser_event
+    breakpoint_id: nord_evasion_theme.tablet
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: teaser_event_2x
+    breakpoint_id: nord_evasion_theme.tablet
+    multiplier: 2x
+  -
+    image_mapping_type: image_style
+    image_mapping: teaser_event_2x
+    breakpoint_id: nord_evasion_theme.mobile
+    multiplier: 1.5x
+  -
+    image_mapping_type: image_style
+    image_mapping: teaser_event_2x
+    breakpoint_id: nord_evasion_theme.mobile
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: teaser_event_2x
+    breakpoint_id: nord_evasion_theme.mobile
+    multiplier: 2x
+breakpoint_group: nord_evasion_theme
+fallback_image_style: teaser_event

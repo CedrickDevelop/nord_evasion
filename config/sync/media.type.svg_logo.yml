@@ -1,0 +1,16 @@
+uuid: 8dae58d5-9980-4a08-b895-7fc66d484a63
+langcode: fr
+status: true
+dependencies:
+  module:
+    - svg_image_field
+id: svg_logo
+label: 'Logo SVG'
+description: ''
+source: svg
+queue_thumbnail_downloads: false
+new_revision: true
+source_configuration:
+  source_field: field_media_svg
+field_map:
+  name: name

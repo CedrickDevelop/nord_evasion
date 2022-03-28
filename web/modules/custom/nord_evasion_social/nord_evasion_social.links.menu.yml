@@ -1,0 +1,6 @@
+#nord_evasion_social.links_config:
+#  title: "Réseaux sociaux"
+#  parent: contrib
+#  menu_name: contrib
+#  route_name: nord_evasion_social.links_config
+#  weight: 6

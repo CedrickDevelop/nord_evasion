@@ -1,0 +1,18 @@
+uuid: 545c945d-a342-4df3-a383-e8559ba7a88d
+langcode: fr
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.carrousel
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: paragraph.carrousel
+target_entity_type_id: paragraph
+target_bundle: carrousel
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,25 @@
+uuid: a62b9b62-3e6b-44fb-be7b-4b775793a1d4
+langcode: fr
+status: false
+dependencies:
+  module:
+    - nord_evasion_social
+  theme:
+    - nord_evasion_theme
+id: nordevasionsocialshare
+theme: nord_evasion_theme
+region: content
+weight: 0
+provider: null
+plugin: nord_evasion_social_block
+settings:
+  id: nord_evasion_social_block
+  label: 'Nord Evasion Social share'
+  label_display: '0'
+  provider: nord_evasion_social
+  allowed_social_networks:
+    Facebook: Facebook
+    Twitter: Twitter
+    LinkedIn: LinkedIn
+    Email: Email
+visibility: {  }

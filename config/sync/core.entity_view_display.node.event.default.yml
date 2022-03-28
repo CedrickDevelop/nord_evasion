@@ -1,0 +1,181 @@
+uuid: 46620da2-83da-42bc-ba03-73bf5b580f7d
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.event.field_address
+    - field.field.node.event.field_city
+    - field.field.node.event.field_description
+    - field.field.node.event.field_destination
+    - field.field.node.event.field_displayed_subtitle
+    - field.field.node.event.field_end_date
+    - field.field.node.event.field_event_type
+    - field.field.node.event.field_google_map
+    - field.field.node.event.field_hours
+    - field.field.node.event.field_is_hidden
+    - field.field.node.event.field_paragraphs
+    - field.field.node.event.field_pricing_conditions
+    - field.field.node.event.field_promoter
+    - field.field.node.event.field_start_date
+    - field.field.node.event.field_venue
+    - field.field.node.event.field_visual
+    - node.type.event
+  module:
+    - datetime
+    - entity_print
+    - entity_reference_revisions
+    - google_map_field
+    - text
+    - user
+third_party_settings:
+  entity_print:
+    pdf_label: 'View PDF'
+id: node.event.default
+targetEntityType: node
+bundle: event
+mode: default
+content:
+  entity_print_view_pdf:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 16
+    region: content
+  field_address:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_city:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_destination:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 18
+    region: content
+  field_displayed_subtitle:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_end_date:
+    type: datetime_default
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_event_type:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_google_map:
+    type: google_map_field_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 17
+    region: content
+  field_hours:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_is_hidden:
+    type: boolean
+    label: hidden
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 14
+    region: content
+  field_paragraphs:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 13
+    region: content
+  field_pricing_conditions:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_promoter:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_start_date:
+    type: datetime_default
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_venue:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_visual:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: event_full
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 15
+    region: content
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_word_docx: true
+  langcode: true
+  search_api_excerpt: true

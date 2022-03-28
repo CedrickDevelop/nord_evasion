@@ -1,0 +1,47 @@
+.NodePageEditoTile {
+  background-color: #fff;
+  padding: 5rem 1.5rem 1.5rem;
+  position: relative;
+  box-shadow: 0 0 0.8rem rgba(0, 0, 0, 0.25);
+  border-radius: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  &:hover,
+  &:focus {
+    span.btn {
+      background-color: var(--theme-color-3);
+    }
+    svg {
+      ellipse {
+        fill: var(--theme-color-3);
+      }
+    }
+
+  }
+  .Media-svg_logo {
+    position: absolute;
+    left: 50%;
+    padding: 0;
+    top: -4rem;
+    transform: translateX(-50%);
+  }
+  header {
+    margin-bottom: 2rem;
+    h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--theme-color-1);
+    }
+    h3 {
+      font-weight: 500;
+      color: var(--color-blue-1);
+    }
+  }
+  & > p {
+    flex-grow: 1;
+  }
+  &-link {
+    text-align: center;
+    margin-top: 3.5rem;
+  }
+}

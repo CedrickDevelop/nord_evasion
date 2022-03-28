@@ -1,0 +1,13 @@
+services:
+
+  Drupal\nord_evasion_pin\Gateway\PinGateway:
+    class: Drupal\nord_evasion_pin\Gateway\PinGateway
+    arguments: [ '@entity_type.manager', '@adimeo_tools.language' ]
+
+  Drupal\nord_evasion_pin\Manager\PinManager:
+    class: Drupal\nord_evasion_pin\Manager\PinManager
+    arguments: [ '@Drupal\nord_evasion_pin\Gateway\PinGateway', '@entity_type.manager' ]
+
+  Drupal\nord_evasion_pin\Manager\PinDisplayedOnManager:
+    class: Drupal\nord_evasion_pin\Manager\PinDisplayedOnManager
+    arguments: [ ]

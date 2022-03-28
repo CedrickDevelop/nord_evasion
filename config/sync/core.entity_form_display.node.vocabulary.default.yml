@@ -1,0 +1,174 @@
+uuid: 6c6a1eaa-f502-4cf2-8857-f325828fcf93
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.vocabulary.field_chapo
+    - field.field.node.vocabulary.field_paragraphs
+    - field.field.node.vocabulary.field_tiles_subtitle
+    - field.field.node.vocabulary.field_tiles_title
+    - field.field.node.vocabulary.field_visual
+    - field.field.node.vocabulary.field_vocabulary
+    - node.type.vocabulary
+  module:
+    - field_group
+    - media_library
+    - paragraphs_browser
+    - text
+third_party_settings:
+  field_group:
+    group_tabs:
+      children:
+        - group_informations
+        - group_tiles
+        - group_content
+      label: Tabs
+      region: content
+      parent_name: ''
+      weight: 0
+      format_type: tabs
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        direction: vertical
+        width_breakpoint: 640
+    group_informations:
+      children:
+        - title
+        - field_visual
+        - field_chapo
+      label: Informations
+      region: hidden
+      parent_name: group_tabs
+      weight: 2
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: open
+        description: ''
+        required_fields: true
+    group_tiles:
+      children:
+        - field_vocabulary
+        - field_tiles_title
+        - field_tiles_subtitle
+      label: 'Remontée de tuiles'
+      region: hidden
+      parent_name: group_tabs
+      weight: 3
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_content:
+      children:
+        - field_paragraphs
+      label: Contenu
+      region: hidden
+      parent_name: group_tabs
+      weight: 4
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+id: node.vocabulary.default
+targetEntityType: node
+bundle: vocabulary
+mode: default
+content:
+  field_chapo:
+    type: text_textarea
+    weight: 21
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_paragraphs:
+    type: paragraphs_browser
+    weight: 4
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: '0'
+      add_mode: paragraphs_browser
+      form_display_mode: default
+      default_paragraph_type: _none
+      features:
+        duplicate: duplicate
+        collapse_edit_all: collapse_edit_all
+        add_above: 0
+      paragraphs_browser: content
+      modal_width: 80%
+      modal_height: auto
+    third_party_settings: {  }
+  field_tiles_subtitle:
+    type: string_textfield
+    weight: 5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_tiles_title:
+    type: string_textfield
+    weight: 4
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_visual:
+    type: media_library_widget
+    weight: 20
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_vocabulary:
+    type: options_buttons
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 1
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 19
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  langcode: true
+  path: true
+  promote: true
+  publish_on: true
+  sticky: true
+  translation: true
+  uid: true
+  unpublish_on: true
+  url_redirects: true

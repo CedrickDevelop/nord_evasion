@@ -1,0 +1,8 @@
+uuid: 527f66b4-b7e3-4eb1-8b7e-327e65a1826f
+langcode: fr
+status: true
+dependencies: {  }
+name: Destination
+vid: destination
+description: ''
+weight: 0

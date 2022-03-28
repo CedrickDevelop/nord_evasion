@@ -1,0 +1,55 @@
+uuid: d8a0e94a-db79-41db-9820-349d9b07f811
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.popin
+    - field.field.media.image.field_caption
+    - field.field.media.image.field_copyright
+    - field.field.media.image.field_media_image
+    - media.type.image
+    - responsive_image.styles.responsive_full_page
+  module:
+    - responsive_image
+_core:
+  default_config_hash: EP_ezL35cTO1NM5uCPjelHXGLBrIGEwILURP3w-m2FM
+id: media.image.popin
+targetEntityType: media
+bundle: image
+mode: popin
+content:
+  field_caption:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_copyright:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_media_image:
+    type: responsive_image
+    label: visually_hidden
+    settings:
+      responsive_image_style: responsive_full_page
+      image_link: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  created: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  langcode: true
+  name: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true

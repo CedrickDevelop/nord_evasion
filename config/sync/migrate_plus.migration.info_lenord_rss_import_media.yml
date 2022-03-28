@@ -1,0 +1,120 @@
+uuid: 6eb77932-ce6e-4a0b-8637-f0adfc1990b0
+langcode: en
+status: true
+dependencies: {  }
+id: info_lenord_rss_import_media
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
+migration_group: null
+label: 'Import events from info.lenord.fr media'
+source:
+  plugin: url
+  data_fetcher_plugin: http
+  urls: 'https://info.lenord.fr/xml/events2evasion.xml'
+  data_parser_plugin: simple_xml
+  item_selector: /rss/channel/item
+  fields:
+    -
+      name: content_url
+      label: 'URL du contenu'
+      selector: url_content
+    -
+      name: guid
+      label: GUID
+      selector: guid
+    -
+      name: title
+      label: Titre
+      selector: title
+    -
+      name: subtitle
+      label: Sous-titre
+      selector: subtitle
+    -
+      name: link
+      label: 'Origin link'
+      selector: link
+    -
+      name: publication_date
+      label: 'Date de publication'
+      selector: date_publication
+    -
+      name: place
+      label: Lieu
+      selector: lieu
+    -
+      name: city
+      label: Ville
+      selector: ville
+    -
+      name: start_date
+      label: 'Date de début'
+      selector: date_debut
+    -
+      name: end_date
+      label: 'Date de fin'
+      selector: date_fin
+    -
+      name: info_lenord_status
+      label: 'Statut sur info.lenord.fr'
+      selector: statut
+    -
+      name: image_url
+      label: 'URL image'
+      selector: enclosure/@url
+    -
+      name: image_extension
+      label: 'Extension image'
+      selector: enclosure/@type
+    -
+      name: info_lenord_status
+      label: 'Statut sur info.lenord'
+      selector: statut
+    -
+      name: schedule
+      label: Horaires
+      selector: horaires
+    -
+      name: prices
+      label: Tarifs
+      selector: tarifs
+    -
+      name: types_event
+      label: 'Type événement'
+      selector: types_event
+    -
+      name: organizer
+      label: Organisateur
+      selector: organized_by
+  ids:
+    guid:
+      type: string
+  keys:
+    - guid
+process:
+  pseudo_destination_filename:
+    plugin: callback
+    callable: basename
+    source: image_url
+  pseudo_destination_existing_filename:
+    plugin: skip_on_value
+    source: '@pseudo_destination_filename'
+    method: row
+    value: images
+    message: 'Cannot import empty image filename.'
+  bundle:
+    plugin: default_value
+    default_value: image
+  name: title
+  field_caption: title
+  field_media_image/target_id:
+    plugin: migration_lookup
+    migration: info_lenord_rss_import_files
+    source: guid
+destination:
+  plugin: 'entity:media'
+migration_dependencies:
+  required:
+    - info_lenord_rss_import_files

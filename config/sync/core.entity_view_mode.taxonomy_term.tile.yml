@@ -1,0 +1,10 @@
+uuid: 7c30407c-0f38-4ed4-9dac-810f52f7b750
+langcode: fr
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term.tile
+label: Tile
+targetEntityType: taxonomy_term
+cache: true

@@ -1,0 +1,21 @@
+uuid: 68a367cb-5a3b-4e28-a0eb-32d1e9db6609
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_displayed_on
+    - node.type.pin
+  module:
+    - options
+id: node.pin.field_displayed_on
+field_name: field_displayed_on
+entity_type: node
+bundle: pin
+label: 'Affichée sur'
+description: 'Par défaut, tous les types de contenu sont sélectionnés.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

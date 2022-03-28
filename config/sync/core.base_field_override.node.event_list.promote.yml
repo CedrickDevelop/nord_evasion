@@ -1,0 +1,22 @@
+uuid: dcf51e88-79ea-442f-973d-56499d392969
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.event_list
+id: node.event_list.promote
+field_name: promote
+entity_type: node
+bundle: event_list
+label: 'Promu en page d''accueil'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

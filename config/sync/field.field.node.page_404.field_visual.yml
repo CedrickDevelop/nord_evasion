@@ -1,0 +1,29 @@
+uuid: 444056fe-d9f9-41c0-b0de-4c9cd49870c8
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_visual
+    - media.type.image
+    - node.type.page_404
+id: node.page_404.field_visual
+field_name: field_visual
+entity_type: node
+bundle: page_404
+label: Visuel
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

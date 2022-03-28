@@ -1,0 +1,12 @@
+.NodeNotAllowed {
+  margin-top: 5rem; }
+  .NodeNotAllowed h1 {
+    font-size: 4.5rem;
+    color: var(--theme-color-1);
+    text-align: center;
+    font-weight: 700; }
+  .NodeNotAllowed h2 {
+    font-size: 2rem;
+    text-align: center; }
+
+/*# sourceMappingURL=node403.css.map */

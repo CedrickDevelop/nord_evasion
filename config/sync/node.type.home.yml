@@ -1,0 +1,19 @@
+uuid: c7644553-e59a-405c-95bb-0efc5aa75cf1
+langcode: fr
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+_core:
+  default_config_hash: iWWAHIiwVGweQK02isf6WcfhCJsdnOqP_DD40WAP1GY
+name: 'Page d''accueil'
+type: home
+description: ''
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: false

@@ -1,0 +1,19 @@
+uuid: 71a26103-77d8-459c-9055-146b2ddb6732
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_description
+    - taxonomy.vocabulary.active_nature
+id: taxonomy_term.active_nature.field_description
+field_name: field_description
+entity_type: taxonomy_term
+bundle: active_nature
+label: Descriptif
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

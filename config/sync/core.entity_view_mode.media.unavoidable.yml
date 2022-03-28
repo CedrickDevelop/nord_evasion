@@ -1,0 +1,10 @@
+uuid: 1feb4577-95e4-4cd1-8b29-d4a5160a5daa
+langcode: fr
+status: true
+dependencies:
+  module:
+    - media
+id: media.unavoidable
+label: Incontournable
+targetEntityType: media
+cache: true

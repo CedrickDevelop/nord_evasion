@@ -1,0 +1,19 @@
+uuid: ea2971f9-9107-4d9d-8f07-d7ccd19e8432
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_city
+    - node.type.event
+id: node.event.field_city
+field_name: field_city
+entity_type: node
+bundle: event
+label: Ville
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

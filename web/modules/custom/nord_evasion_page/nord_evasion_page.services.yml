@@ -1,0 +1,24 @@
+services:
+  Drupal\nord_evasion_page\Manager\PageManager:
+    class: Drupal\nord_evasion_page\Manager\PageManager
+    arguments: [
+      '@Drupal\nord_evasion_page\Gateway\PageGateway',
+      '@entity_type.manager'
+    ]
+
+  Drupal\nord_evasion_page\Gateway\PageGateway:
+    class: Drupal\nord_evasion_page\Gateway\PageGateway
+    arguments: [
+      '@entity_type.manager',
+      '@adimeo_tools.language'
+    ]
+
+  Drupal\nord_evasion_page\BreadcrumbBuilder\PageBreadcrumbBuilder:
+    class: Drupal\nord_evasion_page\BreadcrumbBuilder\PageBreadcrumbBuilder
+    tags:
+      - { name: breadcrumb_builder, priority: 1010 }
+    arguments: [
+      '@url_generator',
+      '@Drupal\nord_evasion_page\Manager\PageManager'
+    ]
+

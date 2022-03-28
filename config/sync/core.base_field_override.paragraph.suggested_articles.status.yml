@@ -1,0 +1,22 @@
+uuid: 717e1791-bd04-4234-9ad1-049f836b4b48
+langcode: fr
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.suggested_articles
+id: paragraph.suggested_articles.status
+field_name: status
+entity_type: paragraph
+bundle: suggested_articles
+label: Publié
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

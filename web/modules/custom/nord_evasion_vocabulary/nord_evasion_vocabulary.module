@@ -1,0 +1,33 @@
+<?php
+
+use Drupal\nord_evasion_vocabulary\Entity\Vocabulary;
+use Drupal\nord_evasion_vocabulary\Entity\VocabularyNodeInterface;
+use Drupal\nord_evasion_vocabulary\Manager\VocabularyManager;
+
+/**
+ * Implements hook_help().
+ */
+function nord_evasion_vocabulary_help($route_name, \Drupal\Core\Routing\RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the dillon module.
+    case 'help.page.nord_evasion_global':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('My Awesome Module') . '</p>';
+      return $output;
+    default:
+  }
+}
+
+function nord_evasion_vocabulary_entity_bundle_info_alter(array &$bundles) {
+  $bundles['node'][VocabularyNodeInterface::NODE_BUNDLE]['class'] = Vocabulary::class;
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function nord_evasion_vocabulary_preprocess_node(&$variables) {
+  /** @var \Drupal\nord_evasion_vocabulary\Manager\VocabularyManager $vocabularyManager */
+  $vocabularyManager = Drupal::service(VocabularyManager::class);
+  $variables = $vocabularyManager->addVariablesToPreProcessNodeVariables($variables);
+}

@@ -1,0 +1,189 @@
+uuid: 584ce93c-7d6b-4517-bee2-8711aa035340
+langcode: fr
+status: true
+dependencies:
+  config:
+    - media.type.audio
+    - media.type.document
+    - media.type.image
+    - media.type.remote_video
+    - media.type.svg_logo
+    - media.type.video
+    - node.type.article
+    - node.type.article_list
+    - node.type.event
+    - node.type.event_list
+    - node.type.home
+    - node.type.page
+    - node.type.page_403
+    - node.type.page_404
+    - node.type.pin
+    - node.type.vocabulary
+    - taxonomy.vocabulary.active_nature
+    - taxonomy.vocabulary.cultural_history
+    - taxonomy.vocabulary.destination
+    - taxonomy.vocabulary.event_type
+    - taxonomy.vocabulary.social_networks
+  module:
+    - content_translation
+    - file
+    - media
+    - node
+    - system
+    - taxonomy
+id: webmaster
+label: Webmaster
+weight: -8
+is_admin: null
+permissions:
+  - 'access administration pages'
+  - 'access content overview'
+  - 'access files overview'
+  - 'access media overview'
+  - 'access site in maintenance mode'
+  - 'access taxonomy overview'
+  - 'administer media'
+  - 'administer media types'
+  - 'administer menu'
+  - 'administer nodes'
+  - 'administer taxonomy'
+  - 'create article_list content'
+  - 'create audio media'
+  - 'create content translations'
+  - 'create document media'
+  - 'create event_list content'
+  - 'create home content'
+  - 'create image media'
+  - 'create media'
+  - 'create page_403 content'
+  - 'create page_404 content'
+  - 'create remote_video media'
+  - 'create svg_logo media'
+  - 'create terms in active_nature'
+  - 'create terms in cultural_history'
+  - 'create terms in destination'
+  - 'create terms in event_type'
+  - 'create terms in social_networks'
+  - 'create video media'
+  - 'create vocabulary content'
+  - 'delete any article content'
+  - 'delete any article_list content'
+  - 'delete any audio media'
+  - 'delete any document media'
+  - 'delete any event content'
+  - 'delete any event_list content'
+  - 'delete any home content'
+  - 'delete any image media'
+  - 'delete any media'
+  - 'delete any page content'
+  - 'delete any page_403 content'
+  - 'delete any page_404 content'
+  - 'delete any pin content'
+  - 'delete any remote_video media'
+  - 'delete any svg_logo media'
+  - 'delete any video media'
+  - 'delete any vocabulary content'
+  - 'delete article revisions'
+  - 'delete article_list revisions'
+  - 'delete content translations'
+  - 'delete event revisions'
+  - 'delete event_list revisions'
+  - 'delete home revisions'
+  - 'delete media'
+  - 'delete own article_list content'
+  - 'delete own audio media'
+  - 'delete own document media'
+  - 'delete own event_list content'
+  - 'delete own home content'
+  - 'delete own image media'
+  - 'delete own page_403 content'
+  - 'delete own page_404 content'
+  - 'delete own remote_video media'
+  - 'delete own svg_logo media'
+  - 'delete own video media'
+  - 'delete own vocabulary content'
+  - 'delete page revisions'
+  - 'delete page_403 revisions'
+  - 'delete page_404 revisions'
+  - 'delete pin revisions'
+  - 'delete terms in active_nature'
+  - 'delete terms in cultural_history'
+  - 'delete terms in destination'
+  - 'delete terms in event_type'
+  - 'delete terms in social_networks'
+  - 'delete vocabulary revisions'
+  - 'edit any article content'
+  - 'edit any article_list content'
+  - 'edit any audio media'
+  - 'edit any document media'
+  - 'edit any event content'
+  - 'edit any event_list content'
+  - 'edit any home content'
+  - 'edit any image media'
+  - 'edit any page content'
+  - 'edit any page_403 content'
+  - 'edit any page_404 content'
+  - 'edit any pin content'
+  - 'edit any remote_video media'
+  - 'edit any svg_logo media'
+  - 'edit any video media'
+  - 'edit any vocabulary content'
+  - 'edit own article_list content'
+  - 'edit own audio media'
+  - 'edit own document media'
+  - 'edit own event_list content'
+  - 'edit own home content'
+  - 'edit own image media'
+  - 'edit own page_403 content'
+  - 'edit own page_404 content'
+  - 'edit own remote_video media'
+  - 'edit own svg_logo media'
+  - 'edit own video media'
+  - 'edit own vocabulary content'
+  - 'edit terms in active_nature'
+  - 'edit terms in cultural_history'
+  - 'edit terms in destination'
+  - 'edit terms in event_type'
+  - 'edit terms in social_networks'
+  - 'revert article revisions'
+  - 'revert article_list revisions'
+  - 'revert event revisions'
+  - 'revert event_list revisions'
+  - 'revert home revisions'
+  - 'revert page revisions'
+  - 'revert page_403 revisions'
+  - 'revert page_404 revisions'
+  - 'revert pin revisions'
+  - 'revert vocabulary revisions'
+  - 'translate active_nature taxonomy_term'
+  - 'translate any entity'
+  - 'translate article node'
+  - 'translate article_list node'
+  - 'translate cultural_history taxonomy_term'
+  - 'translate destination taxonomy_term'
+  - 'translate editable entities'
+  - 'translate event node'
+  - 'translate event_list node'
+  - 'translate event_type taxonomy_term'
+  - 'translate home node'
+  - 'translate page node'
+  - 'translate page_403 node'
+  - 'translate page_404 node'
+  - 'translate pin node'
+  - 'translate social_networks taxonomy_term'
+  - 'translate vocabulary node'
+  - 'update any media'
+  - 'update content translations'
+  - 'update media'
+  - 'view article revisions'
+  - 'view article_list revisions'
+  - 'view event revisions'
+  - 'view event_list revisions'
+  - 'view home revisions'
+  - 'view own unpublished media'
+  - 'view page revisions'
+  - 'view page_403 revisions'
+  - 'view page_404 revisions'
+  - 'view pin revisions'
+  - 'view the administration theme'
+  - 'view vocabulary revisions'

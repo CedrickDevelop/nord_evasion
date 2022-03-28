@@ -1,0 +1,74 @@
+uuid: 2f8673d5-18f9-45b1-8ccb-270a7259312c
+langcode: fr
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+  module:
+    - ckeditor
+    - editor_file
+third_party_settings:
+  editor_file:
+    status: true
+    scheme: public
+    directory: inline-files
+    extensions: 'txt pdf doc docx odt ppt pptx csv xls xlsx'
+    max_size: ''
+_core:
+  default_config_hash: GpxvYjhGr00_uT2lPykyL-q-UMkZy10PX5ROoGX2U3M
+format: full_html
+editor: ckeditor
+settings:
+  toolbar:
+    rows:
+      -
+        -
+          name: Formatting
+          items:
+            - Bold
+            - Italic
+            - RemoveFormat
+            - '-'
+        -
+          name: Alignment
+          items:
+            - JustifyLeft
+            - JustifyCenter
+            - JustifyRight
+            - JustifyBlock
+        -
+          name: Lists
+          items:
+            - BulletedList
+            - NumberedList
+        -
+          name: Style
+          items:
+            - Styles
+        -
+          name: Tools
+          items:
+            - Paste
+            - PasteText
+            - PasteFromWord
+            - '-'
+            - Undo
+            - Redo
+        -
+          name: Link
+          items:
+            - DrupalLink
+            - DrupalUnlink
+  plugins:
+    stylescombo:
+      styles: "h2.wysiwyg-title|Titre H2\r\nh3.wysiwyg-title|Titre H3"
+    language:
+      language_list: un
+image_upload:
+  status: true
+  scheme: public
+  directory: inline-images
+  max_size: ''
+  max_dimensions:
+    width: null
+    height: null

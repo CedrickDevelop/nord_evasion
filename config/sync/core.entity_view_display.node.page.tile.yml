@@ -1,0 +1,61 @@
+uuid: 21656d65-71e9-4595-81eb-cb854fa4a56c
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.tile
+    - field.field.node.page.field_active_nature_theme
+    - field.field.node.page.field_carrousel
+    - field.field.node.page.field_chapo
+    - field.field.node.page.field_culture_heritage_theme
+    - field.field.node.page.field_destination
+    - field.field.node.page.field_displayed_subtitle
+    - field.field.node.page.field_logo
+    - field.field.node.page.field_paragraphs
+    - field.field.node.page.field_thematic
+    - node.type.page
+  module:
+    - text
+    - user
+id: node.page.tile
+targetEntityType: node
+bundle: page
+mode: tile
+content:
+  field_chapo:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_displayed_subtitle:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_logo:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  field_active_nature_theme: true
+  field_carrousel: true
+  field_culture_heritage_theme: true
+  field_destination: true
+  field_paragraphs: true
+  field_thematic: true
+  langcode: true
+  links: true
+  search_api_excerpt: true

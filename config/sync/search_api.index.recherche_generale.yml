@@ -1,0 +1,572 @@
+uuid: 4cfb2403-9053-4005-9798-03e1d92a25d6
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_chapo
+    - field.storage.node.field_cultural_history_theme
+    - field.storage.taxonomy_term.field_description
+    - field.storage.taxonomy_term.field_subtitle
+    - field.storage.node.field_description
+    - field.storage.node.field_destination
+    - field.storage.node.field_hours
+    - field.storage.node.field_venue
+    - field.storage.media.field_media_svg
+    - field.storage.node.field_logo
+    - field.storage.node.field_active_nature_theme
+    - field.storage.node.field_promoter
+    - field.storage.media.field_media_image
+    - field.storage.node.field_paragraphs
+    - field.storage.paragraph.field_media
+    - field.storage.media.field_media_video_file
+    - field.storage.paragraph.field_photo
+    - field.storage.paragraph.field_wysiwyg
+    - field.storage.node.field_displayed_subtitle
+    - field.storage.node.field_event_type
+    - field.storage.node.field_city
+    - field.storage.node.field_visual
+    - search_api.server.database
+  module:
+    - taxonomy
+    - media
+    - file
+    - paragraphs
+    - node
+    - search_api
+id: recherche_generale
+name: 'Recherche générale'
+description: ''
+read_only: false
+field_settings:
+  alt:
+    label: 'Logo » Media » SVG » Alternative text'
+    datasource_id: 'entity:node'
+    property_path: 'field_logo:entity:field_media_svg:alt'
+    type: string
+    dependencies:
+      config:
+        - field.storage.media.field_media_svg
+        - field.storage.node.field_logo
+      module:
+        - media
+  field_active_nature_field_description:
+    label: 'Nature Active » Taxonomy term » Descriptif'
+    datasource_id: 'entity:node'
+    property_path: 'field_active_nature_theme:entity:field_description'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_active_nature_theme
+        - field.storage.taxonomy_term.field_description
+      module:
+        - taxonomy
+  field_active_nature_field_subtitle:
+    label: 'Nature Active » Taxonomy term » Sous-titre'
+    datasource_id: 'entity:node'
+    property_path: 'field_active_nature_theme:entity:field_subtitle'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_active_nature_theme
+        - field.storage.taxonomy_term.field_subtitle
+      module:
+        - taxonomy
+  field_active_nature_name:
+    label: 'Nature Active » Taxonomy term » Name'
+    datasource_id: 'entity:node'
+    property_path: 'field_active_nature_theme:entity:name'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_active_nature_theme
+      module:
+        - taxonomy
+  field_chapo_processed:
+    label: 'Chapô » Processed text'
+    datasource_id: 'entity:node'
+    property_path: 'field_chapo:processed'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_chapo
+  field_city:
+    label: Ville
+    datasource_id: 'entity:node'
+    property_path: field_city
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_city
+  field_cultural_history_field_description:
+    label: 'Culture et Patrimoine » Taxonomy term » Descriptif'
+    datasource_id: 'entity:node'
+    property_path: 'field_cultural_history_theme:entity:field_description'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_cultural_history_theme
+        - field.storage.taxonomy_term.field_description
+      module:
+        - taxonomy
+  field_cultural_history_field_subtitle:
+    label: 'Culture et Patrimoine » Taxonomy term » Sous-titre'
+    datasource_id: 'entity:node'
+    property_path: 'field_cultural_history_theme:entity:field_subtitle'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_cultural_history_theme
+        - field.storage.taxonomy_term.field_subtitle
+      module:
+        - taxonomy
+  field_cultural_history_name:
+    label: 'Culture et Patrimoine » Taxonomy term » Name'
+    datasource_id: 'entity:node'
+    property_path: 'field_cultural_history_theme:entity:name'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_cultural_history_theme
+      module:
+        - taxonomy
+  field_description_processed:
+    label: 'Description » Processed text'
+    datasource_id: 'entity:node'
+    property_path: 'field_description:processed'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_description
+  field_destination_field_description:
+    label: 'Destination » Taxonomy term » Descriptif'
+    datasource_id: 'entity:node'
+    property_path: 'field_destination:entity:field_description'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_destination
+        - field.storage.taxonomy_term.field_description
+      module:
+        - taxonomy
+  field_destination_field_subtitle:
+    label: 'Destination » Taxonomy term » Sous-titre'
+    datasource_id: 'entity:node'
+    property_path: 'field_destination:entity:field_subtitle'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_destination
+        - field.storage.taxonomy_term.field_subtitle
+      module:
+        - taxonomy
+  field_destination_name:
+    label: 'Destination » Taxonomy term » Name'
+    datasource_id: 'entity:node'
+    property_path: 'field_destination:entity:name'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_destination
+      module:
+        - taxonomy
+  field_displayed_subtitle:
+    label: 'Sous-titre affiché'
+    datasource_id: 'entity:node'
+    property_path: field_displayed_subtitle
+    type: boolean
+    dependencies:
+      config:
+        - field.storage.node.field_displayed_subtitle
+  field_hours_processed:
+    label: 'Horaires » Processed text'
+    datasource_id: 'entity:node'
+    property_path: 'field_hours:processed'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_hours
+  field_paragraphs_media_image_alt:
+    label: 'Paragraphes » Paragraph » Media » Media » Image » Alternative text'
+    datasource_id: 'entity:node'
+    property_path: 'field_paragraphs:entity:field_media:entity:field_media_image:alt'
+    type: text
+    dependencies:
+      config:
+        - field.storage.media.field_media_image
+        - field.storage.node.field_paragraphs
+        - field.storage.paragraph.field_media
+      module:
+        - media
+        - paragraphs
+  field_paragraphs_media_image_filename:
+    label: 'Paragraphes » Paragraph » Media » Media » Image » File » Filename'
+    datasource_id: 'entity:node'
+    property_path: 'field_paragraphs:entity:field_media:entity:field_media_image:entity:filename'
+    type: text
+    dependencies:
+      config:
+        - field.storage.media.field_media_image
+        - field.storage.node.field_paragraphs
+        - field.storage.paragraph.field_media
+      module:
+        - file
+        - media
+        - paragraphs
+  field_paragraphs_media_image_title:
+    label: 'Paragraphes » Paragraph » Media » Media » Image » Titre'
+    datasource_id: 'entity:node'
+    property_path: 'field_paragraphs:entity:field_media:entity:field_media_image:title'
+    type: text
+    dependencies:
+      config:
+        - field.storage.media.field_media_image
+        - field.storage.node.field_paragraphs
+        - field.storage.paragraph.field_media
+      module:
+        - media
+        - paragraphs
+  field_paragraphs_media_video_filename:
+    label: 'Paragraphes » Paragraph » Media » Media » Video file » File » Filename'
+    datasource_id: 'entity:node'
+    property_path: 'field_paragraphs:entity:field_media:entity:field_media_video_file:entity:filename'
+    type: text
+    dependencies:
+      config:
+        - field.storage.media.field_media_video_file
+        - field.storage.node.field_paragraphs
+        - field.storage.paragraph.field_media
+      module:
+        - file
+        - media
+        - paragraphs
+  field_paragraphs_photo_image_alt:
+    label: 'Paragraphes » Paragraph » Photo » Media » Image » Alternative text'
+    datasource_id: 'entity:node'
+    property_path: 'field_paragraphs:entity:field_photo:entity:field_media_image:alt'
+    type: text
+    dependencies:
+      config:
+        - field.storage.media.field_media_image
+        - field.storage.node.field_paragraphs
+        - field.storage.paragraph.field_photo
+      module:
+        - media
+        - paragraphs
+  field_paragraphs_photo_image_filename:
+    label: 'Paragraphes » Paragraph » Photo » Media » Image » File » Filename'
+    datasource_id: 'entity:node'
+    property_path: 'field_paragraphs:entity:field_photo:entity:field_media_image:entity:filename'
+    type: text
+    dependencies:
+      config:
+        - field.storage.media.field_media_image
+        - field.storage.node.field_paragraphs
+        - field.storage.paragraph.field_photo
+      module:
+        - file
+        - media
+        - paragraphs
+  field_paragraphs_photo_image_title:
+    label: 'Paragraphes » Paragraph » Photo » Media » Image » Titre'
+    datasource_id: 'entity:node'
+    property_path: 'field_paragraphs:entity:field_photo:entity:field_media_image:title'
+    type: text
+    dependencies:
+      config:
+        - field.storage.media.field_media_image
+        - field.storage.node.field_paragraphs
+        - field.storage.paragraph.field_photo
+      module:
+        - media
+        - paragraphs
+  field_paragraphs_rich_text_processed:
+    label: 'Paragraphes » Paragraph » Texte » Processed text'
+    datasource_id: 'entity:node'
+    property_path: 'field_paragraphs:entity:field_wysiwyg:processed'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_paragraphs
+        - field.storage.paragraph.field_wysiwyg
+      module:
+        - paragraphs
+  field_promoter:
+    label: Organisateur
+    datasource_id: 'entity:node'
+    property_path: field_promoter
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_promoter
+  field_venue:
+    label: Lieu
+    datasource_id: 'entity:node'
+    property_path: field_venue
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_venue
+  field_visual:
+    label: 'Visuel » Media » Image » Titre'
+    datasource_id: 'entity:node'
+    property_path: 'field_visual:entity:field_media_image:title'
+    type: text
+    dependencies:
+      config:
+        - field.storage.media.field_media_image
+        - field.storage.node.field_visual
+      module:
+        - media
+  filename:
+    label: 'Logo » Media » SVG » File » Filename'
+    datasource_id: 'entity:node'
+    property_path: 'field_logo:entity:field_media_svg:entity:filename'
+    type: string
+    dependencies:
+      config:
+        - field.storage.media.field_media_svg
+        - field.storage.node.field_logo
+      module:
+        - file
+        - media
+  name:
+    label: 'Type d''événement » Taxonomy term » Name'
+    datasource_id: 'entity:node'
+    property_path: 'field_event_type:entity:name'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_event_type
+      module:
+        - taxonomy
+  node_grants:
+    label: 'Information d''accès du nœud.'
+    property_path: search_api_node_grants
+    type: string
+    indexed_locked: true
+    type_locked: true
+    hidden: true
+  status:
+    label: status
+    datasource_id: 'entity:node'
+    property_path: status
+    type: boolean
+    indexed_locked: true
+    type_locked: true
+    dependencies:
+      module:
+        - node
+  title:
+    label: Titre
+    datasource_id: 'entity:node'
+    property_path: title
+    type: text
+    dependencies:
+      module:
+        - node
+  type:
+    label: 'Type de contenu'
+    datasource_id: 'entity:node'
+    property_path: type
+    type: string
+    dependencies:
+      module:
+        - node
+  uid:
+    label: uid
+    datasource_id: 'entity:node'
+    property_path: uid
+    type: integer
+    indexed_locked: true
+    type_locked: true
+    dependencies:
+      module:
+        - node
+datasource_settings:
+  'entity:node':
+    bundles:
+      default: true
+      selected:
+        - home
+        - page_403
+        - page_404
+        - pin
+    languages:
+      default: true
+      selected: {  }
+processor_settings:
+  add_url: {  }
+  aggregated_field: {  }
+  content_access:
+    weights:
+      preprocess_query: -30
+  entity_status: {  }
+  entity_type: {  }
+  highlight:
+    weights:
+      postprocess_query: 0
+    prefix: '<strong>'
+    suffix: '</strong>'
+    excerpt: true
+    excerpt_always: false
+    excerpt_length: 256
+    exclude_fields: {  }
+    highlight: never
+    highlight_partial: false
+  ignorecase:
+    weights:
+      preprocess_index: -20
+      preprocess_query: -20
+    all_fields: true
+    fields:
+      - alt
+      - field_active_nature_field_description
+      - field_active_nature_field_subtitle
+      - field_active_nature_name
+      - field_chapo_processed
+      - field_city
+      - field_cultural_history_field_description
+      - field_cultural_history_field_subtitle
+      - field_cultural_history_name
+      - field_description_processed
+      - field_destination_field_description
+      - field_destination_field_subtitle
+      - field_destination_name
+      - field_hours_processed
+      - field_paragraphs_media_image_alt
+      - field_paragraphs_media_image_filename
+      - field_paragraphs_media_image_title
+      - field_paragraphs_media_video_filename
+      - field_paragraphs_photo_image_alt
+      - field_paragraphs_photo_image_filename
+      - field_paragraphs_photo_image_title
+      - field_paragraphs_rich_text_processed
+      - field_promoter
+      - field_venue
+      - field_visual
+      - filename
+      - name
+      - title
+      - type
+  language_with_fallback: {  }
+  rendered_item: {  }
+  stopwords:
+    weights:
+      preprocess_index: -5
+      preprocess_query: -2
+    all_fields: false
+    fields: {  }
+    stopwords:
+      - a
+      - an
+      - and
+      - are
+      - as
+      - at
+      - be
+      - but
+      - by
+      - for
+      - if
+      - in
+      - into
+      - is
+      - it
+      - 'no'
+      - not
+      - of
+      - 'on'
+      - or
+      - s
+      - such
+      - t
+      - that
+      - the
+      - their
+      - then
+      - there
+      - these
+      - they
+      - this
+      - to
+      - was
+      - will
+      - with
+  tokenizer:
+    weights:
+      preprocess_index: -6
+      preprocess_query: -6
+    all_fields: true
+    fields:
+      - field_active_nature_field_description
+      - field_active_nature_field_subtitle
+      - field_active_nature_name
+      - field_chapo_processed
+      - field_city
+      - field_cultural_history_field_description
+      - field_cultural_history_field_subtitle
+      - field_cultural_history_name
+      - field_description_processed
+      - field_destination_field_description
+      - field_destination_field_subtitle
+      - field_destination_name
+      - field_hours_processed
+      - field_paragraphs_media_image_alt
+      - field_paragraphs_media_image_filename
+      - field_paragraphs_media_image_title
+      - field_paragraphs_media_video_filename
+      - field_paragraphs_photo_image_alt
+      - field_paragraphs_photo_image_filename
+      - field_paragraphs_photo_image_title
+      - field_paragraphs_rich_text_processed
+      - field_promoter
+      - field_venue
+      - field_visual
+      - title
+    spaces: ''
+    ignored: ._-
+    overlap_cjk: 1
+    minimum_word_size: '3'
+  transliteration:
+    weights:
+      preprocess_index: -20
+      preprocess_query: -20
+    all_fields: true
+    fields:
+      - alt
+      - field_active_nature_field_description
+      - field_active_nature_field_subtitle
+      - field_active_nature_name
+      - field_chapo_processed
+      - field_city
+      - field_cultural_history_field_description
+      - field_cultural_history_field_subtitle
+      - field_cultural_history_name
+      - field_description_processed
+      - field_destination_field_description
+      - field_destination_field_subtitle
+      - field_destination_name
+      - field_hours_processed
+      - field_paragraphs_media_image_alt
+      - field_paragraphs_media_image_filename
+      - field_paragraphs_media_image_title
+      - field_paragraphs_media_video_filename
+      - field_paragraphs_photo_image_alt
+      - field_paragraphs_photo_image_filename
+      - field_paragraphs_photo_image_title
+      - field_paragraphs_rich_text_processed
+      - field_promoter
+      - field_venue
+      - field_visual
+      - filename
+      - name
+      - title
+      - type
+tracker_settings:
+  default:
+    indexing_order: fifo
+options:
+  cron_limit: 50
+  index_directly: true
+  track_changes_in_references: true
+server: database

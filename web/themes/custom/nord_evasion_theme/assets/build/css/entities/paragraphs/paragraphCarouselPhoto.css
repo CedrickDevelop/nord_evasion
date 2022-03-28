@@ -1,0 +1,86 @@
+.ParagraphPhoto-tags {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 2.5rem; }
+
+.ParagraphCarousel-wrapper {
+  position: relative;
+  overflow: hidden; }
+
+.ParagraphPhoto-wrapper {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.ParagraphPhoto-photoWrapper {
+  height: 65rem;
+  width: 100%;
+  position: relative; }
+  @media (max-width: 719px) {
+    .ParagraphPhoto-photoWrapper {
+      height: 47.5rem; } }
+  .ParagraphPhoto-photoWrapper:after {
+    content: "";
+    position: absolute;
+    height: 18.5rem;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: transparent -webkit-gradient(linear, left top, left bottom, from(#ececea00), color-stop(72%, #435258b8), to(#021720bf)) 0% 0% no-repeat padding-box;
+    background: transparent -o-linear-gradient(top, #ececea00 0%, #435258b8 72%, #021720bf 100%) 0% 0% no-repeat padding-box;
+    background: transparent linear-gradient(180deg, #ececea00 0%, #435258b8 72%, #021720bf 100%) 0% 0% no-repeat padding-box;
+    mix-blend-mode: multiply; }
+  .ParagraphPhoto-photoWrapper article {
+    height: 100%; }
+    .ParagraphPhoto-photoWrapper article img {
+      max-width: initial;
+      width: 100%;
+      height: 100%;
+      -o-object-fit: cover;
+         object-fit: cover; }
+
+.ParagraphPhoto-tags {
+  position: absolute;
+  bottom: 6.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+  .ParagraphPhoto-tags li {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem; }
+    .ParagraphPhoto-tags li:first-of-type {
+      margin-left: 0; }
+    .ParagraphPhoto-tags li:last-of-type {
+      margin-right: 0; }
+  .ParagraphPhoto-tags a {
+    background-color: var(--color-grey-1);
+    color: #fff;
+    font-weight: 300;
+    border-radius: 99rem;
+    padding: 1rem 3rem;
+    -webkit-box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.1);
+    margin-top: 1rem; }
+    .ParagraphPhoto-tags a:last-of-type {
+      margin-right: 0; }
+    @media (max-width: 719px) {
+      .ParagraphPhoto-tags a {
+        margin-right: 2rem; } }
+    .ParagraphPhoto-tags a:hover {
+      text-decoration: underline;
+      background-color: var(--theme-color-3); }
+    @media (max-width: 719px) {
+      .ParagraphPhoto-tags a {
+        padding: 0.5rem 1.5rem; } }
+
+/*# sourceMappingURL=paragraphCarouselPhoto.css.map */

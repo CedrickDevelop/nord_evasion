@@ -1,0 +1,11 @@
+{{ attach_library('nord_evasion_social/lib') }}
+{{ attach_library('nord_evasion_theme/shareBlock') }}
+
+<div class="SocialSharingLinks">
+  <button id="share" title="{{ 'Montrer les partages possibles'|t }}" role="button">{{ 'Partager cette page'|t }} <i class="fa-light fa-share-nodes" aria-hidden="true"></i></button>
+  <ul class="share-links">
+    {% for link in links %}
+      <li class="SocialSharingLink">{{ link }}</li>
+    {% endfor %}
+  </ul>
+</div>

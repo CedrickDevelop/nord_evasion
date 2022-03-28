@@ -1,0 +1,19 @@
+@import "helpers/helpers";
+
+.mobile {
+    @include more-than($mobile-width) {
+        display: none;
+    }
+    @include mobile {
+        display: inherit;
+    }
+}
+
+.desktop {
+    @include more-than($tablet-width) {
+        display: inherit;
+    }
+    @include mobile {
+        display: none;
+    }
+}

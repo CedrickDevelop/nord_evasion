@@ -1,0 +1,15 @@
+uuid: 429c8c70-b4a5-4af9-820a-c8786bdcbc74
+langcode: fr
+status: true
+dependencies:
+  module:
+    - paragraphs_browser
+third_party_settings:
+  paragraphs_browser:
+    image_path: themes/custom/admin_custom/assets/paragraph_images/paragraph_suggested_articles.png
+id: suggested_articles
+label: 'Articles suggérés'
+icon_uuid: null
+icon_default: null
+description: 'Affiche un article incontournable (si sélectionné) et 3 articles en lien avec les thèmes choisis'
+behavior_plugins: {  }

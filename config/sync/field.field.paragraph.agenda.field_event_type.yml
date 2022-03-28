@@ -1,0 +1,29 @@
+uuid: 5b69fdc1-366d-4573-8f98-b0887f6b7bda
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_event_type
+    - paragraphs.paragraphs_type.agenda
+    - taxonomy.vocabulary.event_type
+id: paragraph.agenda.field_event_type
+field_name: field_event_type
+entity_type: paragraph
+bundle: agenda
+label: 'Type d''événement'
+description: 'Si vous ajoutez plusieurs types d''événements, les événements affichés seront ceux comportant tous les types d''événements sélectionnés (relation ET).'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      event_type: event_type
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

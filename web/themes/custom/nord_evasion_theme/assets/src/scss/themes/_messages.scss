@@ -1,0 +1,21 @@
+.Messages {
+    padding: 2rem 0; 
+    position: relative;
+    &.Messages-type-error {
+        color: var(--error-color);
+        &:before {
+            opacity: 0.2;
+            background-color: var(--error-color);
+        }
+    }
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+    
+}

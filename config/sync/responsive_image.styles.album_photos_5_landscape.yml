@@ -1,0 +1,59 @@
+uuid: 2f7047bf-8250-4de6-bc16-eedbb7be1b66
+langcode: fr
+status: true
+dependencies:
+  config:
+    - image.style.album_photos_5_landscape
+    - image.style.album_photos_5_landscape_2x
+  theme:
+    - nord_evasion_theme
+id: album_photos_5_landscape
+label: 'Album photos (5) Paysage'
+image_style_mappings:
+  -
+    image_mapping_type: image_style
+    image_mapping: album_photos_5_landscape_2x
+    breakpoint_id: nord_evasion_theme.desktop
+    multiplier: 1.5x
+  -
+    image_mapping_type: image_style
+    image_mapping: album_photos_5_landscape
+    breakpoint_id: nord_evasion_theme.desktop
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: album_photos_5_landscape_2x
+    breakpoint_id: nord_evasion_theme.desktop
+    multiplier: 2x
+  -
+    image_mapping_type: image_style
+    image_mapping: album_photos_5_landscape_2x
+    breakpoint_id: nord_evasion_theme.tablet
+    multiplier: 1.5x
+  -
+    image_mapping_type: image_style
+    image_mapping: album_photos_5_landscape
+    breakpoint_id: nord_evasion_theme.tablet
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: album_photos_5_landscape_2x
+    breakpoint_id: nord_evasion_theme.tablet
+    multiplier: 2x
+  -
+    image_mapping_type: image_style
+    image_mapping: album_photos_5_landscape_2x
+    breakpoint_id: nord_evasion_theme.mobile
+    multiplier: 1.5x
+  -
+    image_mapping_type: image_style
+    image_mapping: album_photos_5_landscape_2x
+    breakpoint_id: nord_evasion_theme.mobile
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: album_photos_5_landscape_2x
+    breakpoint_id: nord_evasion_theme.mobile
+    multiplier: 2x
+breakpoint_group: nord_evasion_theme
+fallback_image_style: album_photos_5_landscape

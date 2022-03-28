@@ -1,0 +1,179 @@
+pipeline {
+  agent any
+
+  stages {
+    stage('Checkout Git Repository') {
+      steps {
+            git branch: '${BRANCH}',
+            credentialsId: 'nord-evasion-credentials',
+            url: 'git@github.com:Core-Techs-Git/nord_evasion.git'
+      }
+    }
+
+
+    stage('Configure the project') {
+      steps {
+          script {
+            withCredentials([string(credentialsId: 'DB_ROOT_PASSWORD', variable: 'rootPassword')]) {
+              withCredentials([string(credentialsId: 'DB_DRUPAL_PASSWORD', variable: 'drupalPassword')]) {
+                sh "echo 'APP_ENV=production' > .env"
+                sh "echo 'DB_NAME=nord_evasion' >> .env"
+                sh "echo 'DB_USER=drupal' >> .env"
+                sh "echo 'DB_PASSWORD=\"$drupalPassword\"' >> .env"
+                sh "echo 'DB_ROOT_PASSWORD=\"$rootPassword\"' >> .env"
+                sh "echo 'DB_HOST=nord_evasion_bdd' >> .env"
+                sh "echo 'DB_PORT=3306' >> .env"
+                sh "echo 'DB_DRIVER=mysql' >> .env"
+              }
+            }
+          }
+      }
+    }
+
+    stage('Building docker images') {
+      steps {
+          script {
+              withCredentials([string(credentialsId: 'secret-bcerati-pat', variable: 'bceratiPat')]) {
+                  dockerServerImage = docker.build("nord-evasion/server", "--target server --build-arg GIT_TOKEN=$bceratiPat .")
+                  dockerPhpImage = docker.build("nord-evasion/php", "--target php --build-arg GIT_TOKEN=$bceratiPat .")
+              }
+          }
+      }
+    }
+
+    stage('Pushing image to Docker Registry') {
+      steps {
+          script {
+              docker.withRegistry("https://${CMS_REGISTRY_DOMAIN}", 'docker-registry-credentials') {
+                  dockerServerImage.push(); // TODO: change this line. Do not ALWAYS create only a latest tag. This line will be changed when Adimeo is using Harbor.
+                  dockerPhpImage.push(); // TODO: change this line. Do not ALWAYS create only a latest tag. This line will be changed when Adimeo is using Harbor.
+              }
+          }
+      }
+    }
+
+    stage('Running Database Docker on remote Server') {
+      steps {
+        script {
+            def remote = [:]
+            remote.name = "${REMOTE_HOST}"
+            remote.host = "${REMOTE_HOST}"
+            remote.allowAnyHosts = true
+
+            withCredentials([sshUserPrivateKey(credentialsId: 'cms-server-admin-pk', keyFileVariable: 'identity', passphraseVariable: '', usernameVariable: 'sshUser')]) {
+                withCredentials([string(credentialsId: 'DB_ROOT_PASSWORD', variable: 'rootPassword')]) {
+                    withCredentials([string(credentialsId: 'DB_DRUPAL_PASSWORD', variable: 'drupalPassword')]) {
+                        remote.user = sshUser
+                        remote.identityFile = identity
+
+                        sshCommand remote: remote, command: """
+                            if ! docker ps --format '{{.Names}}' | grep -w nord_evasion_bdd &> /dev/null; then
+                                docker run --restart always --name nord_evasion_bdd \
+                                    -v nord_evasion_mysql_data:/var/lib/mysql \
+                                    --network web \
+                                    -e MYSQL_ROOT_PASSWORD=$rootPassword \
+                                    -e MYSQL_USER=drupal \
+                                    -e MYSQL_PASSWORD=$drupalPassword \
+                                    -e MYSQL_DATABASE=nord_evasion \
+                                    -d wodby/mariadb:10.5
+                            fi
+                        """
+                    }
+                }
+            }
+        }
+      }
+    }
+
+    stage('Running MailHog Docker on remote Server') {
+      steps {
+        script {
+            def remote = [:]
+            remote.name = "${REMOTE_HOST}"
+            remote.host = "${REMOTE_HOST}"
+            remote.allowAnyHosts = true
+
+            withCredentials([sshUserPrivateKey(credentialsId: 'cms-server-admin-pk', keyFileVariable: 'identity', passphraseVariable: '', usernameVariable: 'sshUser')]) {
+              remote.user = sshUser
+              remote.identityFile = identity
+
+              sshCommand remote: remote, command: """
+                  if ! docker ps --format '{{.Names}}' | grep -w nord_evasion_mails &> /dev/null; then
+                      docker run -d --restart always \
+                        --name nord_evasion_mails \
+                        --label 'traefik.http.services.nord_evasion_mails.loadbalancer.server.port=8025' \
+                        --label 'traefik.http.routers.nord_evasion_mails.rule=Host(`mails-${PROJECT_URL}`)' \
+                        --label 'traefik.http.routers.nord_evasion_mails.middlewares=nord_evasion_basic_auth@file' \
+                        --label 'traefik.http.routers.nord_evasion_mails-secure.tls=true' \
+                        --label 'traefik.http.routers.nord_evasion_mails.tls.certresolver=lets-encrypt' \
+                        --network web \
+                        --link nord_evasion_php \
+                        mailhog/mailhog
+                  fi
+              """
+            }
+        }
+      }
+    }
+
+    stage('Running Docker Server on Remote Server') {
+      steps {
+        script {
+            def remote = [:]
+            remote.name = "${REMOTE_HOST}"
+            remote.host = "${REMOTE_HOST}"
+            remote.allowAnyHosts = true
+
+            withCredentials([usernamePassword(credentialsId: 'cms-registry-auth', passwordVariable: 'password', usernameVariable: 'username')]) {
+                withCredentials([sshUserPrivateKey(credentialsId: 'cms-server-admin-pk', keyFileVariable: 'identity', passphraseVariable: '', usernameVariable: 'sshUser')]) {
+                    remote.user = sshUser
+                    remote.identityFile = identity
+
+                    sshCommand remote: remote, command: """
+                        docker login -u $username -p $password "https://${CMS_REGISTRY_DOMAIN}"
+
+                        docker stop nord_evasion_php 2> /dev/null || true ; \
+                        docker pull ${CMS_REGISTRY_DOMAIN}/nord-evasion/php; \
+                        docker run -d --rm \
+                          --name nord_evasion_php \
+                          -e PHP_SENDMAIL_PATH='/usr/sbin/sendmail -t -i -S nord_evasion_mails:1025' \
+                          -v nord_evasion_files:/srv/app/web/sites/default/files \
+                          --network web \
+                          ${CMS_REGISTRY_DOMAIN}/nord-evasion/php
+
+                        docker exec nord_evasion_php /srv/app/vendor/drush/drush/drush cr
+
+                        docker stop nord_evasion_server 2> /dev/null || true ; \
+                        docker pull ${CMS_REGISTRY_DOMAIN}/nord-evasion/server; \
+                        docker run -d --rm \
+                          --name nord_evasion_server \
+                          --label 'traefik.http.routers.nord_evasion.rule=Host(`${PROJECT_URL}`)' \
+                          --label 'traefik.http.routers.nord_evasion-secure.tls=true' \
+                          --label 'traefik.http.routers.nord_evasion.tls.certresolver=lets-encrypt' \
+                          --label 'traefik.http.routers.nord_evasion.middlewares=nord_evasion_basic_auth@file' \
+                          --label 'traefik.port-80' \
+                          -v nord_evasion_files:/srv/app/web/sites/default/files:ro \
+                          --network web \
+                          -e NGINX_BACKEND_HOST=nord_evasion_php \
+                          --link nord_evasion_php \
+                          ${CMS_REGISTRY_DOMAIN}/nord-evasion/server
+
+                          docker exec nord_evasion_php php -d memory_limit=-1 /srv/app/vendor/drush/drush/drush cr
+                          docker exec nord_evasion_php php -d memory_limit=-1 /srv/app/vendor/drush/drush/drush cim -y
+                          docker exec nord_evasion_php php -d memory_limit=-1 /srv/app/vendor/drush/drush/drush cr
+                          docker exec nord_evasion_php php -d memory_limit=-1 /srv/app/vendor/drush/drush/drush cr
+                          docker exec -uroot nord_evasion_php crond
+                    """
+                }
+            }
+        }
+      }
+    }
+  }
+
+  post {
+        always {
+            cleanWs()
+        }
+    }
+}

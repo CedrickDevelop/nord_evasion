@@ -1,0 +1,23 @@
+uuid: 3b430c71-b5ae-4f7b-90a7-e1ef79a634f2
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_is_hidden
+    - node.type.event
+id: node.event.field_is_hidden
+field_name: field_is_hidden
+entity_type: node
+bundle: event
+label: 'Masquer l''événement'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

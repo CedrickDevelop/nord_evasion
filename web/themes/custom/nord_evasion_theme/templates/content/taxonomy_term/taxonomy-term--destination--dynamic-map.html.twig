@@ -1,0 +1,15 @@
+{{ attach_library('nord_evasion_theme/termDestinationDynamicMap') }}
+{% if content.field_terminology.0["#context"].value != 'all' %}
+	<article class="TermDestinationDynamicMap swiper-slide" data-destination="{{ content.field_terminology.0["#context"].value }}">
+		<h2>{{ name }}</h2>
+		<h3>{{ content.field_subtitle }}</h3>
+		<div class="TermDestinationDynamicMap-description">
+			{{ content.field_description }}
+		</div>
+{#		<a class="TermDestinationDynamicMap-link" href="{{ url }}" title="{{ 'Découvrir @term'|t({'@term': name.0["#context"].value}) }}">{{ 'Découvrir @term'|t({'@term': name.0["#context"].value}) }}</a>#}
+
+    {% if elements['page_edito_id'] %}
+    <a class="TermDestinationDynamicMap-link" href="{{ path('entity.node.canonical', {'node': elements['page_edito_id'] }) }}" title="{{ 'Découvrir @term'|t({'@term': name.0["#context"].value}) }}">{{ 'Découvrir @term'|t({'@term': name.0["#context"].value}) }}</a>
+    {% endif %}
+  </article>
+{% endif %}

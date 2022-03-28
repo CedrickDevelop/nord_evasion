@@ -1,0 +1,5 @@
+<li class="TermWrapper {{ term.name.value }}">
+	<a rel="noopener" target="_blank" href="{{ term.field_link.uri }}" title="{{ 'Aller sur la page sociale @social de Nord Evasion'|t({'@social': term.name.value }) }}">
+    <i class="{% if term.name.value != 'Instagram' %}fab{% endif %} fak {{ term.field_icon.value }}"></i>
+  </a>
+</li>

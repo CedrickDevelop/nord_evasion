@@ -1,0 +1,25 @@
+<?php
+
+use Drupal\nord_evasion_page\Entity\PageNodeInterface;
+use Drupal\nord_evasion_pin\Entity\Pin;
+use Drupal\nord_evasion_pin\Entity\PinNodeInterface;
+use Drupal\nord_evasion_pin\PinDisplayedOnEnum;
+
+/**
+ * Implements hook_help().
+ */
+function nord_evasion_page_help($route_name, \Drupal\Core\Routing\RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the dillon module.
+    case 'help.page.nord_evasion_page':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('My Awesome Module') . '</p>';
+      return $output;
+    default:
+  }
+}
+
+function nord_evasion_page_entity_bundle_info_alter(array &$bundles) {
+  $bundles['node'][PageNodeInterface::NODE_BUNDLE]['class'] = \Drupal\nord_evasion_page\Entity\Page::class;
+}

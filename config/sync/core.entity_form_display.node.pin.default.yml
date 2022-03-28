@@ -1,0 +1,90 @@
+uuid: cb307d38-dff8-4b5b-b78d-b7e962fe7f90
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.pin.body
+    - field.field.node.pin.field_displayed_on
+    - node.type.pin
+  module:
+    - scheduler
+    - textfield_counter
+id: node.pin.default
+targetEntityType: node
+bundle: pin
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary_and_counter
+    weight: 7
+    region: content
+    settings:
+      rows: 9
+      enable_summary: false
+      summary_rows: 3
+      show_summary: false
+      summary_maxlength: 0
+      placeholder: ''
+      maxlength: 280
+      counter_position: after
+      js_prevent_submit: true
+      count_html_characters: false
+      textcount_status_message: 'Maxlength: <span class="maxlength_count">@maxlength</span><br />Used: <span class="current_count">@current_length</span><br />Remaining: <span class="remaining_count">@remaining_count</span>'
+    third_party_settings: {  }
+  field_displayed_on:
+    type: options_buttons
+    weight: 26
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 1
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  publish_on:
+    type: datetime_timestamp_no_default
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  scheduler_settings:
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 6
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  unpublish_on:
+    type: datetime_timestamp_no_default
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  path: true
+  promote: true
+  sticky: true
+  uid: true
+  url_redirects: true

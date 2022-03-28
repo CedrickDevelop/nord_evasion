@@ -1,0 +1,71 @@
+uuid: 43c997bf-30d5-4985-8a06-9ec92bc51d9c
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_paragraphs
+    - node.type.page_404
+    - paragraphs.paragraphs_type.agenda
+    - paragraphs.paragraphs_type.carrousel
+    - paragraphs.paragraphs_type.dynamic_map
+    - paragraphs.paragraphs_type.media
+    - paragraphs.paragraphs_type.photo
+    - paragraphs.paragraphs_type.photo_album
+    - paragraphs.paragraphs_type.rich_text
+    - paragraphs.paragraphs_type.suggested_articles
+    - paragraphs.paragraphs_type.theme
+  module:
+    - entity_reference_revisions
+id: node.page_404.field_paragraphs
+field_name: field_paragraphs
+entity_type: node
+bundle: page_404
+label: Contenu
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      agenda: agenda
+      carrousel: carrousel
+      dynamic_map: dynamic_map
+      media: media
+      photo: photo
+      photo_album: photo_album
+      rich_text: rich_text
+      suggested_articles: suggested_articles
+      theme: theme
+    negate: 0
+    target_bundles_drag_drop:
+      agenda:
+        weight: 10
+        enabled: true
+      carrousel:
+        weight: 11
+        enabled: true
+      dynamic_map:
+        weight: 12
+        enabled: true
+      media:
+        weight: 13
+        enabled: true
+      photo:
+        weight: 14
+        enabled: true
+      photo_album:
+        weight: 15
+        enabled: true
+      rich_text:
+        weight: 16
+        enabled: true
+      suggested_articles:
+        weight: 17
+        enabled: true
+      theme:
+        weight: 18
+        enabled: true
+field_type: entity_reference_revisions

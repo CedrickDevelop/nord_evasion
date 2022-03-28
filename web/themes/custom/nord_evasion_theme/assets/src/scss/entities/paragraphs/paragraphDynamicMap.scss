@@ -1,0 +1,129 @@
+@import "../../helpers/helpers";
+
+.ParagraphDynamicMap {
+    --max-content-width: 1280px;
+    @include tablet {
+        --max-content-width: 1179px;
+    }
+    @include mobile {
+        --max-content-width: 719px;
+    }
+    background-color: #fff;
+    overflow-x: hidden;
+    padding-bottom: 0;
+    &-map {
+        position: absolute;
+        width: calc((100vw / 3) * 2);
+        height: 100%;
+        right: 0;
+        top: 0;
+        @include tablet {
+            position: relative;
+            width: 100%;
+        }
+        @include screenMaxWidth(450px) {
+            height: 30rem;
+        }
+        &:after {
+            content: "";
+            background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+            position: absolute;
+            display: block;
+            top: 0;
+            left: 0;
+            height: 20%;
+            width: 100%;
+        }
+        &:before {
+            content: "";
+            background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+            position: absolute;
+            display: block;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            height: 100%;
+            width: 20%;
+
+            @include tablet {
+                content: none;
+            }
+        }
+        svg {
+            width: 100%;
+            height: 100%;
+            @include tablet {
+                width: auto;
+            }
+            @include mobile {
+                width: 100%;
+                height: auto;
+            }
+            @include screenMaxWidth(450px) {
+                margin-left: -50%;
+                height: 100%;
+                width: auto;
+            }
+        }
+        a.DynamicMap-link {
+            path {
+                transition: all 0.25s ease-out;
+            }
+            &:hover {
+                g.territory path.cdst5 {
+                    fill: var(--theme-color-3);
+                }
+            }
+            &.is-active {
+                g.territory path.cdst5 {
+                    fill: var(--theme-color-3);
+                }
+            }
+        }
+    }
+    &-content {
+        display: flex;
+        position: relative;
+        background-color: #fff;
+        height: calc(100vw / 2.56);
+        max-height: 50rem;
+        .container {
+            body.homepage & {
+                max-width: 128rem;
+            }
+            max-width: 128rem;
+            display: flex;
+            @include tablet {
+                width: 100%;
+            }
+        }
+        @include tablet {
+            max-height: initial;
+            height: initial;
+            flex-direction: column;
+        }
+        @include mobile {
+            flex-direction: column;
+            & > section {
+                flex: 1 0 100%;
+                @include mobile {
+                    &.ParagraphDynamicMap-map {
+                        flex: unset;
+                    }
+                }
+            }
+        }
+    }
+    &-slides {
+        position: static;
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        margin-right: calc(calc((100vw /3) * 2) - calc((100vw - var(--max-content-width)) / 2));
+        
+        @include tablet {
+            margin: 2rem;
+        }
+    }
+}

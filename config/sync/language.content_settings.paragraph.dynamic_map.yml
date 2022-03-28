@@ -1,0 +1,18 @@
+uuid: a54044e5-7984-4388-8207-d4133088fab3
+langcode: fr
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.dynamic_map
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: paragraph.dynamic_map
+target_entity_type_id: paragraph
+target_bundle: dynamic_map
+default_langcode: site_default
+language_alterable: false

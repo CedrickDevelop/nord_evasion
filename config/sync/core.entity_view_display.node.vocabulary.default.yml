@@ -1,0 +1,85 @@
+uuid: 17c3c614-731a-43fd-9bf8-e03e8e6270f8
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.vocabulary.field_chapo
+    - field.field.node.vocabulary.field_paragraphs
+    - field.field.node.vocabulary.field_tiles_subtitle
+    - field.field.node.vocabulary.field_tiles_title
+    - field.field.node.vocabulary.field_visual
+    - field.field.node.vocabulary.field_vocabulary
+    - node.type.vocabulary
+  module:
+    - entity_print
+    - entity_reference_revisions
+    - text
+    - user
+third_party_settings:
+  entity_print:
+    pdf_label: 'View PDF'
+id: node.vocabulary.default
+targetEntityType: node
+bundle: vocabulary
+mode: default
+content:
+  entity_print_view_pdf:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_chapo:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_paragraphs:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_tiles_subtitle:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_tiles_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_visual:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: album_photos_1
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_vocabulary:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 5
+    region: content
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_word_docx: true
+  langcode: true
+  links: true
+  search_api_excerpt: true

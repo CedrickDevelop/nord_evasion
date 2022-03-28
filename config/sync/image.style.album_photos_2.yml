@@ -1,0 +1,15 @@
+uuid: 8b5e2ff9-d8d9-46b4-9179-93644fbbf35f
+langcode: fr
+status: true
+dependencies: {  }
+name: album_photos_2
+label: 'Album photos (2) (435x430)'
+effects:
+  a9c78ead-d05e-4e2b-a848-ad82ca1a345d:
+    uuid: a9c78ead-d05e-4e2b-a848-ad82ca1a345d
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 435
+      height: 430
+      anchor: center-center

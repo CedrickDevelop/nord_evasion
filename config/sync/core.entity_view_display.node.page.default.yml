@@ -1,0 +1,111 @@
+uuid: 2fbda33c-0e87-4cfd-9448-b0838906a6ab
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.page.field_active_nature_theme
+    - field.field.node.page.field_carrousel
+    - field.field.node.page.field_chapo
+    - field.field.node.page.field_culture_heritage_theme
+    - field.field.node.page.field_destination
+    - field.field.node.page.field_displayed_subtitle
+    - field.field.node.page.field_logo
+    - field.field.node.page.field_paragraphs
+    - field.field.node.page.field_thematic
+    - node.type.page
+  module:
+    - entity_print
+    - entity_reference_revisions
+    - text
+    - user
+third_party_settings:
+  entity_print:
+    pdf_label: 'View PDF'
+id: node.page.default
+targetEntityType: node
+bundle: page
+mode: default
+content:
+  entity_print_view_pdf:
+    settings: {  }
+    region: content
+  field_active_nature_theme:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_carrousel:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_chapo:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_culture_heritage_theme:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_destination:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_displayed_subtitle:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_logo:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_paragraphs:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_thematic:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_word_docx: true
+  langcode: true
+  links: true
+  search_api_excerpt: true

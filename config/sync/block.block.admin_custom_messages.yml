@@ -1,0 +1,22 @@
+uuid: 277d9c18-5b95-458e-83fa-194235d3e5d8
+langcode: fr
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - admin_custom
+_core:
+  default_config_hash: Rdri6D_6mM_M3VSFIsc_Lin9kdfiWky6l42opUwoxGE
+id: admin_custom_messages
+theme: admin_custom
+region: highlighted
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  label_display: '0'
+  provider: system
+visibility: {  }

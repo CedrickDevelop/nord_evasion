@@ -1,0 +1,22 @@
+uuid: 835f1ed7-f28a-4579-9aec-80734ffd49ca
+langcode: fr
+status: true
+dependencies:
+  config:
+    - media.type.svg_logo
+id: media.svg_logo.status
+field_name: status
+entity_type: media
+bundle: svg_logo
+label: Publié
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

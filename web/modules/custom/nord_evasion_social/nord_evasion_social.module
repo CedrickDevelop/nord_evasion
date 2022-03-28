@@ -1,0 +1,29 @@
+<?php
+
+/**
+ * Implements hook_help().
+ */
+function nord_evasion_social_help($route_name, \Drupal\Core\Routing\RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the dillon module.
+    case 'help.page.nord_evasion_social':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('My Awesome Module') . '</p>';
+      return $output;
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function nord_evasion_social_theme() {
+  return [
+    'social_block' => [
+      'variables' => [
+        'links' => [],
+      ],
+    ]
+  ];
+}

@@ -1,0 +1,10 @@
+uuid: 2d9add90-2f43-4151-8a3c-d56ef624bd9f
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+id: node.tile
+label: Tuile
+targetEntityType: node
+cache: true

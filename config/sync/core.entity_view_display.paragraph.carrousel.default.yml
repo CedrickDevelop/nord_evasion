@@ -1,0 +1,37 @@
+uuid: aa4318ab-2648-4753-adea-68023dbf0e84
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.carrousel.field_displayed_title
+    - field.field.paragraph.carrousel.field_paragraph_photos
+    - paragraphs.paragraphs_type.carrousel
+  module:
+    - entity_reference_revisions
+id: paragraph.carrousel.default
+targetEntityType: paragraph
+bundle: carrousel
+mode: default
+content:
+  field_displayed_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_paragraph_photos:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  search_api_excerpt: true

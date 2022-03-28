@@ -1,0 +1,18 @@
+uuid: 75700254-0a78-4e92-a23e-561e7d514c34
+langcode: fr
+status: true
+dependencies:
+  config:
+    - media.type.svg_logo
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: media.svg_logo
+target_entity_type_id: media
+target_bundle: svg_logo
+default_langcode: site_default
+language_alterable: false

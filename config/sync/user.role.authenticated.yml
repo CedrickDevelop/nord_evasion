@@ -1,0 +1,44 @@
+uuid: 6211569b-6a20-4c05-8bf4-457553a3c443
+langcode: fr
+status: true
+dependencies:
+  config:
+    - filter.format.basic_html
+    - filter.format.full_html
+    - filter.format.restricted_html
+    - node.type.article
+    - node.type.event
+    - node.type.page
+    - node.type.pin
+  module:
+    - filter
+    - media
+    - node
+    - search_api_autocomplete
+    - system
+_core:
+  default_config_hash: dJ0L2DNSj5q6XVZAGsuVDpJTh5UeYkIPwKrUOOpr8YI
+id: authenticated
+label: 'Authenticated user'
+weight: -9
+is_admin: false
+permissions:
+  - 'access content'
+  - 'create article content'
+  - 'create event content'
+  - 'create page content'
+  - 'create pin content'
+  - 'delete own article content'
+  - 'delete own event content'
+  - 'delete own page content'
+  - 'delete own pin content'
+  - 'edit own article content'
+  - 'edit own event content'
+  - 'edit own page content'
+  - 'edit own pin content'
+  - 'use search_api_autocomplete for search'
+  - 'use text format basic_html'
+  - 'use text format full_html'
+  - 'use text format restricted_html'
+  - 'view media'
+  - 'view own unpublished content'

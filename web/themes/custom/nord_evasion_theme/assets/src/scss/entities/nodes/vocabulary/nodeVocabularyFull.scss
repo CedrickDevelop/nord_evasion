@@ -1,0 +1,52 @@
+@import "../../../helpers/helpers";
+
+.NodeVocabularyFull {
+  &-tiles {
+    .container {
+      max-width: calc(87rem + 5rem);
+    }
+    background-color: var(--color-blue-6);
+    padding: 7rem 0;
+    &-title {
+      text-align: center;
+      font-size: 4.5rem;
+      font-weight: 700;
+      color: var(--theme-color-1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      line-height: 1;
+    }
+    &-subtitle {
+      text-align: center;
+      font-family: var(--font-cursive);
+      color: var(--color-blue-1);
+      font-weight: 700;
+      font-size: 4.5rem;
+      font-style: italic;
+      margin-bottom: 3.5rem;
+    }
+  }
+  &-tilesList {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 4rem;
+    justify-content: center;
+    .NodePageEditoTile {
+      flex: 1 1 calc((100% / 3) - 3.5rem);
+      margin-left: 3.5rem;
+      margin-bottom: 5rem;
+      &:nth-child(3n + 1) {
+        margin-left: 0;
+        &:last-of-type {
+          flex: 0 1 calc((100% / 3) - 3.5rem);
+        }
+      }
+      @include mobile {
+        flex: 1 1 100%;
+        margin-left: 0;
+        margin-bottom: 3.5rem;
+      }
+    }
+  }
+}

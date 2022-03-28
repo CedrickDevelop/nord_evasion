@@ -1,0 +1,14 @@
+uuid: 3ef165c2-b600-44c1-ba31-79071dac99cb
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.pin
+id: node_type_pin
+entity_type_id: node_type
+entity_id: pin
+action: page_not_found
+allow_override: 1
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied

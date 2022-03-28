@@ -1,0 +1,19 @@
+uuid: 902a64c0-1b57-406a-8507-e47486101a09
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_displayed_title
+    - paragraphs.paragraphs_type.suggested_articles
+id: paragraph.suggested_articles.field_displayed_title
+field_name: field_displayed_title
+entity_type: paragraph
+bundle: suggested_articles
+label: 'Titre affiché'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

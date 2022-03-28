@@ -1,0 +1,50 @@
+uuid: f3ec1c3f-bbd3-4fcd-ac2c-b7dcf06ebae7
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.photo.field_displayed_title
+    - field.field.paragraph.photo.field_photo
+    - field.field.paragraph.photo.field_tag
+    - paragraphs.paragraphs_type.photo
+  module:
+    - link
+id: paragraph.photo.default
+targetEntityType: paragraph
+bundle: photo
+mode: default
+content:
+  field_displayed_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_photo:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: responsive_fullpage
+      link: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_tag:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  search_api_excerpt: true

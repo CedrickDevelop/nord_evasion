@@ -1,0 +1,264 @@
+##
+# Main library
+##
+main:
+  css:
+    theme:
+      assets/build/css/screen.css: {}
+      assets/build/css/ckeditor.css: {}
+      assets/build/css/responsiveness.css: {}
+      assets/build/css/print.css: {media: print}
+  js:
+    assets/build/js/main.js: {weight: -1, minified: true}
+    assets/build/js/accessibility.js: {}
+  dependencies:
+    - core/drupal
+    - nord_evasion_theme/fontawesome
+    - nord_evasion_theme/fontadobe
+
+
+
+##
+# Paragraph Carousel Photo
+##
+carouselPhoto:
+  css:
+    theme:
+      assets/build/css/entities/paragraphs/paragraphCarouselPhoto.css: {}
+  js:
+    assets/build/js/carouselPhoto.js: {}
+  dependencies:
+    - nord_evasion_theme/swiperjs
+
+##
+# Paragraph Wysiwyg
+##
+wysiwyg:
+  css:
+    theme:
+      assets/build/css/entities/paragraphs/wysiwyg.css: {}
+  
+
+##
+# Paragraph Articles suggérés
+##
+suggestedArticles:
+  css:
+    theme:
+      assets/build/css/entities/paragraphs/paragraphSuggestedArticles.css: {}
+  dependencies:
+    - nord_evasion_theme/paragraphCommons
+
+##
+# Paragraph Agenda
+##
+paragraphAgenda:
+  css:
+    theme:
+      assets/build/css/entities/paragraphs/paragraphAgenda.css: {}
+  dependencies:
+    - nord_evasion_theme/paragraphCommons
+
+##
+# Dynamic Map Paragraph
+##
+dynamicMapParagraph:
+  css:
+    theme:
+      assets/build/css/entities/paragraphs/paragraphDynamicMap.css: {}
+  js:
+    assets/build/js/dynamicMap.js: {}
+  dependencies:
+    - nord_evasion_theme/paragraphCommons
+    - nord_evasion_theme/swiperjs
+
+
+##
+# Paragraph Album Photo
+##
+albumPhotoParagraph:
+  css:
+    theme:
+      assets/build/css/entities/paragraphs/paragraphAlbumPhoto.css: {}
+  dependencies:
+    - nord_evasion_theme/paragraphCommons
+
+##
+# Paragraphe Media
+##
+mediaParagraph:
+  css:
+    theme:
+      assets/build/css/entities/paragraphs/paragraphMedia.css: {}
+  dependencies:
+    - nord_evasion_theme/paragraphCommons
+
+##
+# Paragraphe Rubrique
+##
+themeParagraph:
+  css:
+    theme:
+      assets/build/css/entities/paragraphs/paragraphTheme.css: {}
+  dependencies:
+    - nord_evasion_theme/paragraphCommons
+
+##
+# Paragraph Commons
+##
+paragraphCommons:
+  css:
+    theme:
+      assets/build/css/entities/paragraphs/paragraphCommons.css: {}
+
+
+
+################### NODES ##################
+
+
+##
+# Node Event - teaser
+##
+nodeEventTeaser:
+  css:
+    theme:
+      assets/build/css/entities/nodes/event/nodeEventTeaser.css: {}
+
+##
+# Node Article - teaser
+##
+nodeArticleTeaser:
+  css:
+    theme:
+      assets/build/css/entities/nodes/article/nodeArticleTeaser.css: {}
+
+##
+# Node Event - Full
+## 
+nodeEventFull:
+  css:
+    theme:
+      assets/build/css/entities/nodes/event/nodeEventFull.css: {}
+
+##
+# Node Article - Full
+## 
+nodeArticleFull:
+  css:
+    theme:
+      assets/build/css/entities/nodes/article/nodeArticleFull.css: {}
+
+##
+# Node Rubrique - Full
+##
+nodeVocabularyFull:
+  css:
+    theme:
+      assets/build/css/entities/nodes/vocabulary/nodeVocabularyFull.css: {}
+
+##
+# Node Edito - Tile
+##
+nodeEditoTile:
+  css:
+    theme:
+      assets/build/css/entities/nodes/edito/nodeEditoTile.css: {}
+
+##
+# Node 404 
+##
+node404:
+  css:
+    theme:
+      assets/build/css/entities/nodes/404/node404.css: {}
+
+##
+# Node 403 
+##
+node403:
+  css:
+    theme:
+      assets/build/css/entities/nodes/403/node403.css: {}
+
+################## LISTS #####################
+
+lists:
+  css:
+    theme:
+      assets/build/css/components/lists.css: {}
+
+################## FORMS ############################
+
+##
+# Forms
+##
+forms:
+  js:
+    assets/build/js/forms.js: {}
+
+
+################## TAXONOMY TERMS #####################
+
+##
+# Destination term - dynamic map
+##
+termDestinationDynamicMap:
+  css:
+    theme:
+      assets/build/css/entities/terms/destination/termDestinationDynamicMap.css: {}
+
+
+
+##################### BACK BUTTON #########################
+backButton:
+  js:
+    assets/build/js/backButton.js: {}
+
+#################### SHARE BLOCK ##########################
+shareBlock:
+  css:
+    theme:
+      assets/build/css/components/shareBlock.css: {}
+  js:
+    assets/build/js/shareBlock.js: {}
+
+##
+# Popin
+##
+popins:
+  js:
+    assets/build/js/popin.js: {}
+
+searchPopins:
+  js:
+    assets/build/js/searchPopin.js: {}
+
+mediaPopins:
+  js:
+    assets/build/js/mediaPopin.js: {}
+
+test-component:
+  css:
+    theme:
+      assets/build/js/reactComponents/testComponent/testComponent.css: { }
+  js:
+    assets/build/js/reactComponents/testComponent/testComponent.js: { minified: true }
+
+fontawesome:
+  header: true
+  js:
+    https://kit.fontawesome.com/31784ed34f.js: { minified: true, external: true, attributes: { crossorigin: "anonymous" } }
+
+fontadobe:
+  header: true
+  css:
+    theme:
+      https://use.typekit.net/njg2vph.css: { external: true }
+
+swiperjs:
+  css:
+    theme:
+      assets/libraries/swiperjs/swiper-bundle.min.css: { minified: true }
+  js:
+    assets/libraries/swiperjs/swiper-bundle.min.js: { minified: true }
+

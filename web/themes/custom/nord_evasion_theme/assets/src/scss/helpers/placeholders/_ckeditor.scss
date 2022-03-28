@@ -1,0 +1,77 @@
+%_ckeditor {
+  //@TODO add ckeditor styles in here to avoid duplicating theme between the general styles and the one incorporated in the editor
+  p, ul, li, a {
+    font-size: 1.6rem; 
+  }
+  h2 {
+    font-size: 1.8rem;
+    font-weight: 500;
+  }
+  h3 {
+    font-size: 1.6rem;
+    font-weight: 500;
+  }
+  h2, h3, h4, h5, h6 {
+    color: var(--color-blue-1);
+  }
+
+  h2.wysiwyg-title {
+    font-weight: 700;
+    color: var(--theme-color-1);
+  }
+
+  h3.wysiwyg-title {
+    font-weight: 500;
+    color: var(--color-blue-1);
+  }
+
+  ul {
+    margin: 0.5rem 0;
+    padding-left: 2rem;
+    li {
+      list-style-type: disc;
+    }
+  }
+
+  ol {
+    margin: 0.5rem 0;
+    padding-left: 2rem;
+    li {
+      list-style-type: decimal;
+    }
+  }
+
+  .text-align-center {
+    text-align: center;
+  }
+  .text-align-left {
+    text-align: left;
+  }
+  .text-align-right {
+    text-align: right;
+  }
+
+  strong {
+    font-weight: 500;
+  }
+  em {
+    font-style: italic;
+  }
+
+  a {
+    text-decoration: underline;
+    font-weight: 500;
+    &[rel="noopener"],
+    &[rel="noreferrer"] {
+      color: var(--link-color);
+    }
+    &:visited {
+      color: var(--link-visited-color);
+    }
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+  }
+  
+}

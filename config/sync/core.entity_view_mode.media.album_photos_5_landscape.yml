@@ -1,0 +1,10 @@
+uuid: 8683fc0a-4cef-4367-bdf3-cff8c90324f1
+langcode: fr
+status: true
+dependencies:
+  module:
+    - media
+id: media.album_photos_5_landscape
+label: 'Album photos (5) Paysage'
+targetEntityType: media
+cache: true

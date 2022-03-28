@@ -1,0 +1,122 @@
+uuid: 11f9fc04-09e5-4f88-a992-cadb62c7e38f
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.event.field_address
+    - field.field.node.event.field_city
+    - field.field.node.event.field_description
+    - field.field.node.event.field_destination
+    - field.field.node.event.field_displayed_subtitle
+    - field.field.node.event.field_end_date
+    - field.field.node.event.field_event_type
+    - field.field.node.event.field_google_map
+    - field.field.node.event.field_hours
+    - field.field.node.event.field_is_hidden
+    - field.field.node.event.field_paragraphs
+    - field.field.node.event.field_pricing_conditions
+    - field.field.node.event.field_promoter
+    - field.field.node.event.field_start_date
+    - field.field.node.event.field_venue
+    - field.field.node.event.field_visual
+    - node.type.event
+  module:
+    - datetime
+    - text
+    - user
+id: node.event.teaser
+targetEntityType: node
+bundle: event
+mode: teaser
+content:
+  field_address:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_city:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_destination:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_displayed_subtitle:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_end_date:
+    type: datetime_default
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_event_type:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_start_date:
+    type: datetime_default
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_venue:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_visual:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: teaser_event
+      link: false
+    third_party_settings: {  }
+    weight: 5
+    region: content
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  field_description: true
+  field_destination: true
+  field_event_type: true
+  field_google_map: true
+  field_hours: true
+  field_is_hidden: true
+  field_paragraphs: true
+  field_pricing_conditions: true
+  field_promoter: true
+  langcode: true
+  links: true
+  search_api_excerpt: true

@@ -1,0 +1,115 @@
+.Menu {
+    line-height: inherit;
+    & * {
+        line-height: inherit;
+    }
+    //**************** ANCRES *************//
+    ul {
+        display: flex;
+    }
+    &-anchors {
+        display: flex;
+        padding-right: 1rem;
+        border-right: 1px solid var(--theme-color-2);
+        ul {
+            li {
+                margin-left: 0.4rem;
+                &:before {
+                    content: '-';
+                }
+                &:first-of-type {
+                    margin-left: 0;
+                    &:before {
+                        content: none;
+                    }
+                }
+                a {
+                    margin-left: 0.4rem;
+                }
+            }
+        }
+    }
+
+    //*************** ACCESSIBLE ************//
+    &-fontSizes {
+        padding: 0 1rem;
+        border-right: 1px solid var(--theme-color-2);
+        ul {
+            li {
+                margin-right: 1rem;
+                &:last-of-type {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+
+    &-dyslexie {
+        padding: 0 1rem;
+    }
+
+    &-fontSizes,
+    &-dyslexie {
+        button {
+            &:hover,
+            &:focus {
+                background-color: transparent;
+                text-decoration: underline;
+                color: var(--theme-color-2);
+            }
+            &.is-active {
+                color: var(--theme-color-2);
+                text-decoration: underline;
+            }
+        }
+    }
+
+
+    //************ MENU PRINCIPAL ************//
+    &-main {
+        margin-left: auto;
+        font-family: var(--font-nav);
+        font-weight: 200;
+        font-size: 2.4rem;
+        text-transform: uppercase;
+        line-height: 1.5;
+        ul {
+            li {
+                margin-right: 4rem;
+                font-size: inherit;
+                &:last-of-type {
+                    margin-right: 0;
+                }
+                a {
+                    font-size: inherit;
+                }
+            }
+        }
+        nav {
+            margin-left: 2rem;
+        }
+    }
+
+    //************ MENU SEARCH **************//
+    &-search {
+        margin-left: 4rem;
+        margin-bottom: -0.6rem;
+        padding: 1.2rem 1.2rem;
+        border-radius: 999px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        place-items: center center;
+        background-color: var(--color-grey-1);
+        svg circle[data-name="center_circle"] {
+            opacity: 0;
+            transition: 0.2s ease;
+        }
+        &:hover,
+        &:focus {
+            svg circle[data-name="center_circle"] {
+                opacity: 1;
+            }
+        }
+    }
+}

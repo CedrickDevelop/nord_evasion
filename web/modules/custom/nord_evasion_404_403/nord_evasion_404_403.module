@@ -1,0 +1,26 @@
+<?php
+
+use Drupal\nord_evasion_404_403\Entity\Page403;
+use Drupal\nord_evasion_404_403\Entity\Page403NodeInterface;
+use Drupal\nord_evasion_404_403\Entity\Page404;
+use Drupal\nord_evasion_404_403\Entity\Page404NodeInterface;
+
+/**
+ * Implements hook_help().
+ */
+function nord_evasion_404_403_help($route_name, \Drupal\Core\Routing\RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the dillon module.
+    case 'help.page.nord_evasion_event':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('My Awesome Module') . '</p>';
+      return $output;
+    default:
+  }
+}
+
+function nord_evasion_404_403_entity_bundle_info_alter(array &$bundles) {
+  $bundles['node'][Page403NodeInterface::NODE_BUNDLE]['class'] = Page403::class;
+  $bundles['node'][Page404NodeInterface::NODE_BUNDLE]['class'] = Page404::class;
+}

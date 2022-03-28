@@ -1,0 +1,8 @@
+uuid: 76eb2f3c-bc0a-44d4-b211-a861c6dc866e
+langcode: fr
+status: true
+dependencies: {  }
+name: 'Nature Active'
+vid: active_nature
+description: ''
+weight: 0

@@ -1,0 +1,10 @@
+uuid: 0994c657-f8fe-4bf8-a679-9e94cc552db3
+langcode: fr
+status: true
+dependencies:
+  module:
+    - media
+id: media.album_photos_5_portrait
+label: 'Album photos (5) Portrait'
+targetEntityType: media
+cache: true

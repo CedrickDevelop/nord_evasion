@@ -1,0 +1,14 @@
+uuid: 6f3de832-b18a-48f1-afd9-a5ee7e9f6ea0
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.vocabulary
+id: node_type_vocabulary
+entity_type_id: node_type
+entity_id: vocabulary
+action: display_page
+allow_override: 1
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied

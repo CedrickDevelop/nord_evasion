@@ -1,0 +1,81 @@
+.ParagraphRichText p, .ParagraphRichText ul, .ParagraphRichText li, .ParagraphRichText a {
+  font-size: 1.6rem; }
+
+.ParagraphRichText h2 {
+  font-size: 1.8rem;
+  font-weight: 500; }
+
+.ParagraphRichText h3 {
+  font-size: 1.6rem;
+  font-weight: 500; }
+
+.ParagraphRichText h2, .ParagraphRichText h3, .ParagraphRichText h4, .ParagraphRichText h5, .ParagraphRichText h6 {
+  color: var(--color-blue-1); }
+
+.ParagraphRichText h2.wysiwyg-title {
+  font-weight: 700;
+  color: var(--theme-color-1); }
+
+.ParagraphRichText h3.wysiwyg-title {
+  font-weight: 500;
+  color: var(--color-blue-1); }
+
+.ParagraphRichText ul {
+  margin: 0.5rem 0;
+  padding-left: 2rem; }
+  .ParagraphRichText ul li {
+    list-style-type: disc; }
+
+.ParagraphRichText ol {
+  margin: 0.5rem 0;
+  padding-left: 2rem; }
+  .ParagraphRichText ol li {
+    list-style-type: decimal; }
+
+.ParagraphRichText .text-align-center {
+  text-align: center; }
+
+.ParagraphRichText .text-align-left {
+  text-align: left; }
+
+.ParagraphRichText .text-align-right {
+  text-align: right; }
+
+.ParagraphRichText strong {
+  font-weight: 500; }
+
+.ParagraphRichText em {
+  font-style: italic; }
+
+.ParagraphRichText a {
+  text-decoration: underline;
+  font-weight: 500; }
+  .ParagraphRichText a[rel="noopener"], .ParagraphRichText a[rel="noreferrer"] {
+    color: var(--link-color); }
+  .ParagraphRichText a:visited {
+    color: var(--link-visited-color); }
+  .ParagraphRichText a:hover, .ParagraphRichText a:focus {
+    text-decoration: none; }
+
+.ParagraphRichText {
+  padding: 4.5rem 0; }
+  .ParagraphRichText-title {
+    font-size: 2rem;
+    color: var(--theme-color-1);
+    font-weight: 700;
+    margin-bottom: 1rem; }
+    .ParagraphRichText-title h2 {
+      color: inherit;
+      font-weight: inherit; }
+    .NodeHome .ParagraphRichText-title {
+      color: var(--color-blue-1);
+      font-weight: 500; }
+  .ParagraphRichText .inner {
+    max-width: 100rem; }
+  .NodeHome .ParagraphRichText {
+    background-color: var(--color-blue-6); }
+    .NodeHome .ParagraphRichText h2, .NodeHome .ParagraphRichText h3, .NodeHome .ParagraphRichText h3, .NodeHome .ParagraphRichText h4, .NodeHome .ParagraphRichText h5, .NodeHome .ParagraphRichText h6, .NodeHome .ParagraphRichText p {
+      text-align: center;
+      font-size: 2rem; }
+
+/*# sourceMappingURL=wysiwyg.css.map */

@@ -1,0 +1,14 @@
+uuid: fd62a5df-fdb9-4363-a0b2-b43213f6d2ea
+langcode: fr
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.active_nature
+id: taxonomy_vocabulary_active_nature
+entity_type_id: taxonomy_vocabulary
+entity_id: active_nature
+action: page_not_found
+allow_override: 0
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied

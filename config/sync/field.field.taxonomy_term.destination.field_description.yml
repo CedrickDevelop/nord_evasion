@@ -1,0 +1,19 @@
+uuid: 6f2a23a7-24ea-473a-ba3f-f0caa5719f64
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_description
+    - taxonomy.vocabulary.destination
+id: taxonomy_term.destination.field_description
+field_name: field_description
+entity_type: taxonomy_term
+bundle: destination
+label: Descriptif
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

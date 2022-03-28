@@ -1,0 +1,55 @@
+.NodeArticleFull {
+
+    &-internalSummary {
+        background-color: var(--color-grey-1);
+        color: #fff;
+        padding: 5rem 0;
+        font-weight: 300;
+        .container {
+            max-width: calc(83.5rem + 5rem);
+        }
+        .article_summary {
+            ul {
+                display: flex;
+                align-items: center;
+                li {
+                    position: relative;
+                    &:after {
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        top: 0;
+                        width: 2px;
+                        height: 100%;
+                        right: -2rem;
+                        background-color: var(--theme-color-2);
+                    }
+                    &:last-of-type:after {
+                        content: none;
+                    }
+                    margin-right: 2rem;
+                    & + li {
+                        margin-left: 2rem;
+                    }
+                    a {
+                        &:hover,
+                        &:focus {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &-infosSummary {
+        margin: 4rem auto;
+        font-weight: 300;
+        color: var(--color-blue-1);
+        .container {
+            max-width: 115rem;
+        }
+        strong {
+            font-weight: 500;
+        }
+    }
+}

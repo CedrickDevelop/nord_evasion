@@ -1,0 +1,31 @@
+<?php
+
+use Drupal\nord_evasion_bo_additions\Manager\NordEvasionBoAdditionsManager;
+
+
+/**
+ * Implements hook_help().
+ */
+function nord_evasion_bo_additions_help($route_name, \Drupal\Core\Routing\RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the dillon module.
+    case 'help.page.nord_evasion_article':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('My Awesome Module') . '</p>';
+      return $output;
+    default:
+  }
+}
+
+function nord_evasion_bo_additions_menu_links_discovered_alter(&$links) {
+  /** @var NordEvasionBoAdditionsManager $manager */
+  $manager = \Drupal::service(NordEvasionBoAdditionsManager::class);
+  $links = $manager->alterMenuLinksWithAdditions($links);
+}
+
+function nord_evasion_bo_additions_field_widget_options_buttons_form_alter(array &$element) {
+  /** @var NordEvasionBoAdditionsManager $manager */
+  $manager = \Drupal::service(NordEvasionBoAdditionsManager::class);
+  $element = $manager->alterVocabularyOptionsButtonsWidget($element);
+}

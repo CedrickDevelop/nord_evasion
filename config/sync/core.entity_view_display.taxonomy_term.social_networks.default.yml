@@ -1,0 +1,42 @@
+uuid: 04001af2-1ec6-420c-8201-438400df47fd
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.social_networks.field_icon
+    - field.field.taxonomy_term.social_networks.field_link
+    - taxonomy.vocabulary.social_networks
+  module:
+    - link
+id: taxonomy_term.social_networks.default
+targetEntityType: taxonomy_term
+bundle: social_networks
+mode: default
+content:
+  field_icon:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: true
+      url_plain: true
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  description: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  langcode: true
+  search_api_excerpt: true

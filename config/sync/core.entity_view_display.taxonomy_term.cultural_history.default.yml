@@ -1,0 +1,54 @@
+uuid: ffe664f5-b14a-43b5-9ae5-91f852e44871
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.cultural_history.field_alias
+    - field.field.taxonomy_term.cultural_history.field_description
+    - field.field.taxonomy_term.cultural_history.field_logo
+    - field.field.taxonomy_term.cultural_history.field_subtitle
+    - taxonomy.vocabulary.cultural_history
+id: taxonomy_term.cultural_history.default
+targetEntityType: taxonomy_term
+bundle: cultural_history
+mode: default
+content:
+  field_alias:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_description:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_logo:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: teaser_event
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_subtitle:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  description: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  langcode: true
+  search_api_excerpt: true

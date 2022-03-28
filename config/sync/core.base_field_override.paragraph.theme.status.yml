@@ -1,0 +1,22 @@
+uuid: 1b7d0840-d486-4797-a04f-12f0c921c470
+langcode: fr
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.theme
+id: paragraph.theme.status
+field_name: status
+entity_type: paragraph
+bundle: theme
+label: Publié
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

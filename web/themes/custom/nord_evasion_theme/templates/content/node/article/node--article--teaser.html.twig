@@ -1,0 +1,23 @@
+{{ attach_library('nord_evasion_theme/nodeArticleTeaser') }}
+{% set view_mode  = "NodeArticleTeaser" %}
+<a class="NodeArticle {{ view_mode }}" href="{{ url }}" role="article" title="{{ 'Aller au contenu @label'|t({'@label': label.0["#context"].value}) }}">
+	{% if content.field_visual[0] is defined %}
+		<div class="NodeArticle-visual {{ view_mode ~ '-visual' }}">
+				{{ content.field_visual }}
+		</div>
+	{% endif %}
+  <div class="NodeArticle-presentation {{ view_mode ~ '-presentation' }}">
+		<header class="NodeArticle-ArticleHeader">
+			<h3>{{ content.field_displayed_subtitle }}</h3>
+			<h2>{{ label }}</h2>
+		</header>
+		<div class="NodeArticle-details {{ view_mode ~ '-details' }}">
+			<span class="NodeArticle-eventType {{ view_mode ~ '-eventType' }}">{{ content.field_event_type }}</span>
+		</div>
+		<div class="NodeArticle-link {{ view_mode ~ '-link' }}">
+			<span class="btn">
+				<i class="fa-light fa-arrow-right" aria-hidden="true"></i>
+			</span>
+		</div>
+	</div>
+</a>

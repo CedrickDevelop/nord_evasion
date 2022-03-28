@@ -1,0 +1,81 @@
+nord_evasion_global.taxonomies:
+  title: "Taxonomies"
+  parent: contrib
+  menu_name: contrib
+  url: internal:/admin/structure/taxonomy
+  weight: 6
+
+
+
+
+#### Page Médias
+nord_evasion_global.medias:
+  title: "Media"
+  parent: contrib
+  menu_name: contrib
+  url: internal:/admin/content/media
+  weight: 21
+
+#### Page Médias -- Voir tout
+nord_evasion_global.medias.show:
+  title: "Voir tous les médias"
+  parent: nord_evasion_global.medias
+  menu_name: contrib
+  url: internal:/admin/content/media
+  weight: 0
+
+#### Page Médias -- Images
+nord_evasion_global.medias.images:
+  title: "Images"
+  parent: nord_evasion_global.medias
+  menu_name: contrib
+  url: internal:/admin/content/media
+  options:
+    query:
+      type[0]: 'image'
+  weight: 1
+
+nord_evasion_global.medias.images.show:
+  title: "Voir la liste"
+  parent: nord_evasion_global.medias.images
+  menu_name: contrib
+  url: internal:/admin/content/media
+  options:
+    query:
+      type[0]: 'image'
+  weight: 0
+
+nord_evasion_global.medias.images.add:
+  title: "Ajouter"
+  parent: nord_evasion_global.medias.images
+  menu_name: contrib
+  url: internal:/media/add/image
+  weight: 1
+
+#### Page Médias -- Videos
+nord_evasion_global.medias.videos:
+  title: "Videos"
+  parent: nord_evasion_global.medias
+  menu_name: contrib
+  url: internal:/admin/content/media
+  options:
+    query:
+      type[0]: 'remote_video'
+  weight: 2
+
+nord_evasion_global.medias.videos.show:
+  title: "Voir la liste"
+  parent: nord_evasion_global.medias.videos
+  menu_name: contrib
+  url: internal:/admin/content/media
+  options:
+    query:
+      type[0]: 'remote_video'
+  weight: 0
+
+nord_evasion_global.medias.videos.add:
+  title: "Ajouter"
+  parent: nord_evasion_global.medias.videos
+  menu_name: contrib
+  url: internal:/media/add/remote_video
+  weight: 1

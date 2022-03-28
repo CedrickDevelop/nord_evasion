@@ -1,0 +1,43 @@
+.ParagraphMedia {
+  background-color: #fff; }
+  .ParagraphMedia .container {
+    max-width: 83.5rem; }
+  .ParagraphMedia-media .Media-remote_video, .ParagraphMedia-media .Media-video {
+    width: 100%;
+    position: relative;
+    height: 0;
+    padding-bottom: 56.25%;
+    overflow: hidden;
+    border-radius: 1rem;
+    -webkit-box-shadow: 0 0.3rem 0.6rem rgba(0, 0, 0, 0.3);
+            box-shadow: 0 0.3rem 0.6rem rgba(0, 0, 0, 0.3); }
+    .ParagraphMedia-media .Media-remote_video iframe,
+    .ParagraphMedia-media .Media-remote_video video, .ParagraphMedia-media .Media-video iframe,
+    .ParagraphMedia-media .Media-video video {
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      position: absolute; }
+  .ParagraphMedia-media .Media-image {
+    border-radius: 1rem;
+    overflow: hidden;
+    -webkit-box-shadow: 0 0.3rem 0.6rem rgba(0, 0, 0, 0.3);
+            box-shadow: 0 0.3rem 0.6rem rgba(0, 0, 0, 0.3); }
+    .ParagraphMedia-media .Media-image img {
+      width: 100%;
+      height: 100%;
+      -o-object-fit: cover;
+         object-fit: cover; }
+  .ParagraphMedia-media-1 {
+    display: grid;
+    grid-template-columns: 1fr; }
+  .ParagraphMedia-media-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 0.5fr);
+    gap: 2rem; }
+    @media (max-width: 719px) {
+      .ParagraphMedia-media-2 {
+        grid-template-columns: repeat(1, 1fr); } }
+
+/*# sourceMappingURL=paragraphMedia.css.map */

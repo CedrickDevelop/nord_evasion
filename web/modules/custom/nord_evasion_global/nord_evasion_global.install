@@ -1,0 +1,15 @@
+<?php
+
+/**
+ * Implement hook_schema().
+ */
+function nord_evasion_global_schema() {
+  $schema = [];
+  return $schema;
+}
+
+/**
+ * Implement hook_install().
+ */
+function nord_evasion_global_install() {
+}

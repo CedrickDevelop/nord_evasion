@@ -1,0 +1,21 @@
+uuid: c17bf46d-ebfc-473c-813d-2bfdf3c085d4
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_chapo
+    - node.type.article
+  module:
+    - text
+id: node.article.field_chapo
+field_name: field_chapo
+entity_type: node
+bundle: article
+label: Chapô
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

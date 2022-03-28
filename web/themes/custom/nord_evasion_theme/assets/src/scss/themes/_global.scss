@@ -1,0 +1,222 @@
+* {
+  box-sizing: border-box;
+  /* Utilisons un peu d'inertie sur IOS */
+  -webkit-overflow-scrolling: touch;
+  word-break: break-word;
+}
+
+:root {
+    --font-size: 62.5%;
+
+    --font-main: 'Roboto', sans-serif;
+    --font-title: 'Roboto', sans-serif;
+    --font-cursive: 'mrs-eaves-xl-serif-narrow', 'Roboto', sans-serif;
+    --font-nav: 'Oswald', sans-serif;
+    --font-icon: 'Font Awesome 6 Pro';
+    --font-icon--brands: 'Font Awesome 6 Brands';
+
+    --theme-color-1: #17323F;
+    --theme-color-2: #cd9700;
+    --theme-color-3: #9c6e00;
+    
+
+    --color-blue-1: #06475E;
+    --color-blue-2: #5B94AB;
+    --color-blue-3: #0F2935;
+    --color-blue-4: #E5F0f3;
+    --color-blue-5: #5b94a8;
+    --color-blue-6: #ECF4F7;
+
+    --color-grey-1: #334853;
+
+    --fastLinks-color: #ECECEA;
+
+    --text-color: #212529;
+    --link-color: #006487;
+    --link-visited-color: #660099;
+    --error-color: #CD1719;
+
+    --swiper-pagination-bullet-width: 1.2rem;
+    --swiper-pagination-bullet-height: 1.2rem;
+    --swiper-pagination-bullet-horizontal-gap: 0.75rem;
+    --swiper-pagination-bullet-inactive-opacity: 1;
+    --swiper-pagination-bullet-inactive-color: #fff;
+    --swiper-pagination-color: var(--theme-color-2);
+}
+
+html.dyslexia {
+    --font-main: 'OpenDyslexic', sans-serif;
+    --font-title: var(--font-main);
+    --font-cursive: var(--font-main);
+    --font-nav: var(--font-main);
+}
+
+html {
+    &.font-size-1 {
+        --font-size: 50.625%;
+    }
+    &.font-size-2 {
+        --font-size: 56.25%;
+    }
+    &.font-size-3 {
+        --font-size: 62.5%;
+    }
+    &.font-size-4 {
+        --font-size: 68.75%;
+    }
+    &.font-size-5 {
+        --font-size: 75.625%;
+    }
+
+}
+
+
+
+html {
+  font-size: var(--font-size);
+  //font-size: .625em;
+  //font-size: calc(1em * .625);
+}
+
+
+
+body {
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 1.6rem;
+  line-height: 1.5em;
+  &.no-scroll,
+  &.js-mobile-menu,
+  &.js-search-open {
+    overflow: hidden;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  a {
+    line-height: 1.5em;
+  }
+}
+
+#Page {
+  color: $color-black;
+  @extend %_fontBody;
+  font-size: 1.6rem;
+  line-height: 1.5em;
+}
+
+.container {
+  @extend %_siteSizeWrapper;
+}
+
+:focus {
+  //outline: transparent;
+}
+
+.element-invisible,
+.hidden,
+.visually-hidden {
+  display: none;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ul,
+li {
+  list-style: none;
+  list-style-type: none;
+}
+
+em {
+  @extend %_fontBodyItalic;
+}
+
+strong {
+  @extend %_fontBodyBold;
+}
+
+.site-size-wrapper {
+  @extend %_siteSizeWrapper;
+
+  padding-left: 3rem;
+  padding-right: 3rem;
+
+  @include mobile {
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
+  }
+
+  &--noPaddings {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  &--noResponsivePaddings {
+    @include tablet {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  &--noMobilePaddings {
+    @include mobile {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
+
+.no-fontSize {
+  font-size: 0;
+}
+
+.ckeditorContent p {
+}
+
+.color-gold {
+  color: var(--theme-color-2);
+}
+
+#overlay {
+  visibility: hidden;
+  z-index: 777;
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  opacity: 0.6;
+  body.js-search-open & {
+    opacity: 0.9;
+  }
+  .inner {
+    opacity: 0;
+    position: absolute;
+    background-color: var(--color-blue-2);
+    transition: opacity 0.3s;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+  body.js-mobile-menu &,
+  body.js-search-open & ,
+  body.js-media-popin-open & {
+    visibility: visible;
+    .inner {
+      opacity: 1;
+    }
+  }
+}

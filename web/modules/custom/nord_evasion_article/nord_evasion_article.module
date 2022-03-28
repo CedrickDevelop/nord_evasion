@@ -1,0 +1,41 @@
+<?php
+
+use Drupal\nord_evasion_article\Entity\Article;
+use Drupal\nord_evasion_article\Entity\ArticleList;
+use Drupal\nord_evasion_article\Entity\ArticleListNodeInterface;
+use Drupal\nord_evasion_article\Entity\ArticleNodeInterface;
+use Drupal\nord_evasion_article\Manager\ArticleListManager;
+use Drupal\nord_evasion_article\Manager\ArticleManager;
+
+/**
+ * Implements hook_help().
+ */
+function nord_evasion_article_help($route_name, \Drupal\Core\Routing\RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the dillon module.
+    case 'help.page.nord_evasion_article':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('My Awesome Module') . '</p>';
+      return $output;
+    default:
+  }
+}
+
+function nord_evasion_article_entity_bundle_info_alter(array &$bundles) {
+  $bundles['node'][ArticleNodeInterface::NODE_BUNDLE]['class'] = Article::class;
+  $bundles['node'][ArticleListNodeInterface::NODE_BUNDLE]['class'] = ArticleList::class;
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function nord_evasion_article_preprocess_node(&$variables) {
+  /** @var ArticleManager $articleManager */
+  $articleManager = \Drupal::service(ArticleManager::class);
+  $variables = $articleManager->addArticleVariablesToPreprocessNode($variables);
+
+  /** @var ArticleListManager $articleListManager */
+  $articleListManager = \Drupal::service(ArticleListManager::class);
+  $variables = $articleListManager->addArticleListVariablesToPreprocessNode($variables);
+}

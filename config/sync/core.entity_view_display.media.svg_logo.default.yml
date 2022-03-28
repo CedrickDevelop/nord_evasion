@@ -1,0 +1,58 @@
+uuid: 855a5c31-6d71-4496-8b11-31a319ff5e30
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.media.svg_logo.field_caption
+    - field.field.media.svg_logo.field_copyright
+    - field.field.media.svg_logo.field_media_svg
+    - media.type.svg_logo
+  module:
+    - svg_image_field
+id: media.svg_logo.default
+targetEntityType: media
+bundle: svg_logo
+mode: default
+content:
+  field_caption:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_copyright:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_media_svg:
+    type: svg_image_field_formatter
+    label: visually_hidden
+    settings:
+      inline: false
+      apply_dimensions: true
+      width: 25
+      height: 25
+      enable_alt: true
+      enable_title: true
+      link: ''
+      force_fill: false
+      sanitize: true
+      sanitize_remote: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  langcode: true
+  name: true
+  thumbnail: true
+  uid: true

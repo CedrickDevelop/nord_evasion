@@ -1,0 +1,15 @@
+uuid: 76eca86b-1b74-4fd8-86b6-dc92856c973c
+langcode: fr
+status: true
+dependencies: {  }
+name: search_result
+label: 'Search result (120x120)'
+effects:
+  016e8cc4-8548-470b-b0ce-bc26386e9605:
+    uuid: 016e8cc4-8548-470b-b0ce-bc26386e9605
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 120
+      height: 120
+      anchor: center-center

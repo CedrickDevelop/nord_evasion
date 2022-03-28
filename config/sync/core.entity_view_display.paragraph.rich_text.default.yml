@@ -1,0 +1,34 @@
+uuid: 64dd2677-296f-4204-b574-e4be8ec5e5ac
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.rich_text.field_displayed_title
+    - field.field.paragraph.rich_text.field_wysiwyg
+    - paragraphs.paragraphs_type.rich_text
+  module:
+    - text
+id: paragraph.rich_text.default
+targetEntityType: paragraph
+bundle: rich_text
+mode: default
+content:
+  field_displayed_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_wysiwyg:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true

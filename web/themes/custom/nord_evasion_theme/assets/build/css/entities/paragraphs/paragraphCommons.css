@@ -1,0 +1,113 @@
+button,
+input[type="submit"] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  cursor: pointer;
+  color: inherit;
+  padding: 0;
+  -webkit-transition: 0.3s ease-out;
+  -o-transition: 0.3s ease-out;
+  transition: 0.3s ease-out; }
+  button:hover, button:focus,
+  input[type="submit"]:hover,
+  input[type="submit"]:focus {
+    background-color: var(--theme-color-3); }
+
+#back {
+  width: 4rem;
+  height: 4rem;
+  background-color: var(--color-grey-1);
+  font-size: 2rem; }
+  #back:hover {
+    background-color: var(--theme-color-3); }
+  #back.visually-hidden {
+    display: none; }
+
+.btn, .btn-link:before, .Paragraph-link a:before {
+  background-color: var(--color-blue-2);
+  color: #fff;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 99rem;
+  line-height: 1em;
+  -webkit-transition: 0.3s ease-out;
+  -o-transition: 0.3s ease-out;
+  transition: 0.3s ease-out; }
+  .btn:hover, .btn-link:hover:before, .Paragraph-link a:hover:before, .btn:focus, .btn-link:focus:before, .Paragraph-link a:focus:before {
+    background-color: var(--theme-color-3); }
+
+.btn-link, .Paragraph-link a {
+  display: inline-block;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 500;
+  color: var(--color-blue-1);
+  text-decoration: underline;
+  vertical-align: middle; }
+  .btn-link:before, .Paragraph-link a:before {
+    content: '\2b';
+    margin-right: 1rem;
+    font-family: var(--font-icon);
+    text-decoration: none;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 2em;
+    text-align: center; }
+
+.Paragraph {
+  padding: 4rem 0;
+  background-color: var(--color-blue-6); }
+  .Paragraph .container {
+    max-width: calc(83.5rem + 5rem); }
+    body.homepage .Paragraph .container {
+      max-width: 100rem; }
+  .Paragraph-title {
+    text-align: center;
+    font-size: 4.5rem;
+    font-weight: 700;
+    color: var(--theme-color-1);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    line-height: 1; }
+  .Paragraph-subtitle {
+    text-align: center;
+    font-family: var(--font-cursive);
+    color: var(--color-blue-1);
+    font-weight: 700;
+    font-size: 4.5rem;
+    font-style: italic;
+    margin-bottom: 3.5rem; }
+  .Paragraph-link {
+    margin-top: 5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+
+/*# sourceMappingURL=paragraphCommons.css.map */

@@ -1,0 +1,15 @@
+uuid: de57fb3b-e3d2-4aa5-9b8e-287f009709bc
+langcode: fr
+status: true
+dependencies: {  }
+name: album_photos_4
+label: 'Album photos (4) (290x430)'
+effects:
+  6c3d61c3-4211-4054-a0a3-f41dfcbd98ca:
+    uuid: 6c3d61c3-4211-4054-a0a3-f41dfcbd98ca
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 290
+      height: 430
+      anchor: center-center

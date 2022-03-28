@@ -1,0 +1,23 @@
+uuid: abbec5ae-7e8d-418d-8700-23171ac45774
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_has_summary
+    - node.type.article
+id: node.article.field_has_summary
+field_name: field_has_summary
+entity_type: node
+bundle: article
+label: Sommaire
+description: 'Permet d''afficher un sommaire en haut de l''article'
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

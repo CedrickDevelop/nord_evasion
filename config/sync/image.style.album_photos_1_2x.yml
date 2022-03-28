@@ -1,0 +1,15 @@
+uuid: 8f43f9bd-5945-4d3f-b673-2668a0b2cb6c
+langcode: fr
+status: true
+dependencies: {  }
+name: album_photos_1_2x
+label: 'Album photos (1) (1740x860)'
+effects:
+  0e7b7530-dd8b-435a-8e02-da76e7ed32e9:
+    uuid: 0e7b7530-dd8b-435a-8e02-da76e7ed32e9
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1740
+      height: 860
+      anchor: center-center

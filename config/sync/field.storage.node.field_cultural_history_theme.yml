@@ -1,0 +1,20 @@
+uuid: c9f9bd6a-5624-4f27-9b6d-1f9eaf2848cd
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_cultural_history_theme
+field_name: field_cultural_history_theme
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

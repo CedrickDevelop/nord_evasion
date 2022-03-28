@@ -1,0 +1,18 @@
+uuid: c3d6a970-e685-434a-8a4a-1816525bdf67
+langcode: fr
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.cultural_history
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: taxonomy_term.cultural_history
+target_entity_type_id: taxonomy_term
+target_bundle: cultural_history
+default_langcode: site_default
+language_alterable: false

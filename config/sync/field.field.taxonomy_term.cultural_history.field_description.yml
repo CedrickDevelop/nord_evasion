@@ -1,0 +1,19 @@
+uuid: 1ca9898a-588f-4541-b932-cf9a16e19012
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_description
+    - taxonomy.vocabulary.cultural_history
+id: taxonomy_term.cultural_history.field_description
+field_name: field_description
+entity_type: taxonomy_term
+bundle: cultural_history
+label: Descriptif
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

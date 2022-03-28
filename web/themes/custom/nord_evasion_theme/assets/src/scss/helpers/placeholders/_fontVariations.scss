@@ -1,0 +1,39 @@
+// FONT VARIATIONS
+%_fontBody {
+  font-family: var(--font-main);
+  font-weight: 400;
+  font-style: normal;
+}
+
+%_fontBodyLight {
+  font-family: var(--font-main);
+  font-weight: 300;
+  font-style: normal;
+}
+
+%_fontBodyItalic {
+  font-family: var(--font-main);
+  font-weight: 400;
+  font-style: italic;
+}
+
+%_fontBodyBold {
+  font-family: var(--font-main);
+  font-weight: 700;
+  font-style: normal;
+}
+
+%_fontMainTitle {
+  font-family: var(--font-title);
+  font-weight: 700;
+  font-style: normal;
+}
+
+%_fontNavigation {
+  font-family: var(--font-nav);
+}
+
+%_fontCursive {
+  font-family: var(--font-cursive);
+  font-weight: 700;
+}

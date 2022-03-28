@@ -1,0 +1,47 @@
+uuid: 1b26e4b0-e56d-4d78-abd9-82e28510fe1a
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.teaser_bo
+    - field.field.media.image.field_caption
+    - field.field.media.image.field_copyright
+    - field.field.media.image.field_media_image
+    - image.style.teaser_media_back_office
+    - media.type.image
+  module:
+    - image
+_core:
+  default_config_hash: Gnu9XZTOUH0URiecFezvwDo1EhSOoCmsr0v-Cq1EMx4
+id: media.image.teaser_bo
+targetEntityType: media
+bundle: image
+mode: teaser_bo
+content:
+  field_media_image:
+    type: image
+    label: visually_hidden
+    settings:
+      image_link: ''
+      image_style: teaser_media_back_office
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  name:
+    type: string
+    label: visually_hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  created: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  field_caption: true
+  field_copyright: true
+  langcode: true
+  thumbnail: true
+  uid: true

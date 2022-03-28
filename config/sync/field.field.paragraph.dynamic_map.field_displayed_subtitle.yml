@@ -1,0 +1,19 @@
+uuid: 9da20299-9abb-4ee0-83be-1a0317d1d4ba
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_displayed_subtitle
+    - paragraphs.paragraphs_type.dynamic_map
+id: paragraph.dynamic_map.field_displayed_subtitle
+field_name: field_displayed_subtitle
+entity_type: paragraph
+bundle: dynamic_map
+label: 'Sous-titre affiché'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

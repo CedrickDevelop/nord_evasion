@@ -1,0 +1,23 @@
+uuid: f53c957f-d1bd-40f7-b504-ddd0801c91df
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.pin
+  module:
+    - text
+id: node.pin.body
+field_name: body
+entity_type: node
+bundle: pin
+label: Body
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary

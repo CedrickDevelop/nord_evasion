@@ -1,0 +1,65 @@
+uuid: 824c7002-6635-4327-b8fa-d74faf97dc97
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.agenda.field_destination
+    - field.field.paragraph.agenda.field_displayed_subtitle
+    - field.field.paragraph.agenda.field_displayed_title
+    - field.field.paragraph.agenda.field_event_type
+    - field.field.paragraph.agenda.field_link
+    - paragraphs.paragraphs_type.agenda
+  module:
+    - link
+id: paragraph.agenda.default
+targetEntityType: paragraph
+bundle: agenda
+mode: default
+content:
+  field_destination:
+    type: entity_reference_autocomplete
+    weight: 3
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_displayed_subtitle:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_displayed_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_event_type:
+    type: entity_reference_autocomplete
+    weight: 2
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_link:
+    type: link_default
+    weight: 4
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

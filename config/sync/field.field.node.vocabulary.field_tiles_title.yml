@@ -1,0 +1,19 @@
+uuid: c75e1fb0-2e99-4798-a54f-92ac3a8494d3
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tiles_title
+    - node.type.vocabulary
+id: node.vocabulary.field_tiles_title
+field_name: field_tiles_title
+entity_type: node
+bundle: vocabulary
+label: 'Titre bloc de tuiles'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

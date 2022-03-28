@@ -1,0 +1,14 @@
+uuid: 4d24e776-749a-4c91-8a5d-f9c01a148a87
+langcode: fr
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.cultural_history
+id: taxonomy_vocabulary_cultural_history
+entity_type_id: taxonomy_vocabulary
+entity_id: cultural_history
+action: page_not_found
+allow_override: 0
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied

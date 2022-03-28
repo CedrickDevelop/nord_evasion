@@ -1,0 +1,120 @@
+uuid: 3208b7c4-c3b9-416b-b707-d2845c0158b4
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.article.field_active_nature_theme
+    - field.field.node.article.field_chapo
+    - field.field.node.article.field_cultural_history_theme
+    - field.field.node.article.field_destination
+    - field.field.node.article.field_displayed_subtitle
+    - field.field.node.article.field_has_summary
+    - field.field.node.article.field_is_exportable
+    - field.field.node.article.field_paragraphs
+    - field.field.node.article.field_visual
+    - node.type.article
+  module:
+    - entity_print
+    - entity_reference_revisions
+    - text
+    - user
+third_party_settings:
+  entity_print:
+    pdf_label: 'View PDF'
+id: node.article.default
+targetEntityType: node
+bundle: article
+mode: default
+content:
+  entity_print_view_pdf:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_active_nature_theme:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_chapo:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_cultural_history_theme:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_destination:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_displayed_subtitle:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_has_summary:
+    type: boolean
+    label: hidden
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_is_exportable:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_paragraphs:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_visual:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: album_photos_1
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_word_docx: true
+  langcode: true
+  search_api_excerpt: true

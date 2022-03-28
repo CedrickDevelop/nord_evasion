@@ -1,0 +1,23 @@
+uuid: e63a842c-b73e-4fd9-9035-484f222981cb
+langcode: fr
+status: true
+dependencies:
+  config:
+    - views.view.search
+  module:
+    - views
+  theme:
+    - nord_evasion_theme
+id: exposed_search_form_block
+theme: nord_evasion_theme
+region: content
+weight: -4
+provider: null
+plugin: 'views_exposed_filter_block:search-search_page'
+settings:
+  id: 'views_exposed_filter_block:search-search_page'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+visibility: {  }

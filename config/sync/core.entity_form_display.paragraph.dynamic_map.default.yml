@@ -1,0 +1,32 @@
+uuid: 861e5720-7ee7-4763-9350-dfd667b4bcd2
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.dynamic_map.field_displayed_subtitle
+    - field.field.paragraph.dynamic_map.field_displayed_title
+    - paragraphs.paragraphs_type.dynamic_map
+id: paragraph.dynamic_map.default
+targetEntityType: paragraph
+bundle: dynamic_map
+mode: default
+content:
+  field_displayed_subtitle:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_displayed_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

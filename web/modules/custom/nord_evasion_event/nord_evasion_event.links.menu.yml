@@ -1,0 +1,16 @@
+nord_evasion_event.events:
+  title: "Evénements"
+  parent: contrib
+  menu_name: contrib
+  url: internal:/admin/content
+  options:
+    query:
+      type[0]: 'event'
+  weight: 5
+
+nord_evasion_event.event.add:
+  title: "Ajouter un événement"
+  parent: nord_evasion_event.events
+  menu_name: contrib
+  url: internal:/node/add/event
+  weight: 1

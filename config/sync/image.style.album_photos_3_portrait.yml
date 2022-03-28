@@ -1,0 +1,15 @@
+uuid: dcf2d6e6-f6b2-4312-8afe-b5785ffa79ef
+langcode: fr
+status: true
+dependencies: {  }
+name: album_photos_3_portrait
+label: 'Album photos (3) (290x430)'
+effects:
+  e0e3a7dc-a66c-4477-914c-3328fb552052:
+    uuid: e0e3a7dc-a66c-4477-914c-3328fb552052
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 290
+      height: 430
+      anchor: center-center

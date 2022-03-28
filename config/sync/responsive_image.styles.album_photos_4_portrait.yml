@@ -1,0 +1,59 @@
+uuid: a3069126-e4e3-464f-b01b-fbb1c92263eb
+langcode: fr
+status: true
+dependencies:
+  config:
+    - image.style.album_photos_4
+    - image.style.album_photos_4_2x
+  theme:
+    - nord_evasion_theme
+id: album_photos_4_portrait
+label: 'Album photos (4) Portrait'
+image_style_mappings:
+  -
+    image_mapping_type: image_style
+    image_mapping: album_photos_4_2x
+    breakpoint_id: nord_evasion_theme.desktop
+    multiplier: 1.5x
+  -
+    image_mapping_type: image_style
+    image_mapping: album_photos_4
+    breakpoint_id: nord_evasion_theme.desktop
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: album_photos_4_2x
+    breakpoint_id: nord_evasion_theme.desktop
+    multiplier: 2x
+  -
+    image_mapping_type: image_style
+    image_mapping: album_photos_4_2x
+    breakpoint_id: nord_evasion_theme.tablet
+    multiplier: 1.5x
+  -
+    image_mapping_type: image_style
+    image_mapping: album_photos_4
+    breakpoint_id: nord_evasion_theme.tablet
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: album_photos_4_2x
+    breakpoint_id: nord_evasion_theme.tablet
+    multiplier: 2x
+  -
+    image_mapping_type: image_style
+    image_mapping: album_photos_4_2x
+    breakpoint_id: nord_evasion_theme.mobile
+    multiplier: 1.5x
+  -
+    image_mapping_type: image_style
+    image_mapping: album_photos_4_2x
+    breakpoint_id: nord_evasion_theme.mobile
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: album_photos_4_2x
+    breakpoint_id: nord_evasion_theme.mobile
+    multiplier: 2x
+breakpoint_group: nord_evasion_theme
+fallback_image_style: album_photos_4

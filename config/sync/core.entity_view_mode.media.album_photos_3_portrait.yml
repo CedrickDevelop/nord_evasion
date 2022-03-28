@@ -1,0 +1,10 @@
+uuid: a21be2b0-5067-4141-aaeb-39e87f86f965
+langcode: fr
+status: true
+dependencies:
+  module:
+    - media
+id: media.album_photos_3_portrait
+label: 'Album photos (3) Portrait'
+targetEntityType: media
+cache: true

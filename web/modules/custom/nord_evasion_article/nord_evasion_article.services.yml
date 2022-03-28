@@ -1,0 +1,37 @@
+services:
+
+  Drupal\nord_evasion_article\Gateway\ArticleListGateway:
+    class: Drupal\nord_evasion_article\Gateway\ArticleListGateway
+    arguments: [ '@entity_type.manager', '@adimeo_tools.language' ]
+
+  Drupal\nord_evasion_article\Gateway\ArticleGateway:
+    class: Drupal\nord_evasion_article\Gateway\ArticleGateway
+    arguments: [ '@entity_type.manager', '@adimeo_tools.language' ]
+
+  Drupal\nord_evasion_article\Manager\ArticleManager:
+    class: Drupal\nord_evasion_article\Manager\ArticleManager
+    arguments: [ '@Drupal\nord_evasion_article\Gateway\ArticleGateway', '@Drupal\nord_evasion_pin\Manager\PinManager', '@entity_type.manager' ]
+
+  Drupal\nord_evasion_article\Manager\ArticleListManager:
+    class: Drupal\nord_evasion_article\Manager\ArticleListManager
+    arguments: [
+      '@Drupal\nord_evasion_article\Gateway\ArticleListGateway',
+      '@Drupal\nord_evasion_article\Manager\ArticleManager',
+      '@Drupal\nord_evasion_article\Manager\ArticleListResultsTitleManager',
+      '@Drupal\nord_evasion_global\Manager\ThematicsManager',
+      '@form_builder',
+      '@request_stack'
+    ]
+
+  Drupal\nord_evasion_article\Manager\ArticleListResultsTitleManager:
+    class: Drupal\nord_evasion_article\Manager\ArticleListResultsTitleManager
+    arguments: [
+      '@Drupal\nord_evasion_global\Manager\ThematicsManager',
+      '@Drupal\nord_evasion_global\Manager\DestinationManager'
+    ]
+
+  Drupal\nord_evasion_article\BreadcrumbBuilder\ArticleBreadcrumbBuilder:
+    class: Drupal\nord_evasion_article\BreadcrumbBuilder\ArticleBreadcrumbBuilder
+    tags:
+      - { name: breadcrumb_builder, priority: 1010 }
+    arguments: [ '@url_generator', '@Drupal\nord_evasion_article\Manager\ArticleListManager' ]

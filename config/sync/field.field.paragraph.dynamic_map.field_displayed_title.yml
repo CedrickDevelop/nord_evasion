@@ -1,0 +1,19 @@
+uuid: 7ecdf4cb-5af1-4e07-9ca0-e995dc354388
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_displayed_title
+    - paragraphs.paragraphs_type.dynamic_map
+id: paragraph.dynamic_map.field_displayed_title
+field_name: field_displayed_title
+entity_type: paragraph
+bundle: dynamic_map
+label: 'Titre affiché'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

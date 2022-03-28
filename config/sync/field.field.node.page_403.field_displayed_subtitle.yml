@@ -1,0 +1,19 @@
+uuid: aea3164a-5c2d-459e-beaa-f528b7098295
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_displayed_subtitle
+    - node.type.page_403
+id: node.page_403.field_displayed_subtitle
+field_name: field_displayed_subtitle
+entity_type: node
+bundle: page_403
+label: Sous-titre
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

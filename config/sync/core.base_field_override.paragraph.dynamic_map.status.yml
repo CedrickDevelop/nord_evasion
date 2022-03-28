@@ -1,0 +1,22 @@
+uuid: d34d427e-5377-4daf-a464-da9549cde690
+langcode: fr
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.dynamic_map
+id: paragraph.dynamic_map.status
+field_name: status
+entity_type: paragraph
+bundle: dynamic_map
+label: Publié
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

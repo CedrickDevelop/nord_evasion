@@ -1,0 +1,32 @@
+{{ attach_library('nord_evasion_theme/backButton') }}
+
+<header class="ContentHeader">
+	<div class="container inner">
+		<button role="button" id="back" title="{{ 'Revenir à la page précédente'|t }}" class="btn">
+			<i class="fa-light fa-arrow-left"></i>
+		</button>
+		{% if surtitle is defined %}
+			<span class="surtitle">{{ surtitle }}</span>
+		{% endif %}
+		{# Titre #}
+		<h1>{{ title }}</h1>
+		{# Sous-titre #}
+		{% if subtitle is defined %}
+			<span class="subtitle">{{ subtitle }}</span>
+		{% endif %}
+		{# Chapo #}
+		{% if chapo is defined %}
+			{% if isContent %}
+			  {{ chapo }}
+			{% else %}
+				<div class="ContentHeader-chapo">{{ chapo }}</div>
+			{% endif %}
+		{% endif %}
+		{% if visual is defined %}
+			{{ visual }}
+		{% endif %}
+		{% if additional_content is defined %}
+			{{ additional_content }}
+		{% endif %}
+	</div>
+</header>

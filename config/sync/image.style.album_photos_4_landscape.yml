@@ -1,0 +1,15 @@
+uuid: 47248d00-0ca8-48a5-9628-226cedc768da
+langcode: fr
+status: true
+dependencies: {  }
+name: album_photos_4_landscape
+label: 'Album photos (4) (290x215)'
+effects:
+  d69773bd-f313-41da-b8b4-b5a66bce9abd:
+    uuid: d69773bd-f313-41da-b8b4-b5a66bce9abd
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 290
+      height: 215
+      anchor: center-center

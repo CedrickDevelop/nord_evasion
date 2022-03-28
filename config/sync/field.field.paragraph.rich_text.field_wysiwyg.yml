@@ -1,0 +1,21 @@
+uuid: d1c65663-7858-4031-b9fc-9bd65f4326ad
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_wysiwyg
+    - paragraphs.paragraphs_type.rich_text
+  module:
+    - text
+id: paragraph.rich_text.field_wysiwyg
+field_name: field_wysiwyg
+entity_type: paragraph
+bundle: rich_text
+label: Texte
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

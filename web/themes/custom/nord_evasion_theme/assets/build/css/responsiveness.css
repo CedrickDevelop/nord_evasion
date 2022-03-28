@@ -1,0 +1,17 @@
+@media screen and (min-width: 719px) {
+  .mobile {
+    display: none; } }
+
+@media (max-width: 719px) {
+  .mobile {
+    display: inherit; } }
+
+@media screen and (min-width: 1179px) {
+  .desktop {
+    display: inherit; } }
+
+@media (max-width: 719px) {
+  .desktop {
+    display: none; } }
+
+/*# sourceMappingURL=responsiveness.css.map */

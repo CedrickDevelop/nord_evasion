@@ -1,0 +1,15 @@
+uuid: 16c6cfa7-f231-49ca-ab89-dba48ed333d0
+langcode: fr
+status: true
+dependencies: {  }
+name: paragraph_media_1
+label: 'Paragraph media (1) (830x490)'
+effects:
+  e7db2091-1c97-4064-a801-a9acb53aafea:
+    uuid: e7db2091-1c97-4064-a801-a9acb53aafea
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 830
+      height: 490
+      anchor: center-center

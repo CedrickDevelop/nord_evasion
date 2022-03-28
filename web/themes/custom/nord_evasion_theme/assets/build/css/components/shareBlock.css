@@ -1,0 +1,113 @@
+.SocialSharingLinks {
+  position: relative;
+  margin: 4rem 0;
+  text-align: center; }
+  .SocialSharingLinks button#share {
+    font-weight: 500;
+    color: var(--color-blue-1);
+    display: inline-block; }
+    .SocialSharingLinks button#share:hover, .SocialSharingLinks button#share:focus {
+      text-decoration: underline;
+      background-color: transparent; }
+      .SocialSharingLinks button#share:hover i, .SocialSharingLinks button#share:focus i {
+        color: #fff; }
+        .SocialSharingLinks button#share:hover i:after, .SocialSharingLinks button#share:focus i:after {
+          background-color: var(--theme-color-3); }
+    .SocialSharingLinks button#share i {
+      margin-left: 2rem;
+      position: relative;
+      font-size: 2.5rem; }
+      .SocialSharingLinks button#share i:after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 4.5rem;
+        height: 4.5rem;
+        background-color: var(--color-blue-6);
+        top: 50%;
+        left: 50%;
+        border-radius: 100%;
+        -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+        z-index: -1;
+        -webkit-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease; }
+      .SocialSharingLinks button#share i:before {
+        margin-left: -0.4rem; }
+  .SocialSharingLinks .share-links {
+    position: absolute;
+    bottom: 5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    left: 50%;
+    -webkit-transform: translateX(-50%) translateY(1rem);
+        -ms-transform: translateX(-50%) translateY(1rem);
+            transform: translateX(-50%) translateY(1rem);
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all 0.25s ease;
+    -o-transition: all 0.25s ease;
+    transition: all 0.25s ease; }
+    .SocialSharingLinks .share-links.active {
+      visibility: visible;
+      -webkit-transform: translateX(-50%) translateY(0);
+          -ms-transform: translateX(-50%) translateY(0);
+              transform: translateX(-50%) translateY(0);
+      opacity: 1; }
+    .SocialSharingLinks .share-links .SocialSharingLink {
+      text-align: center; }
+      .SocialSharingLinks .share-links .SocialSharingLink + .SocialSharingLink {
+        margin-left: 1.5rem; }
+      .SocialSharingLinks .share-links .SocialSharingLink a {
+        font-size: 0;
+        position: relative;
+        width: 4.5rem;
+        height: 4.5rem;
+        display: block; }
+        .SocialSharingLinks .share-links .SocialSharingLink a:hover:after {
+          background-color: var(--theme-color-3); }
+        .SocialSharingLinks .share-links .SocialSharingLink a:hover:before {
+          color: #fff; }
+        .SocialSharingLinks .share-links .SocialSharingLink a:before {
+          content: "";
+          font-family: var(--font-icon--brands);
+          font-weight: 300;
+          font-size: 2.5rem;
+          color: var(--color-blue-1);
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          -webkit-transform: translate(-50%, -50%);
+              -ms-transform: translate(-50%, -50%);
+                  transform: translate(-50%, -50%); }
+        .SocialSharingLinks .share-links .SocialSharingLink a:after {
+          content: "";
+          display: block;
+          position: absolute;
+          width: 4.5rem;
+          height: 4.5rem;
+          background-color: var(--color-blue-6);
+          top: 50%;
+          left: 50%;
+          border-radius: 100%;
+          -webkit-transform: translate(-50%, -50%);
+              -ms-transform: translate(-50%, -50%);
+                  transform: translate(-50%, -50%);
+          z-index: -1;
+          -webkit-transition: all 0.3s ease;
+          -o-transition: all 0.3s ease;
+          transition: all 0.3s ease; }
+        .SocialSharingLinks .share-links .SocialSharingLink a.Facebook:before {
+          content: "\f39e"; }
+        .SocialSharingLinks .share-links .SocialSharingLink a.Twitter:before {
+          content: "\f099"; }
+        .SocialSharingLinks .share-links .SocialSharingLink a.LinkedIn:before {
+          content: "\f0e1"; }
+        .SocialSharingLinks .share-links .SocialSharingLink a.Email:before {
+          font-family: var(--font-icon);
+          content: "\f0e0"; }
+
+/*# sourceMappingURL=shareBlock.css.map */

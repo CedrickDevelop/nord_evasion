@@ -1,0 +1,35 @@
+uuid: ec5a0579-3341-4784-ac23-093dc618521d
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.photo_album.field_displayed_title
+    - field.field.paragraph.photo_album.field_photos
+    - paragraphs.paragraphs_type.photo_album
+id: paragraph.photo_album.default
+targetEntityType: paragraph
+bundle: photo_album
+mode: default
+content:
+  field_displayed_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_photos:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  search_api_excerpt: true

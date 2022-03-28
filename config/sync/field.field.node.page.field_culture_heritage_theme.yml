@@ -1,0 +1,29 @@
+uuid: c63277c2-ec02-4eba-86cb-7ee097eec3c3
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_culture_heritage_theme
+    - node.type.page
+    - taxonomy.vocabulary.cultural_history
+id: node.page.field_culture_heritage_theme
+field_name: field_culture_heritage_theme
+entity_type: node
+bundle: page
+label: 'Culture et patrimoine'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      cultural_history: cultural_history
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,15 @@
+uuid: 0678037e-38c5-4de8-975b-7f4556fc283f
+langcode: fr
+status: true
+dependencies: {  }
+name: teaser_event
+label: 'Evènement accroche (160x250)'
+effects:
+  dd129479-5500-4fc7-af20-522d1e9fd0f1:
+    uuid: dd129479-5500-4fc7-af20-522d1e9fd0f1
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 160
+      height: 250
+      anchor: center-center

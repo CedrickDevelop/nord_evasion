@@ -1,0 +1,8 @@
+uuid: d47a9fb8-e57d-4a08-8908-7c24ad6671d1
+langcode: fr
+status: true
+dependencies: {  }
+id: menu-top-footer
+label: 'Menu top footer'
+description: 'Menu apparaissant en haut du footer'
+locked: false

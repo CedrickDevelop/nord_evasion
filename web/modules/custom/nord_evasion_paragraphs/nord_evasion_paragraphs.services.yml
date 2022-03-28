@@ -1,0 +1,41 @@
+services:
+  Drupal\nord_evasion_paragraphs\Manager\ParagraphManager:
+    class: Drupal\nord_evasion_paragraphs\Manager\ParagraphManager
+    arguments: [
+      '@Drupal\nord_evasion_paragraphs\Manager\AgendaManager',
+      '@Drupal\nord_evasion_paragraphs\Manager\DynamicMapManager',
+      '@Drupal\nord_evasion_paragraphs\Manager\MediaPhotoAlbumManager',
+      '@Drupal\nord_evasion_paragraphs\Manager\SuggestedArticlesManager',
+      '@Drupal\nord_evasion_paragraphs\Manager\ThematicManager'
+    ]
+
+  Drupal\nord_evasion_paragraphs\Manager\DynamicMapManager:
+    class: Drupal\nord_evasion_paragraphs\Manager\DynamicMapManager
+    arguments: [ '@Drupal\nord_evasion_global\Manager\DestinationManager',
+                 '@Drupal\nord_evasion_global\Gateway\DestinationGateway',
+                 '@Drupal\nord_evasion_page\Manager\PageManager']
+
+  Drupal\nord_evasion_paragraphs\Manager\AgendaManager:
+    class: Drupal\nord_evasion_paragraphs\Manager\AgendaManager
+    arguments: [ '@Drupal\nord_evasion_event\Manager\EventManager']
+
+  Drupal\nord_evasion_paragraphs\Manager\MediaPhotoAlbumManager:
+    class: Drupal\nord_evasion_paragraphs\Manager\MediaPhotoAlbumManager
+
+  Drupal\nord_evasion_paragraphs\Manager\SuggestedArticlesManager:
+    class: Drupal\nord_evasion_paragraphs\Manager\SuggestedArticlesManager
+    arguments: [
+      '@Drupal\nord_evasion_article\Manager\ArticleManager',
+      '@Drupal\nord_evasion_global\Manager\ThematicsManager'
+    ]
+
+  Drupal\nord_evasion_paragraphs\Manager\ThematicManager:
+    class: Drupal\nord_evasion_paragraphs\Manager\ThematicManager
+    arguments: [
+      '@Drupal\nord_evasion_vocabulary\Manager\VocabularyManager',
+      '@Drupal\nord_evasion_page\Manager\PageManager',
+      '@entity_type.manager'
+    ]
+
+  Drupal\nord_evasion_paragraphs\Manager\ParagraphWidgetManager:
+    class: Drupal\nord_evasion_paragraphs\Manager\ParagraphWidgetManager

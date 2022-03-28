@@ -1,0 +1,27 @@
+nord_evasion_pin.pins:
+  title: "Epingles"
+  parent: contrib
+  menu_name: contrib
+  url: internal:/admin/content
+  options:
+    query:
+      type[0]: 'pin'
+  weight: 5
+
+nord_evasion_pin.pins.add:
+  title: "Ajouter une épingle"
+  parent: nord_evasion_pin.pins
+  menu_name: contrib
+  url: internal:/node/add/pin
+  weight: 1
+
+nord_evasion_pin.pins.edit:
+  title: "Modifier la dernière épingle utilisée"
+  parent: nord_evasion_pin.pins
+  menu_name: contrib
+  route_name: bo_additions.node_edit
+  options:
+    query:
+      type: 'pin'
+      status: '1'
+  weight: 2

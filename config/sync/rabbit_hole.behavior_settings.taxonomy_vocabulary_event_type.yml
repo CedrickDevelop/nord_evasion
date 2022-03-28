@@ -1,0 +1,14 @@
+uuid: d5e8d895-f4b1-4902-8fbe-ee3ce063858c
+langcode: fr
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.event_type
+id: taxonomy_vocabulary_event_type
+entity_type_id: taxonomy_vocabulary
+entity_id: event_type
+action: page_not_found
+allow_override: 0
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied

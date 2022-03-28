@@ -1,0 +1,22 @@
+uuid: 81ae863e-ae03-4c44-9f0f-3b1aaaf59320
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+id: edito_path
+label: 'Edito path'
+type: 'canonical_entities:node'
+pattern: '[node:field_thematic]/[node:title]'
+selection_criteria:
+  ad3cbf6e-6af4-41b4-aee3-5f30341d0d6c:
+    id: node_type
+    negate: false
+    uuid: ad3cbf6e-6af4-41b4-aee3-5f30341d0d6c
+    context_mapping:
+      node: node
+    bundles:
+      page: page
+selection_logic: and
+weight: -5
+relationships: {  }

@@ -1,0 +1,29 @@
+uuid: 701ef3c3-7e73-412f-a098-eb51edf3fdb9
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.media.media_library
+    - field.field.media.video.field_media_video_file
+    - media.type.video
+_core:
+  default_config_hash: rphh0NgV3wTiJFPD4BMga-RVc8Tt7TtAkwxeylCSCJY
+id: media.video.media_library
+targetEntityType: media
+bundle: video
+mode: media_library
+content:
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_media_video_file: true
+  name: true
+  path: true
+  status: true
+  uid: true

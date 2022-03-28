@@ -1,0 +1,59 @@
+uuid: 20252ef5-3375-46be-a116-8f96e7d233f4
+langcode: fr
+status: true
+dependencies:
+  config:
+    - image.style.album_photos_5_square
+    - image.style.album_photos_5_square_2x
+  theme:
+    - nord_evasion_theme
+id: album_photos_5_carre
+label: 'Album photos (5) Carré'
+image_style_mappings:
+  -
+    image_mapping_type: image_style
+    image_mapping: album_photos_5_square_2x
+    breakpoint_id: nord_evasion_theme.desktop
+    multiplier: 1.5x
+  -
+    image_mapping_type: image_style
+    image_mapping: album_photos_5_square
+    breakpoint_id: nord_evasion_theme.desktop
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: album_photos_5_square_2x
+    breakpoint_id: nord_evasion_theme.desktop
+    multiplier: 2x
+  -
+    image_mapping_type: image_style
+    image_mapping: album_photos_5_square_2x
+    breakpoint_id: nord_evasion_theme.tablet
+    multiplier: 1.5x
+  -
+    image_mapping_type: image_style
+    image_mapping: album_photos_5_square
+    breakpoint_id: nord_evasion_theme.tablet
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: album_photos_5_square_2x
+    breakpoint_id: nord_evasion_theme.tablet
+    multiplier: 2x
+  -
+    image_mapping_type: image_style
+    image_mapping: album_photos_5_square_2x
+    breakpoint_id: nord_evasion_theme.mobile
+    multiplier: 1.5x
+  -
+    image_mapping_type: image_style
+    image_mapping: album_photos_5_square_2x
+    breakpoint_id: nord_evasion_theme.mobile
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: album_photos_5_square_2x
+    breakpoint_id: nord_evasion_theme.mobile
+    multiplier: 2x
+breakpoint_group: nord_evasion_theme
+fallback_image_style: album_photos_5_square

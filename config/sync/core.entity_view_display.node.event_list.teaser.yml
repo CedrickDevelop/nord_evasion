@@ -1,0 +1,24 @@
+uuid: 4e6b8f03-cb03-4ee5-9be3-06b8a8058c54
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.event_list
+  module:
+    - user
+id: node.event_list.teaser
+targetEntityType: node
+bundle: event_list
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  langcode: true

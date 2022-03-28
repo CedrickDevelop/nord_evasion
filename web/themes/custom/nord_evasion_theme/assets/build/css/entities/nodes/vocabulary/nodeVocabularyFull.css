@@ -1,0 +1,61 @@
+.NodeVocabularyFull-tiles {
+  background-color: var(--color-blue-6);
+  padding: 7rem 0; }
+  .NodeVocabularyFull-tiles .container {
+    max-width: calc(87rem + 5rem); }
+  .NodeVocabularyFull-tiles-title {
+    text-align: center;
+    font-size: 4.5rem;
+    font-weight: 700;
+    color: var(--theme-color-1);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    line-height: 1; }
+  .NodeVocabularyFull-tiles-subtitle {
+    text-align: center;
+    font-family: var(--font-cursive);
+    color: var(--color-blue-1);
+    font-weight: 700;
+    font-size: 4.5rem;
+    font-style: italic;
+    margin-bottom: 3.5rem; }
+
+.NodeVocabularyFull-tilesList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 4rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  .NodeVocabularyFull-tilesList .NodePageEditoTile {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 calc((100% / 3) - 3.5rem);
+            flex: 1 1 calc((100% / 3) - 3.5rem);
+    margin-left: 3.5rem;
+    margin-bottom: 5rem; }
+    .NodeVocabularyFull-tilesList .NodePageEditoTile:nth-child(3n + 1) {
+      margin-left: 0; }
+      .NodeVocabularyFull-tilesList .NodePageEditoTile:nth-child(3n + 1):last-of-type {
+        -webkit-box-flex: 0;
+            -ms-flex: 0 1 calc((100% / 3) - 3.5rem);
+                flex: 0 1 calc((100% / 3) - 3.5rem); }
+    @media (max-width: 719px) {
+      .NodeVocabularyFull-tilesList .NodePageEditoTile {
+        -webkit-box-flex: 1;
+            -ms-flex: 1 1 100%;
+                flex: 1 1 100%;
+        margin-left: 0;
+        margin-bottom: 3.5rem; } }
+
+/*# sourceMappingURL=nodeVocabularyFull.css.map */

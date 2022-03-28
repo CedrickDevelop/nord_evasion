@@ -1,0 +1,34 @@
+uuid: bfc264fb-5912-46d6-a166-faa178d7d1d8
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.rich_text.field_displayed_title
+    - field.field.paragraph.rich_text.field_wysiwyg
+    - paragraphs.paragraphs_type.rich_text
+  module:
+    - text
+id: paragraph.rich_text.default
+targetEntityType: paragraph
+bundle: rich_text
+mode: default
+content:
+  field_displayed_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_wysiwyg:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

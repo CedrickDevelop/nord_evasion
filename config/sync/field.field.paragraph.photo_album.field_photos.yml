@@ -1,0 +1,29 @@
+uuid: 55b04dfe-8ff8-4b1f-9481-0dae17cfeeb6
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_photos
+    - media.type.image
+    - paragraphs.paragraphs_type.photo_album
+id: paragraph.photo_album.field_photos
+field_name: field_photos
+entity_type: paragraph
+bundle: photo_album
+label: Photos
+description: 'Seules les 5 premières photos sélectionnées seront affichées'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

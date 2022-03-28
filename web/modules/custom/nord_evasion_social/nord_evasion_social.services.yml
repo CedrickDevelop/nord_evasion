@@ -1,0 +1,5 @@
+services:
+  Drupal\nord_evasion_social\Manager\SocialLinksManager:
+    class: Drupal\nord_evasion_social\Manager\SocialLinksManager
+    arguments:
+      [ '@current_route_match', '@request_stack', '@title_resolver' ]

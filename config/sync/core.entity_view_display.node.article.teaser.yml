@@ -1,0 +1,54 @@
+uuid: d2d21ff4-54d4-4a48-ac85-7a48f4a02b94
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.article.field_active_nature_theme
+    - field.field.node.article.field_chapo
+    - field.field.node.article.field_cultural_history_theme
+    - field.field.node.article.field_destination
+    - field.field.node.article.field_displayed_subtitle
+    - field.field.node.article.field_has_summary
+    - field.field.node.article.field_is_exportable
+    - field.field.node.article.field_paragraphs
+    - field.field.node.article.field_visual
+    - node.type.article
+  module:
+    - user
+id: node.article.teaser
+targetEntityType: node
+bundle: article
+mode: teaser
+content:
+  field_displayed_subtitle:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_visual:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: teaser_article
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  field_active_nature_theme: true
+  field_chapo: true
+  field_cultural_history_theme: true
+  field_destination: true
+  field_has_summary: true
+  field_is_exportable: true
+  field_paragraphs: true
+  langcode: true
+  links: true
+  search_api_excerpt: true

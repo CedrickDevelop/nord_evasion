@@ -1,0 +1,20 @@
+uuid: ab3fed6c-a02a-4a88-82a0-2ec77b51b3ad
+langcode: fr
+status: true
+dependencies:
+  config:
+    - media.type.svg_logo
+id: media.svg_logo.name
+field_name: name
+entity_type: media
+bundle: svg_logo
+label: Name
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: ''
+default_value_callback: ''
+settings: {  }
+field_type: string

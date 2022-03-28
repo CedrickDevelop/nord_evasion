@@ -1,0 +1,76 @@
+uuid: 1c5ce7ff-015c-45c2-b160-f83d3e2c37d5
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.suggested_articles.field_destination
+    - field.field.paragraph.suggested_articles.field_displayed_subtitle
+    - field.field.paragraph.suggested_articles.field_displayed_title
+    - field.field.paragraph.suggested_articles.field_key_article
+    - field.field.paragraph.suggested_articles.field_link
+    - field.field.paragraph.suggested_articles.field_theme
+    - paragraphs.paragraphs_type.suggested_articles
+  module:
+    - link
+id: paragraph.suggested_articles.default
+targetEntityType: paragraph
+bundle: suggested_articles
+mode: default
+content:
+  field_destination:
+    type: entity_reference_autocomplete
+    weight: 3
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_displayed_subtitle:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_displayed_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_key_article:
+    type: entity_reference_autocomplete
+    weight: 4
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_link:
+    type: link_default
+    weight: 5
+    region: content
+    settings:
+      placeholder_url: 'Choisissez la page de liste des articles si vous souhaitez créer ce lien'
+      placeholder_title: 'Entrez "Tous les articles" par exemple si vous souhaitez configurer le lien vers la liste d''articles'
+    third_party_settings: {  }
+  field_theme:
+    type: entity_reference_autocomplete
+    weight: 2
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

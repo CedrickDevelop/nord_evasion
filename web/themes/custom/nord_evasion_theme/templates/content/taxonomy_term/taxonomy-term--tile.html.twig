@@ -1,0 +1,11 @@
+<article class="TermTile">
+  {{ content.field_logo }}
+  <h2>{{ name }}</h2>
+  <h3>{{ content.field_subtitle }}</h3>
+  <div class="TermTile-description">
+    {{ content.field_description }}
+  </div>
+  <a class="TermTile-link" href="{{ url }}"
+     title="{{ 'Découvrir @term'|t({'@term': term.name.value}) }}">Flèche lien</a>
+</article>
+

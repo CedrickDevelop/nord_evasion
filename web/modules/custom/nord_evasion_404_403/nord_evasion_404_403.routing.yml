@@ -1,0 +1,15 @@
+nord_evasion_404_403.404:
+  path: '/errors/404'
+  defaults:
+    _controller: Drupal\nord_evasion_404_403\Controller\ErrorPagesController:error404
+    _title: 'Page non trouvée'
+  requirements:
+    _permission: 'access content'
+
+nord_evasion_404_403.403:
+  path: '/errors/403'
+  defaults:
+    _controller: Drupal\nord_evasion_404_403\Controller\ErrorPagesController:error403
+    _title: 'Page non trouvée'
+  requirements:
+    _permission: 'access content'

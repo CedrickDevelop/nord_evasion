@@ -1,0 +1,7 @@
+lib:
+  version: 1.x
+  js:
+    assets/js/script.js: {}
+  css:
+    theme:
+      assets/css/style.css: {}

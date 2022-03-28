@@ -1,0 +1,19 @@
+uuid: ef9196dd-f5d3-4432-bf5e-3cc6f66b8d29
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_subtitle
+    - taxonomy.vocabulary.active_nature
+id: taxonomy_term.active_nature.field_subtitle
+field_name: field_subtitle
+entity_type: taxonomy_term
+bundle: active_nature
+label: Sous-titre
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

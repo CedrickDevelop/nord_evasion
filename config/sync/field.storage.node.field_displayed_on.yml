@@ -1,0 +1,21 @@
+uuid: e87dda47-ca19-498d-893d-ae5e3644d975
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_displayed_on
+field_name: field_displayed_on
+entity_type: node
+type: list_string
+settings:
+  allowed_values: {  }
+  allowed_values_function: _nord_evasion_pin_displayed_on_values
+module: options
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

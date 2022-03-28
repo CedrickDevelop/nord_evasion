@@ -1,0 +1,8 @@
+uuid: 52f20c42-be09-4621-aab4-1831f2492d8b
+langcode: fr
+status: true
+dependencies: {  }
+name: 'Culture et Patrimoine'
+vid: cultural_history
+description: ''
+weight: 0

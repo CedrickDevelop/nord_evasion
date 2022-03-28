@@ -1,0 +1,12 @@
+uuid: 4898fd9a-c8da-4261-bfc1-42bb6a5f9454
+langcode: fr
+status: true
+dependencies:
+  module:
+    - media
+_core:
+  default_config_hash: EiTfTWkp9CXlEd2-7rLap8WWIM4kCELqLIjnbF3X0r4
+id: media.responsive_fullpage
+label: 'Responsive fullpage'
+targetEntityType: media
+cache: true

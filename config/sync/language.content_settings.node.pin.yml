@@ -1,0 +1,18 @@
+uuid: 0cc45cf5-8542-4489-9615-4ea518e23ec6
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.pin
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: node.pin
+target_entity_type_id: node
+target_bundle: pin
+default_langcode: site_default
+language_alterable: true

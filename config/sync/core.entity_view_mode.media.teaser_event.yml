@@ -1,0 +1,10 @@
+uuid: 1e39a672-6c05-4050-99bf-6e77d0f84a21
+langcode: fr
+status: true
+dependencies:
+  module:
+    - media
+id: media.teaser_event
+label: 'Evènement accroche'
+targetEntityType: media
+cache: true

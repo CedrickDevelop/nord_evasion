@@ -1,0 +1,65 @@
+uuid: 091501f9-d693-4e6d-8c53-9f3308d70b61
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_result_inline
+    - field.field.node.event.field_address
+    - field.field.node.event.field_city
+    - field.field.node.event.field_description
+    - field.field.node.event.field_destination
+    - field.field.node.event.field_displayed_subtitle
+    - field.field.node.event.field_end_date
+    - field.field.node.event.field_event_type
+    - field.field.node.event.field_google_map
+    - field.field.node.event.field_hours
+    - field.field.node.event.field_is_hidden
+    - field.field.node.event.field_paragraphs
+    - field.field.node.event.field_pricing_conditions
+    - field.field.node.event.field_promoter
+    - field.field.node.event.field_start_date
+    - field.field.node.event.field_venue
+    - field.field.node.event.field_visual
+    - node.type.event
+  module:
+    - entity_print
+    - user
+third_party_settings:
+  entity_print:
+    pdf_label: 'View PDF'
+id: node.event.search_result_inline
+targetEntityType: node
+bundle: event
+mode: search_result_inline
+content:
+  field_visual:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: search_result
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  field_address: true
+  field_city: true
+  field_description: true
+  field_destination: true
+  field_displayed_subtitle: true
+  field_end_date: true
+  field_event_type: true
+  field_google_map: true
+  field_hours: true
+  field_is_hidden: true
+  field_paragraphs: true
+  field_pricing_conditions: true
+  field_promoter: true
+  field_start_date: true
+  field_venue: true
+  langcode: true
+  links: true
+  search_api_excerpt: true

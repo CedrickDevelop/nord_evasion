@@ -1,0 +1,41 @@
+uuid: 0e236faa-b435-4951-b921-f83b057b0d48
+langcode: fr
+status: true
+dependencies:
+  config:
+    - image.style.landscape_full_page_1280w
+    - image.style.landscape_full_page_1366w
+    - image.style.landscape_full_page_1440w
+    - image.style.landscape_full_page_1920w
+    - image.style.landscape_full_page_2560w
+    - image.style.landscape_full_page_2732w
+    - image.style.landscape_full_page_2880w
+    - image.style.landscape_full_page_450w
+    - image.style.landscape_full_page_5116w
+    - image.style.landscape_full_page_900w
+  theme:
+    - nord_evasion_theme
+_core:
+  default_config_hash: 0vEExGFeU3O0tj8MJ-UMqtsBfvdtquYVb9PLH4gxG4k
+id: responsive_full_page
+label: 'Responsive full page'
+image_style_mappings:
+  -
+    breakpoint_id: nord_evasion_theme.all
+    multiplier: 1x
+    image_mapping_type: sizes
+    image_mapping:
+      sizes: 100vw
+      sizes_image_styles:
+        - landscape_full_page_1280w
+        - landscape_full_page_1366w
+        - landscape_full_page_1440w
+        - landscape_full_page_1920w
+        - landscape_full_page_2560w
+        - landscape_full_page_2732w
+        - landscape_full_page_2880w
+        - landscape_full_page_450w
+        - landscape_full_page_5116w
+        - landscape_full_page_900w
+breakpoint_group: nord_evasion_theme
+fallback_image_style: landscape_full_page_1920w

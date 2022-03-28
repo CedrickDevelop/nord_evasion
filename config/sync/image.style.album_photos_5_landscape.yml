@@ -1,0 +1,15 @@
+uuid: 78b60e41-ddde-4a32-8e41-93173fd0eba8
+langcode: fr
+status: true
+dependencies: {  }
+name: album_photos_5_landscape
+label: 'Album photos (5) (365x215)'
+effects:
+  5a26abb5-20aa-4ea3-92ca-d46eb6b0e823:
+    uuid: 5a26abb5-20aa-4ea3-92ca-d46eb6b0e823
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 365
+      height: 215
+      anchor: center-center

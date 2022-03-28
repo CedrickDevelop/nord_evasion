@@ -1,0 +1,19 @@
+uuid: 0b717c66-a975-4419-9277-0c036864ece3
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tiles_subtitle
+    - node.type.vocabulary
+id: node.vocabulary.field_tiles_subtitle
+field_name: field_tiles_subtitle
+entity_type: node
+bundle: vocabulary
+label: 'Sous-titre bloc de tuiles'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,10 @@
+uuid: 15928a2f-81da-484a-9457-d307aca12d19
+langcode: fr
+status: true
+dependencies:
+  module:
+    - media
+id: media.event_full
+label: 'Evènement full'
+targetEntityType: media
+cache: true

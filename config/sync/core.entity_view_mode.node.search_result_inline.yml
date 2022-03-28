@@ -1,0 +1,10 @@
+uuid: 7ba47b5c-879b-4757-9efd-85b0c96b654d
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+id: node.search_result_inline
+label: 'Search result'
+targetEntityType: node
+cache: true

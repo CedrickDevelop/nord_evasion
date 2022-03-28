@@ -1,0 +1,29 @@
+uuid: dd0ebe47-1c0a-4669-83e2-2852872da1c0
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_logo
+    - media.type.svg_logo
+    - taxonomy.vocabulary.active_nature
+id: taxonomy_term.active_nature.field_logo
+field_name: field_logo
+entity_type: taxonomy_term
+bundle: active_nature
+label: Logo
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      svg_logo: svg_logo
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: image
+field_type: entity_reference

@@ -1,0 +1,22 @@
+uuid: 771d9af3-4317-46f6-b2a0-95b8396c0b50
+langcode: fr
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.carrousel
+id: paragraph.carrousel.status
+field_name: status
+entity_type: paragraph
+bundle: carrousel
+label: Publié
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

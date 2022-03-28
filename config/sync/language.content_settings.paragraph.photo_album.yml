@@ -1,0 +1,18 @@
+uuid: 8fb87fa2-3dd9-47b8-8fe7-b0a6c00ddf9a
+langcode: fr
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.photo_album
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: paragraph.photo_album
+target_entity_type_id: paragraph
+target_bundle: photo_album
+default_langcode: site_default
+language_alterable: false

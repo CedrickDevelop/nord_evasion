@@ -1,0 +1,37 @@
+uuid: b80463b8-875b-42ca-82fd-091eb18ccbd2
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.vocabulary.field_chapo
+    - field.field.node.vocabulary.field_paragraphs
+    - field.field.node.vocabulary.field_tiles_subtitle
+    - field.field.node.vocabulary.field_tiles_title
+    - field.field.node.vocabulary.field_visual
+    - field.field.node.vocabulary.field_vocabulary
+    - node.type.vocabulary
+  module:
+    - user
+id: node.vocabulary.teaser
+targetEntityType: node
+bundle: vocabulary
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  field_chapo: true
+  field_paragraphs: true
+  field_tiles_subtitle: true
+  field_tiles_title: true
+  field_visual: true
+  field_vocabulary: true
+  langcode: true
+  search_api_excerpt: true

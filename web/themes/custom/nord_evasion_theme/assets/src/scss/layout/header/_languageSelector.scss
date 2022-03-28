@@ -1,0 +1,23 @@
+.language-switcher-language-url {
+    line-height: inherit;
+    ul {
+        display: flex;
+        text-transform: uppercase;
+        li {
+            padding-left: 1rem;
+            padding-right: 1rem;
+            border-left: 1px solid var(--theme-color-2);
+            a {
+                line-height: inherit;
+            }
+            &:first-of-type {
+                padding-left: 0;
+                border-left: 0;
+            }
+            &.is-active {
+                text-decoration: underline;
+                color: var(--theme-color-2);
+            }
+        }
+    }
+}

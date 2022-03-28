@@ -1,0 +1,47 @@
+uuid: 51253a81-ef70-4208-9123-8d866dc25dea
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.carrousel.field_displayed_title
+    - field.field.paragraph.carrousel.field_paragraph_photos
+    - paragraphs.paragraphs_type.carrousel
+  module:
+    - paragraphs_browser
+id: paragraph.carrousel.default
+targetEntityType: paragraph
+bundle: carrousel
+mode: default
+content:
+  field_displayed_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_paragraph_photos:
+    type: paragraphs_browser
+    weight: 1
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      features:
+        duplicate: duplicate
+        collapse_edit_all: collapse_edit_all
+      paragraphs_browser: _na
+      modal_width: 80%
+      modal_height: auto
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

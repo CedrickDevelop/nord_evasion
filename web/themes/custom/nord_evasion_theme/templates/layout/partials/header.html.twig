@@ -1,0 +1,86 @@
+<header id="Header" class="Header">
+	<div class="inner container mobile">
+		{{ header.sitebranding }}
+	</div>
+	<div class="inner container desktop">
+		<div class="Header-upperMenu">
+			<div class="Menu Menu-anchors">
+				<span class="color-gold">Aller : &nbsp;</span>
+
+				<nav
+					role="navigation" aria-labelledby="{{'Menu de contournement'|t}}">
+					<ul>
+						<li><a href="#menu" title="{{'Aller directement au menu'|t}}"><span>au menu</span></a></li>
+						<li><a href="#search" title="{{'Aller directement à la recherche'|t}}"><span>à la recherche</span></a></li>
+						<li><a href="#content" title="{{'Aller directement au contenu'|t}}"><span>au contenu</span></a></li>
+					</ul>
+				</nav>
+			</div>
+			<div class="Menu Menu-fontSizes">
+				<ul>
+					<li>
+						<button data-font-size="increase" title="{{ 'A+ Agrandir le texte'|t }}" aria-disabled="false" role="button">
+							<span>A+</span>
+						</button>
+					</li>
+					<li>
+						<button data-font-size="decrease" title="{{ 'A- Réduire le texte'|t }}" aria-disabled="false" role="button">
+							<span>A-</span>
+						</button>
+					</li>
+				</ul>
+			</div>
+			<div class="Menu Menu-dyslexie">
+				<button data-font-toggle="dyslexia" title="{{ 'Activer la police pour dyslexique'|t }}" aria-disabled="false" role="button">
+					<span>{{ 'Dyslexie'|t }}</span>
+				</button>
+			</div>
+			{{ header.languageswitcher }}
+		</div>
+		<div class="Header-lowerMenu">
+			{{ header.sitebranding }}
+			{{ header.mainnavigation }}
+			<button class="Menu-search Search-popin-trigger" data-popin-target=".PopinSearch" role="button" title="{{ 'Rechercher'|t }}">{{ source("/themes/custom/nord_evasion_theme/assets/build/svg/search.svg") }}</button>
+		</div>
+	</div>
+
+	<button role="button" title="{{ 'Menu' }}" class="mobile burger" id="Hamburger">
+		<span class="burger-inner">
+			<span class="open-state">
+				{{ source("/themes/custom/nord_evasion_theme/assets/build/svg/hamburger.svg") }}
+				<span class="button-title">menu</span>
+			</span>
+			<span class="close-state">
+				{{ source("/themes/custom/nord_evasion_theme/assets/build/svg/close.svg") }}
+			</span>
+		</span>
+	</button>
+	<div class="mobile HeaderMobile">
+		<div class="HeaderMobile-inner">
+			{{ header.sitebranding }}
+			{{ header.mainnavigation }}
+			<section
+				class="HeaderMobile-search">
+				{# <div class="form-group">
+									<label for="searchMobile" class="hidden">Recherche</label>
+									<input id="searchMobile" type="text" placeholder="Je recherche"/>
+								</div>
+								<button type="submit" class="no-fontSize" role="button">Rechercher</button> #}
+
+				{{ drupal_entity('block', 'exposed_search_form_block') }}
+			</section>
+
+			{# NAVIGATION SECONDAIRE MOBILE  #}
+			<div class="HeaderMobile-secondaryNav">
+				{{ drupal_entity('block', 'menutopfooter') }}
+			</div>
+			<hr>
+			<div class="HeaderMobile-lowMenu">
+				<button title="{{ 'Activer la police pour dyslexie'|t }}" data-font-toggle="dyslexia" aria-disabled="false" role="button">
+					<span>{{ 'Dyslexie'|t }}</span>
+				</button>
+				{{ header.languageswitcher }}
+			</div>
+		</div>
+	</div>
+</header>

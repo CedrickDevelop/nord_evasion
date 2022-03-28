@@ -1,0 +1,128 @@
+uuid: ae4448cf-67bb-45f5-b662-c0972db77175
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.home.field_displayed_title
+    - field.field.node.home.field_paragraphs
+    - node.type.home
+  module:
+    - field_group
+    - paragraphs_browser
+    - scheduler
+third_party_settings:
+  field_group:
+    group_tabs:
+      children:
+        - group_informations
+        - group_content
+      label: Tabs
+      region: content
+      parent_name: ''
+      weight: 5
+      format_type: tabs
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        direction: vertical
+        width_breakpoint: 640
+    group_informations:
+      children:
+        - title
+        - field_displayed_title
+        - status
+      label: Informations
+      region: content
+      parent_name: group_tabs
+      weight: 13
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: open
+        description: ''
+        required_fields: true
+    group_content:
+      children:
+        - field_presentation
+        - field_paragraphs
+      label: Contenu
+      region: content
+      parent_name: group_tabs
+      weight: 14
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+_core:
+  default_config_hash: id7OaadiQmgJkUGfoG7RXUL5CafhXpo2CvtnjOGY3a8
+id: node.home.default
+targetEntityType: node
+bundle: home
+mode: default
+content:
+  field_displayed_title:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_paragraphs:
+    type: entity_reference_paragraphs_browser
+    weight: 4
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      add_mode: paragraphs_browser
+      form_display_mode: default
+      default_paragraph_type: _none
+      paragraphs_browser: content
+      modal_width: 80%
+      modal_height: auto
+    third_party_settings: {  }
+  publish_on:
+    type: datetime_timestamp_no_default
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 2
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  unpublish_on:
+    type: datetime_timestamp_no_default
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  langcode: true
+  path: true
+  promote: true
+  sticky: true
+  translation: true
+  uid: true
+  url_redirects: true

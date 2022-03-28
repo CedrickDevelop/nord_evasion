@@ -1,0 +1,100 @@
+button,
+input[type="submit"] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  cursor: pointer;
+  color: inherit;
+  padding: 0;
+  -webkit-transition: 0.3s ease-out;
+  -o-transition: 0.3s ease-out;
+  transition: 0.3s ease-out; }
+  button:hover, button:focus,
+  input[type="submit"]:hover,
+  input[type="submit"]:focus {
+    background-color: var(--theme-color-3); }
+
+#back {
+  width: 4rem;
+  height: 4rem;
+  background-color: var(--color-grey-1);
+  font-size: 2rem; }
+  #back:hover {
+    background-color: var(--theme-color-3); }
+  #back.visually-hidden {
+    display: none; }
+
+.btn, .btn-link:before, .TermDestinationDynamicMap-link:before {
+  background-color: var(--color-blue-2);
+  color: #fff;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 99rem;
+  line-height: 1em;
+  -webkit-transition: 0.3s ease-out;
+  -o-transition: 0.3s ease-out;
+  transition: 0.3s ease-out; }
+  .btn:hover, .btn-link:hover:before, .TermDestinationDynamicMap-link:hover:before, .btn:focus, .btn-link:focus:before, .TermDestinationDynamicMap-link:focus:before {
+    background-color: var(--theme-color-3); }
+
+.btn-link, .TermDestinationDynamicMap-link {
+  display: inline-block;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 500;
+  color: var(--color-blue-1);
+  text-decoration: underline;
+  vertical-align: middle; }
+  .btn-link:before, .TermDestinationDynamicMap-link:before {
+    content: '\2b';
+    margin-right: 1rem;
+    font-family: var(--font-icon);
+    text-decoration: none;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 2em;
+    text-align: center; }
+
+.TermDestinationDynamicMap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 4rem 2rem 4rem 0; }
+  @media (max-width: 1179px) {
+    .TermDestinationDynamicMap {
+      padding-left: 2rem; } }
+  @media (max-width: 719px) {
+    .TermDestinationDynamicMap {
+      padding-left: 0; } }
+  .TermDestinationDynamicMap h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--theme-color-1); }
+  .TermDestinationDynamicMap h3 {
+    font-weight: 500;
+    color: var(--color-blue-1); }
+  .TermDestinationDynamicMap-description {
+    margin: 1.5rem 0; }
+  .TermDestinationDynamicMap-link {
+    margin-top: auto; }
+
+/*# sourceMappingURL=termDestinationDynamicMap.css.map */

@@ -1,0 +1,59 @@
+@import "../../helpers/helpers";
+
+.ParagraphTheme {
+    background-color: var(--color-blue-6);
+    header {
+        margin-bottom: 2rem;
+        h2 {
+            display: flex;
+            flex-direction: column;
+            font-size: 4.5rem;
+            font-weight: 700;
+            line-height: 1;
+            color: var(--theme-color-1);
+            em {
+                font-family: var(--font-cursive);
+                color: var(--color-blue-1);
+                text-transform: lowercase;
+            }
+        }
+    }
+    &-taxonomy {
+        &-list {
+            display: grid;
+            grid-template-columns: repeat(5, 0.2fr);
+            gap: 2.5rem;
+            @include mobile {
+                grid-template-columns: repeat(2, 0.5fr);
+            }
+        }
+        &-wrapper {
+            & + .ParagraphTheme-taxonomy-wrapper {
+                margin-top: 5rem;
+            }
+        }
+    }
+    .TermLogo {
+        padding: 2rem 1rem 1rem;
+        background-color: #fff;
+        border-radius: 0.8rem;
+        box-shadow: 0 0 0.6rem rgba(0, 0, 0, 0.3);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &:hover {
+            svg {
+
+            }
+        }
+        .Media-svg_logo {
+            padding: 0;
+        }
+        h2 {
+            text-align: center;
+            font-weight: 500;
+            margin-top: auto;
+            color: var(--color-blue-1)
+        }
+    }
+}

@@ -1,0 +1,5 @@
+<div class="form-group">
+    {{ form.search_api_fulltext }}
+    {{ form.actions }}
+</div>
+{{ form|without('search_api_fulltext', 'actions') }}

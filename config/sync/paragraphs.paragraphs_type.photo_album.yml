@@ -1,0 +1,15 @@
+uuid: 42da50cb-f59b-4a6e-86db-470f85236fe7
+langcode: fr
+status: true
+dependencies:
+  module:
+    - paragraphs_browser
+third_party_settings:
+  paragraphs_browser:
+    image_path: themes/custom/admin_custom/assets/paragraph_images/paragraph_photo_album.png
+id: photo_album
+label: 'Album photos'
+icon_uuid: null
+icon_default: null
+description: 'Affiche un album photo des photos sélectionnées (5 photos max.)'
+behavior_plugins: {  }

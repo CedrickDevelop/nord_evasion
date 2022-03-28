@@ -1,0 +1,53 @@
+uuid: 2c03b8d6-ccca-4436-abdc-0c4223af7564
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_paragraphs
+    - node.type.page
+  module:
+    - entity_reference_revisions
+id: node.page.field_paragraphs
+field_name: field_paragraphs
+entity_type: node
+bundle: page
+label: Contenu
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles: null
+    negate: 0
+    target_bundles_drag_drop:
+      agenda:
+        weight: 10
+        enabled: false
+      carrousel:
+        weight: 11
+        enabled: false
+      dynamic_map:
+        weight: 12
+        enabled: false
+      media:
+        weight: 13
+        enabled: false
+      photo:
+        weight: 14
+        enabled: false
+      photo_album:
+        weight: 15
+        enabled: false
+      rich_text:
+        weight: 16
+        enabled: false
+      suggested_articles:
+        weight: 17
+        enabled: false
+      theme:
+        weight: 18
+        enabled: false
+field_type: entity_reference_revisions

@@ -1,0 +1,117 @@
+@import "../../themes/buttons";
+@import "../../helpers/helpers";
+
+.ParagraphSuggestedArticles {
+    &-events {
+        margin-top: 4rem;
+        display: grid;
+        grid-template-columns: repeat(3, 0.333fr);
+        gap: 3.5rem;
+        @include mobile {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+}
+
+.NodeArticle-viewMode-unavoidable {
+    display: flex;
+    align-items: stretch;
+    box-shadow: 0 0.3rem 0.8rem rgba(0, 0, 0, 0.25);
+    border-radius: 1rem;
+    overflow: hidden;
+    & > * {
+        flex: 1 1 50%;
+        @include mobile {
+            flex: 1 1 auto;
+        }
+    }
+    &:hover,
+    &:focus {
+        img {
+            transform: scale(1.05);
+        }
+        h3 {
+            text-decoration: underline;
+        }
+        .NodeArticle-right {
+            & > span:last-of-type {
+                background-color: var(--theme-color-3);
+            }
+        }
+    }
+    @include mobile {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .Media {
+        border-top-left-radius: 1rem;
+        border-bottom-left-radius: 1rem;
+        overflow: hidden;
+        @include mobile {
+            height: 25rem;
+            border-top-left-radius: 1rem;
+            border-top-right-radius: 1rem;
+            border-bottom-left-radius: initial;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            will-change: transform;
+            transition: 0.2s ease-out;
+        }
+    }
+    .NodeArticle {
+        &-right {
+            display: flex;
+            flex-direction: column;
+            background-color: var(--color-blue-3);
+            padding: 5rem 4.5rem 3.5rem 4rem;
+            color: #fff;
+            border-top-right-radius: 1rem;
+            border-bottom-right-radius: 1rem;
+            @include mobile {
+                padding: 2.5rem;
+                align-items: center;
+                text-align: center;
+                border-top-right-radius: initial;
+                border-bottom-left-radius: 1rem;
+                border-bottom-right-radius: 1rem;
+            }
+            & > span {
+                font-size: 2.5rem;
+                color: var(--color-blue-5);
+                font-family: var(--font-cursive);
+                margin-bottom: 1.5rem;
+            }
+            & h3 {
+                font-size: 2.5rem;
+                font-weight: 500;
+                margin-bottom: 1.5rem;
+                @include mobile {
+                    font-size: 1.8rem;
+                }
+            }
+            & > p {
+                font-weight: 300;
+                font-size: 1.4rem;
+                margin-bottom: 1rem;
+            }
+
+            & > span:last-child {
+                margin-top: auto;
+                @extend %_btn;
+                font-size: 1.5rem;
+                @include mobile {
+                    margin-top: 2rem;
+                }
+            }
+        }
+
+        &-link {
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}

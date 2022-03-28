@@ -1,0 +1,19 @@
+uuid: 223b36cc-6500-4781-93a9-f9af021c8d3e
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_displayed_title
+    - paragraphs.paragraphs_type.theme
+id: paragraph.theme.field_displayed_title
+field_name: field_displayed_title
+entity_type: paragraph
+bundle: theme
+label: 'Titre affiché'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

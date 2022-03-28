@@ -1,0 +1,21 @@
+uuid: 577a9c67-7fb9-44f1-9497-c85ef768c4f8
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_chapo
+    - node.type.vocabulary
+  module:
+    - text
+id: node.vocabulary.field_chapo
+field_name: field_chapo
+entity_type: node
+bundle: vocabulary
+label: Chapô
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

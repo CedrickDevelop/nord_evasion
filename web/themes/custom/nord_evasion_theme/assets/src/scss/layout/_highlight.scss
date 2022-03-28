@@ -1,0 +1,20 @@
+#block-pin {
+    background-color: var(--theme-color-3);
+    color: #fff;
+    font-size: 2rem;
+    padding: 2rem 0;
+    box-shadow: 0 0.3rem 0.6rem rgba(0, 0, 0, 0.4);
+    .container {
+        max-width: 100rem;
+    }
+
+    h2, h3 {
+        font-weight: 500;
+    }
+    p, a {
+        font-weight: 300;
+    }
+    a {
+        text-decoration: underline;
+    }
+}

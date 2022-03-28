@@ -1,0 +1,33 @@
+uuid: a89fe796-257a-435f-83a1-2a12b23a5d30
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.media.remote_video.field_media_oembed_video
+    - media.type.remote_video
+  module:
+    - tac_services
+_core:
+  default_config_hash: '-jUaSpSMiqASaIBAMkWVySXgRGfIBmBVYqPOvgx0U00'
+id: media.remote_video.default
+targetEntityType: media
+bundle: remote_video
+mode: default
+content:
+  field_media_oembed_video:
+    type: tac_oembed
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  langcode: true
+  name: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true

@@ -1,0 +1,19 @@
+uuid: b501db15-e012-4926-8aca-83ae11ca2a5d
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_subtitle
+    - taxonomy.vocabulary.destination
+id: taxonomy_term.destination.field_subtitle
+field_name: field_subtitle
+entity_type: taxonomy_term
+bundle: destination
+label: Sous-titre
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,55 @@
+uuid: a7148014-6a7c-49cf-8436-5a7f9a7e9299
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_carrousel
+    - node.type.page
+    - paragraphs.paragraphs_type.carrousel
+  module:
+    - entity_reference_revisions
+id: node.page.field_carrousel
+field_name: field_carrousel
+entity_type: node
+bundle: page
+label: Carrousel
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      carrousel: carrousel
+    negate: 0
+    target_bundles_drag_drop:
+      agenda:
+        weight: 10
+        enabled: false
+      carrousel:
+        weight: 11
+        enabled: true
+      dynamic_map:
+        weight: 12
+        enabled: false
+      media:
+        weight: 13
+        enabled: false
+      photo:
+        weight: 14
+        enabled: false
+      photo_album:
+        weight: 15
+        enabled: false
+      rich_text:
+        weight: 16
+        enabled: false
+      suggested_articles:
+        weight: 17
+        enabled: false
+      theme:
+        weight: 18
+        enabled: false
+field_type: entity_reference_revisions

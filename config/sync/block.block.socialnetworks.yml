@@ -1,0 +1,20 @@
+uuid: ecef14a6-29cd-4b09-a0a9-1f188d771c68
+langcode: fr
+status: true
+dependencies:
+  module:
+    - nord_evasion_global
+  theme:
+    - nord_evasion_theme
+id: socialnetworks
+theme: nord_evasion_theme
+region: footer
+weight: 0
+provider: null
+plugin: nord_evasion_global_social_networks
+settings:
+  id: nord_evasion_global_social_networks
+  label: 'Social networks'
+  label_display: '0'
+  provider: nord_evasion_global
+visibility: {  }

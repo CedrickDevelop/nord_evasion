@@ -1,0 +1,15 @@
+uuid: 877d9d82-b603-40b7-8eb2-6ab917bdb44d
+langcode: fr
+status: true
+dependencies: {  }
+name: album_photos_4_2x
+label: 'Album photos (4) (580x860)'
+effects:
+  94115729-ee5b-49db-9063-cd4c22570f14:
+    uuid: 94115729-ee5b-49db-9063-cd4c22570f14
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 580
+      height: 860
+      anchor: center-center

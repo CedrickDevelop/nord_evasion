@@ -1,0 +1,87 @@
+<?php
+
+use Drupal\nord_evasion_global\Controller\FormConfirmationController;
+use Drupal\nord_evasion_global\Entity\ActiveNature;
+use Drupal\nord_evasion_global\Entity\ActiveNatureTermInterface;
+use Drupal\nord_evasion_global\Entity\CulturalHistory;
+use Drupal\nord_evasion_global\Entity\CulturalHistoryTermInterface;
+use Drupal\nord_evasion_global\Entity\Destination;
+use Drupal\nord_evasion_global\Entity\DestinationTermInterface;
+use Drupal\nord_evasion_global\Manager\SearchManager;
+use Drupal\nord_evasion_global\Manager\SearchResultManager;
+use Drupal\nord_evasion_global\Plugin\Block\SocialNetworksTaxonomyBlock;
+use Drupal\views\ViewExecutable;
+
+/**
+ * Implements hook_help().
+ */
+function nord_evasion_global_help($route_name, \Drupal\Core\Routing\RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the dillon module.
+    case 'help.page.nord_evasion_global':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('My Awesome Module') . '</p>';
+      return $output;
+    default:
+  }
+}
+
+function nord_evasion_global_entity_bundle_info_alter(array &$bundles) {
+  $bundles['taxonomy_term'][ActiveNatureTermInterface::TERM_VOCABULARY]['class'] = ActiveNature::class;
+  $bundles['taxonomy_term'][CulturalHistoryTermInterface::TERM_VOCABULARY]['class'] = CulturalHistory::class;
+  $bundles['taxonomy_term'][DestinationTermInterface::TERM_VOCABULARY]['class'] = Destination::class;
+}
+
+/**
+ * Implements hook_theme().
+ */
+function nord_evasion_global_theme($existing, $type, $theme, $path) {
+  $templates = [
+    FormConfirmationController::TWIG_THEME => [
+      'template' => FormConfirmationController::TWIG_THEME,
+      'variables' => [],
+    ],
+    SocialNetworksTaxonomyBlock::TEMPLATE => [
+      'variables' => [
+        'social_networks' => NULL,
+      ],
+    ],
+  ];
+
+  return $templates;
+}
+
+function nord_evasion_global_views_pre_build(ViewExecutable $view) {
+  /** @var SearchManager $searchManager */
+  $searchManager = \Drupal::service(SearchManager::class);
+  $view = $searchManager->alterViewPreBuildToForceExposedFilterFormDisplay($view);
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK().
+ */
+function nord_evasion_global_theme_suggestions_views_exposed_form(array $variables) {
+  return ['views_exposed_form__' . str_replace("-", "_", $variables['form']['#id'])];
+}
+
+function nord_evasion_global_theme_suggestions_taxonomy_term(array $variables) {
+  /** @var \Drupal\taxonomy\TermInterface $term */
+  $term = $variables['elements']['#taxonomy_term'];
+  $sanitized_view_mode = strtr($variables['elements']['#view_mode'], '.', '_');
+  // Add view mode theme suggestions.
+  $suggestions[] = 'taxonomy_term__' . $sanitized_view_mode;
+  $suggestions[] = 'taxonomy_term__' . $term->bundle() . '__' . $sanitized_view_mode;
+  $suggestions[] = 'taxonomy_term__' . $term->id() . '__' . $sanitized_view_mode;
+
+  return $suggestions;
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function nord_evasion_global_preprocess_node(&$variables) {
+  /* @var SearchResultManager $searchResultManager */
+  $searchResultManager = Drupal::service(SearchResultManager::class);
+  $variables = $searchResultManager->addSearchResultVariablesToPreprocessNode($variables);
+}

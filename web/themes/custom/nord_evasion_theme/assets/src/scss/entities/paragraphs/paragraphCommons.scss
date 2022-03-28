@@ -1,0 +1,39 @@
+@import "../../themes/buttons";
+
+.Paragraph {
+    padding: 4rem 0;
+    background-color: var(--color-blue-6);
+    .container {
+        body.homepage & {
+            max-width: 100rem;
+        }
+        max-width: calc(83.5rem + 5rem);
+    }
+    &-title {
+        text-align: center;
+        font-size: 4.5rem;
+        font-weight: 700;
+        color: var(--theme-color-1);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        line-height: 1;
+    }
+    &-subtitle {
+        text-align: center;
+        font-family: var(--font-cursive);
+        color: var(--color-blue-1);
+        font-weight: 700;
+        font-size: 4.5rem;
+        font-style: italic;
+        margin-bottom: 3.5rem;
+    }
+    &-link {
+        margin-top: 5rem;
+        display: flex;
+        justify-content: center;
+        a {
+            @extend %_btn-link;
+        }
+    }
+}

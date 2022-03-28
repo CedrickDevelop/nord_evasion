@@ -1,0 +1,23 @@
+uuid: 6930bec9-4fb0-4131-a17c-2b47d7489ef5
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_is_exportable
+    - node.type.article
+id: node.article.field_is_exportable
+field_name: field_is_exportable
+entity_type: node
+bundle: article
+label: 'Peut être exporté'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Oui
+  off_label: Non
+field_type: boolean

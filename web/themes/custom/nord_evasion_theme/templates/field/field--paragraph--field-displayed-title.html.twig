@@ -1,0 +1,9 @@
+{% if multiple %}
+    {% for item in items %}
+        {{ item.content }}
+    {% endfor %}
+{% else %}
+    {% for item in items %}
+        <h2 class="Paragraph-title">{{ item.content }}</h2>
+    {% endfor %}
+{% endif %}

@@ -1,0 +1,15 @@
+uuid: b726b8a1-1c67-49a5-a715-3361f85196fc
+langcode: fr
+status: true
+dependencies: {  }
+name: album_photos_5_portrait_2x
+label: 'Album photos (5) (580x860)'
+effects:
+  243261f7-138f-456d-85a4-43172e93e639:
+    uuid: 243261f7-138f-456d-85a4-43172e93e639
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 580
+      height: 860
+      anchor: center-center

@@ -1,0 +1,10 @@
+uuid: e42abe96-38ad-4117-b5ba-6c5b150ace93
+langcode: fr
+status: true
+dependencies:
+  module:
+    - media
+id: media.popin
+label: Popin
+targetEntityType: media
+cache: true

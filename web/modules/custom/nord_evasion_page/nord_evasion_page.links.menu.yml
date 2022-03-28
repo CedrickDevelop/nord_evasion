@@ -1,0 +1,16 @@
+nord_evasion_page.pages:
+  title: "Pages éditoriales"
+  parent: contrib
+  menu_name: contrib
+  url: internal:/admin/content
+  options:
+    query:
+      type[0]: 'page'
+  weight: 3
+
+nord_evasion_page.page.add:
+  title: "Ajouter une page éditoriale"
+  parent: nord_evasion_page.pages
+  menu_name: contrib
+  url: internal:/node/add/page
+  weight: 1

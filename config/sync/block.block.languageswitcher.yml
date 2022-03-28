@@ -1,0 +1,20 @@
+uuid: 150a6805-1fbf-44b1-afec-89528199e7be
+langcode: fr
+status: true
+dependencies:
+  module:
+    - language
+  theme:
+    - nord_evasion_theme
+id: languageswitcher
+theme: nord_evasion_theme
+region: header
+weight: -5
+provider: null
+plugin: 'language_block:language_interface'
+settings:
+  id: 'language_block:language_interface'
+  label: 'Language switcher'
+  label_display: '0'
+  provider: language
+visibility: {  }

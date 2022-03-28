@@ -1,0 +1,22 @@
+<footer id="Footer" class="Footer">
+	<section class="Footer-upper desktop">
+		<div class="container">
+			{{ footer.menutopfooter }}
+		</div>
+	</section>
+	<section class="Footer-lower">
+		<section class="Footer-lower-left">
+			<a href="/" class="Footer-logo" title="{{ "Le site touristique du Nord le département est là"|t }}" target="_blank">
+				<span>{{ 'Le site touristique du'|t }}</span>
+				<img src="/themes/custom/nord_evasion_theme/assets/build/svg/logo_nord.svg" alt="{{ "Logo de Nord le Département"|t }}" />
+			</a>
+			<section class="Footer-lower-menu">
+				{{ footer.menubottomfooter }}
+			</section>
+		</section>
+		<section
+			class="Footer-lower-right">{# Réseaux sociaux !!! #}
+      			{{ footer.socialnetworks }}
+		</section>
+	</section>
+</footer>

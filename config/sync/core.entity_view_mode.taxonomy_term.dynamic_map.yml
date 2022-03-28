@@ -1,0 +1,10 @@
+uuid: 7cb3c394-a787-46aa-8bc3-032bb44bdf70
+langcode: fr
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term.dynamic_map
+label: 'Dynamic Map'
+targetEntityType: taxonomy_term
+cache: true

@@ -1,0 +1,18 @@
+uuid: 0e3af202-0054-41f9-b99e-47b02e2387d7
+langcode: fr
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.dynamic_map
+id: paragraph.dynamic_map.created
+field_name: created
+entity_type: paragraph
+bundle: dynamic_map
+label: 'Authored on'
+description: 'The time that the Paragraph was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

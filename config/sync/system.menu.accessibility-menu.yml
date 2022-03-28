@@ -1,0 +1,8 @@
+uuid: d3ee0f00-901e-489f-9d33-ef5e9bc8390b
+langcode: fr
+status: true
+dependencies: {  }
+id: accessibility-menu
+label: 'Menu de contournement'
+description: ''
+locked: false

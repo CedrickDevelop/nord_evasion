@@ -1,0 +1,32 @@
+@import "../../helpers/helpers";
+
+.ParagraphRichText {
+    @extend %_ckeditor;
+    padding: 4.5rem 0;
+    &-title {
+        font-size: 2rem;
+        color: var(--theme-color-1);
+        font-weight: 700;
+        margin-bottom: 1rem;
+        h2 {
+            color: inherit;
+            font-weight: inherit;
+        }
+        .NodeHome & {
+            color: var(--color-blue-1);
+            font-weight: 500;
+        }
+    }
+
+    .inner {
+        max-width: 100rem;
+    }
+
+    .NodeHome & {
+        background-color: var(--color-blue-6);
+        h2, h3, h3, h4, h5, h6, p {
+            text-align: center;
+            font-size: 2rem;
+        }
+    }
+}

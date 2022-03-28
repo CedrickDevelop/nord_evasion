@@ -1,0 +1,25 @@
+uuid: 3f22741b-5f2d-4bfa-9fee-26b0b70a62e3
+langcode: fr
+status: true
+dependencies:
+  config:
+    - system.menu.menu-bottom-footer
+  module:
+    - system
+  theme:
+    - nord_evasion_theme
+id: menubottomfooter
+theme: nord_evasion_theme
+region: footer
+weight: -1
+provider: null
+plugin: 'system_menu_block:menu-bottom-footer'
+settings:
+  id: 'system_menu_block:menu-bottom-footer'
+  label: 'Menu bottom footer'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

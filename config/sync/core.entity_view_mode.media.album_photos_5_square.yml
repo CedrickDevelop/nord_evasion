@@ -1,0 +1,10 @@
+uuid: ebee54ff-73b1-455d-8497-a712ea2ac671
+langcode: fr
+status: true
+dependencies:
+  module:
+    - media
+id: media.album_photos_5_square
+label: 'Album photos (5) Carré'
+targetEntityType: media
+cache: true

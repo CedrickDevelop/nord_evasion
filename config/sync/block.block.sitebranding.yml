@@ -1,0 +1,23 @@
+uuid: 07e557f3-2f00-491b-ad96-293b11a7b593
+langcode: fr
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - nord_evasion_theme
+id: sitebranding
+theme: nord_evasion_theme
+region: header
+weight: -4
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: false
+  use_site_slogan: false
+visibility: {  }

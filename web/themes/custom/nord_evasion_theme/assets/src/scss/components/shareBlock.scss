@@ -1,0 +1,125 @@
+.SocialSharingLinks {
+    position: relative;
+    margin: 4rem 0;
+    text-align: center;
+    button#share {
+        font-weight: 500;
+        color: var(--color-blue-1);
+        display: inline-block;
+        &:hover,
+        &:focus {
+            text-decoration: underline;
+            background-color: transparent;
+            i {
+                color: #fff;
+                &:after {
+                    background-color: var(--theme-color-3);
+                }
+            }
+        }
+        i {
+            margin-left: 2rem;
+            position: relative;
+            font-size: 2.5rem;
+            &:after {
+                content: "";
+                display: block;
+                position: absolute;
+                width: 4.5rem;
+                height: 4.5rem;
+                background-color: var(--color-blue-6);
+                top: 50%;
+                left: 50%;
+                border-radius: 100%;
+                transform: translate(-50%, -50%);
+                z-index: -1;
+                transition: all 0.3s ease;
+            }
+            &:before {
+                margin-left: -0.4rem;
+            }
+        }
+    }
+    .share-links {
+        position: absolute;
+        bottom: 5rem;
+        display: flex;
+        left: 50%;
+        transform: translateX(-50%) translateY(1rem);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.25s ease;
+        &.active {
+            visibility: visible;
+            transform: translateX(-50%) translateY(0);
+            opacity: 1;
+        }
+        .SocialSharingLink {
+            text-align: center;
+            & + .SocialSharingLink {
+                margin-left: 1.5rem;
+            }
+            a {
+                font-size: 0;
+                position: relative;
+                width: 4.5rem;
+                height: 4.5rem;
+                display: block;
+                &:hover {
+                    &:after {
+                        background-color: var(--theme-color-3);
+                    }
+                    &:before {
+                        color: #fff;
+                    }
+                }
+                &:before {
+                    content: "";
+                    font-family: var(--font-icon--brands);
+                    font-weight: 300;
+                    font-size: 2.5rem;
+                    color: var(--color-blue-1);
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+                &:after {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    width: 4.5rem;
+                    height: 4.5rem;
+                    background-color: var(--color-blue-6);
+                    top: 50%;
+                    left: 50%;
+                    border-radius: 100%;
+                    transform: translate(-50%, -50%);
+                    z-index: -1;
+                    transition: all 0.3s ease;
+                }
+                &.Facebook {
+                    &:before {
+                        content: "\f39e";
+                    }
+                }
+                &.Twitter {
+                    &:before {
+                        content: "\f099";
+                    }
+                }
+                &.LinkedIn {
+                    &:before {
+                        content: "\f0e1";
+                    }
+                }
+                &.Email {
+                    &:before {
+                        font-family: var(--font-icon);
+                        content: "\f0e0";
+                    }
+                }
+            }
+        }
+    }
+}

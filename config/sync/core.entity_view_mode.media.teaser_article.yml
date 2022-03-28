@@ -1,0 +1,10 @@
+uuid: 5d309b79-467c-4fa0-931a-8c9ca6815dee
+langcode: fr
+status: true
+dependencies:
+  module:
+    - media
+id: media.teaser_article
+label: 'Article accroche'
+targetEntityType: media
+cache: true

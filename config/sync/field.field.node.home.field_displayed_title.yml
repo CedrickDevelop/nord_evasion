@@ -1,0 +1,19 @@
+uuid: c28d47fc-48ac-4e5e-b201-227360eda190
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_displayed_title
+    - node.type.home
+id: node.home.field_displayed_title
+field_name: field_displayed_title
+entity_type: node
+bundle: home
+label: 'Titre affiché'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

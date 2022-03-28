@@ -1,0 +1,25 @@
+uuid: f8a879e1-38db-4ee5-9121-eeeebffa8715
+langcode: fr
+status: true
+dependencies:
+  config:
+    - system.menu.menu-top-footer
+  module:
+    - system
+  theme:
+    - nord_evasion_theme
+id: menutopfooter
+theme: nord_evasion_theme
+region: footer
+weight: -2
+provider: null
+plugin: 'system_menu_block:menu-top-footer'
+settings:
+  id: 'system_menu_block:menu-top-footer'
+  label: 'Menu top footer'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

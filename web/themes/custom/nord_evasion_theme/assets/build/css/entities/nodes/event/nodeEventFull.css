@@ -1,0 +1,198 @@
+.NodeEventFull-presentation-details-item span {
+  font-family: var(--font-main);
+  font-weight: 300;
+  font-style: normal; }
+
+.NodeEventFull .container {
+  max-width: calc(83.5rem + 5rem); }
+
+.NodeEventFull-presentation {
+  padding: 8rem 0 6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  @media (max-width: 719px) {
+    .NodeEventFull-presentation {
+      padding: 4rem 0;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; } }
+  .NodeEventFull-presentation-details {
+    margin-top: 4rem;
+    margin-left: 7rem;
+    font-weight: 300;
+    font-size: 2rem;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 calc((100% / 2) - 3.5rem);
+            flex: 0 0 calc((100% / 2) - 3.5rem);
+    color: var(--color-blue-1); }
+    @media (max-width: 719px) {
+      .NodeEventFull-presentation-details {
+        margin-left: 0;
+        margin-top: 2rem; } }
+    .NodeEventFull-presentation-details-item {
+      font-weight: 500; }
+    .NodeEventFull-presentation-details-city {
+      text-transform: uppercase; }
+  .NodeEventFull-presentation-visual {
+    border-radius: 0.8rem;
+    overflow: hidden;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 calc((100% / 2) - 3.5rem);
+            flex: 0 0 calc((100% / 2) - 3.5rem); }
+    .NodeEventFull-presentation-visual .Media-image {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+      .NodeEventFull-presentation-visual .Media-image img {
+        width: 100%;
+        height: 100%;
+        -o-object-fit: cover;
+           object-fit: cover; }
+
+.NodeEventFull-details {
+  margin-top: 4rem; }
+  .NodeEventFull-details > .NodeEventFull-details-pricing,
+  .NodeEventFull-details > .NodeEventFull-details-hours, .NodeEventFull-details-locationInfo {
+    margin-bottom: 2rem;
+    padding: 3rem 4rem 3rem 8rem;
+    color: var(--theme-color-1);
+    font-weight: 300;
+    border-radius: 0.8rem;
+    position: relative;
+    overflow: hidden; }
+    .NodeEventFull-details > .NodeEventFull-details-pricing p,
+    .NodeEventFull-details > .NodeEventFull-details-hours p, .NodeEventFull-details-locationInfo p {
+      font-weight: 500; }
+    .NodeEventFull-details > .NodeEventFull-details-pricing:after,
+    .NodeEventFull-details > .NodeEventFull-details-hours:after, .NodeEventFull-details-locationInfo:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: var(--color-blue-6);
+      mix-blend-mode: multiply;
+      opacity: 0.4;
+      z-index: -1; }
+  .NodeEventFull-details-pricing {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .NodeEventFull-details-pricing p {
+      margin-left: 0.5rem; }
+  .NodeEventFull-details-locationMap {
+    overflow: hidden;
+    border-radius: 0.8rem; }
+    @media (max-width: 719px) {
+      .NodeEventFull-details-locationMap {
+        width: 100%; } }
+    .NodeEventFull-details-locationMap .map-container {
+      width: 15rem !important;
+      height: 15rem !important; }
+      @media (max-width: 719px) {
+        .NodeEventFull-details-locationMap .map-container {
+          width: 100% !important;
+          height: 20rem !important; } }
+    .NodeEventFull-details-locationMap .google-map-field h2 {
+      display: none; }
+  .NodeEventFull-details-location {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start; }
+    @media (max-width: 719px) {
+      .NodeEventFull-details-location {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column; } }
+  .NodeEventFull-details-city {
+    text-transform: uppercase; }
+  .NodeEventFull-details-locationInfo {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
+    margin-left: 2.5rem; }
+    @media (max-width: 719px) {
+      .NodeEventFull-details-locationInfo {
+        -webkit-box-flex: 1;
+            -ms-flex: 1 1 100%;
+                flex: 1 1 100%;
+        margin-left: 0;
+        margin-top: 2rem; } }
+
+.NodeEventFull-share {
+  margin: 7rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  @media (max-width: 719px) {
+    .NodeEventFull-share {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; } }
+  .NodeEventFull-share > a {
+    margin-right: 4rem; }
+    @media (max-width: 719px) {
+      .NodeEventFull-share > a {
+        margin-right: 0;
+        margin-bottom: 5rem; } }
+  .NodeEventFull-share #block-nordevasionsocialshare {
+    margin-left: 4rem; }
+    @media (max-width: 719px) {
+      .NodeEventFull-share #block-nordevasionsocialshare {
+        margin-left: 0;
+        margin-top: 5rem; } }
+  .NodeEventFull-share-link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-weight: 500;
+    color: var(--color-blue-1); }
+    .NodeEventFull-share-link:hover {
+      text-decoration: underline; }
+      .NodeEventFull-share-link:hover span:after {
+        background-color: var(--theme-color-3); }
+      .NodeEventFull-share-link:hover svg, .NodeEventFull-share-link:hover path, .NodeEventFull-share-link:hover ellipse, .NodeEventFull-share-link:hover line {
+        stroke: #fff; }
+    .NodeEventFull-share-link span {
+      position: relative;
+      margin-left: 2rem;
+      height: 3rem; }
+      .NodeEventFull-share-link span:after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 4.5rem;
+        height: 4.5rem;
+        background-color: var(--color-blue-6);
+        top: 50%;
+        left: 50%;
+        border-radius: 100%;
+        -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+        z-index: -1;
+        -webkit-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease; }
+    .NodeEventFull-share-link svg {
+      width: 100%;
+      height: 100%; }
+
+/*# sourceMappingURL=nodeEventFull.css.map */

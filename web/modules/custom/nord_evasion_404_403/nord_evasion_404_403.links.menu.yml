@@ -1,0 +1,32 @@
+nord_evasion_404_403.error_pages:
+  title: "Pages d'erreur"
+  parent: contrib
+  menu_name: contrib
+  url: internal:/admin/content
+  options:
+    query:
+      type[0]: 'page_404'
+      type[1]: 'page_403'
+  weight: 6
+
+nord_evasion_404_403.page_404.edit:
+  title: "Modifier la page 404"
+  parent: nord_evasion_404_403.error_pages
+  menu_name: contrib
+  route_name: bo_additions.node_edit
+  options:
+    query:
+      type: 'page_404'
+      status: '1'
+  weight: 1
+
+nord_evasion_404_403.page_403.edit:
+  title: "Modifier la page 403"
+  parent: nord_evasion_404_403.error_pages
+  menu_name: contrib
+  route_name: bo_additions.node_edit
+  options:
+    query:
+      type: 'page_403'
+      status: '1'
+  weight: 2

@@ -1,0 +1,28 @@
+uuid: 85c03de1-24ee-4d55-928c-99c8a4382afa
+langcode: fr
+status: true
+dependencies:
+  module:
+    - file
+    - media
+  enforced:
+    module:
+      - media
+_core:
+  default_config_hash: vCMPMm56i2bwQtEKBcny38otnEuMiOWBhW1uC7qds50
+id: media.field_media_document
+field_name: field_media_document
+entity_type: media
+type: file
+settings:
+  uri_scheme: public
+  target_type: file
+  display_field: false
+  display_default: false
+module: file
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

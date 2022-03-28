@@ -1,0 +1,21 @@
+uuid: 62136219-fb79-48fb-9fc0-17cb66858c3e
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pricing_conditions
+    - node.type.event
+  module:
+    - text
+id: node.event.field_pricing_conditions
+field_name: field_pricing_conditions
+entity_type: node
+bundle: event
+label: 'Conditions tarifaires'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

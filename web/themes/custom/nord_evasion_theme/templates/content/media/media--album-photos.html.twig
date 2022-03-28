@@ -1,0 +1,25 @@
+{#
+/**
+ * @file
+ * Theme override to display a media item.
+ *
+ * Available variables:
+ * - name: Name of the media.
+ * - content: Media content.
+ *
+ * @see template_preprocess_media()
+ */
+#}
+
+{% set classes = [
+    'Media',
+    'Media-' ~ media.bundle(),
+    'Media-popin-trigger'
+] %}
+
+<article{{ attributes.addClass(classes) }} data-popin-target=".PopinMedia" data-popin-media-bundle="{{ media.bundle() }}" data-popin-media-id="{{ media.id() }}">
+  {{ title_suffix.contextual_links }}
+  {% if content %}
+    {{ content }}
+  {% endif %}
+</article>

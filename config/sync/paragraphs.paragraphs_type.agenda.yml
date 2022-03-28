@@ -1,0 +1,15 @@
+uuid: 9c881459-619a-4b1c-a25a-4d9c5d877786
+langcode: fr
+status: true
+dependencies:
+  module:
+    - paragraphs_browser
+third_party_settings:
+  paragraphs_browser:
+    image_path: themes/custom/admin_custom/assets/paragraph_images/paragraph_agenda.png
+id: agenda
+label: 'Agenda de vos envies'
+icon_uuid: null
+icon_default: null
+description: 'Remonte les trois événements dont la date de début est la plus proche de la date du jour reliés à la destination et au type d''événement choisis'
+behavior_plugins: {  }

@@ -1,0 +1,78 @@
+uuid: 6c4db0c8-f3d0-43c0-ac71-630823455844
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.destination.field_description
+    - field.field.taxonomy_term.destination.field_logo
+    - field.field.taxonomy_term.destination.field_subtitle
+    - field.field.taxonomy_term.destination.field_terminology
+    - taxonomy.vocabulary.destination
+  module:
+    - media_library
+    - textfield_counter
+id: taxonomy_term.destination.default
+targetEntityType: taxonomy_term
+bundle: destination
+mode: default
+content:
+  field_description:
+    type: string_textarea_with_counter
+    weight: 4
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+      maxlength: 325
+      counter_position: after
+      js_prevent_submit: true
+      count_html_characters: false
+      textcount_status_message: 'Longueur de texte maximale : <span class="maxlength_count">@maxlength</span><br />Utilisé actuellement : <span class="current_count">@current_length</span><br />Nombre de caractères restant : <span class="remaining_count">@remaining_count</span>'
+    third_party_settings: {  }
+  field_logo:
+    type: media_library_widget
+    weight: 3
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_subtitle:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_terminology:
+    type: string_textfield
+    weight: 7
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 5
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  description: true
+  path: true
+  status: true

@@ -1,0 +1,15 @@
+uuid: 5fc24a07-63c4-4571-a768-2462f2ad4454
+langcode: fr
+status: true
+dependencies: {  }
+name: search_result_2x
+label: 'Search result (240x240)'
+effects:
+  d0aef049-026b-449f-947a-e7e12ea83ce4:
+    uuid: d0aef049-026b-449f-947a-e7e12ea83ce4
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 240
+      height: 240
+      anchor: center-center

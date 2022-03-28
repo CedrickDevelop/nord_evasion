@@ -1,0 +1,15 @@
+uuid: b2e7c799-fe4a-4151-95cf-9fac7f2e1e8d
+langcode: fr
+status: true
+dependencies:
+  module:
+    - paragraphs_browser
+third_party_settings:
+  paragraphs_browser:
+    image_path: themes/custom/admin_custom/assets/paragraph_images/paragraph_media.png
+id: media
+label: Media
+icon_uuid: null
+icon_default: null
+description: 'Affiche un media (photo, vidéo ou vidéo externe de type Youtube)'
+behavior_plugins: {  }

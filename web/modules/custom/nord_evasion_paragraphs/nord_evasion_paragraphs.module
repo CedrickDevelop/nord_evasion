@@ -1,0 +1,70 @@
+<?php
+
+use Drupal\nord_evasion_paragraphs\Entity\Agenda;
+use Drupal\nord_evasion_paragraphs\Entity\AgendaParagraphInterface;
+use Drupal\nord_evasion_paragraphs\Entity\DynamicMap;
+use Drupal\nord_evasion_paragraphs\Entity\DynamicMapParagraphInterface;
+use Drupal\nord_evasion_paragraphs\Entity\Media;
+use Drupal\nord_evasion_paragraphs\Entity\MediaParagraphInterface;
+use Drupal\nord_evasion_paragraphs\Entity\PhotoAlbum;
+use Drupal\nord_evasion_paragraphs\Entity\PhotoAlbumParagraphInterface;
+use Drupal\nord_evasion_paragraphs\Entity\SuggestedArticles;
+use Drupal\nord_evasion_paragraphs\Entity\SuggestedArticlesParagraphInterface;
+use Drupal\nord_evasion_paragraphs\Entity\Thematic;
+use Drupal\nord_evasion_paragraphs\Entity\ThematicParagraphInterface;
+use Drupal\nord_evasion_paragraphs\Manager\ParagraphManager;
+use Drupal\nord_evasion_paragraphs\Manager\ParagraphWidgetManager;
+
+/**
+ * Implements hook_help().
+ */
+function nord_evasion_paragraphs_help($route_name, \Drupal\Core\Routing\RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the dillon module.
+    case 'help.page.nord_evasion_global':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('My Awesome Module') . '</p>';
+      return $output;
+    default:
+  }
+}
+
+function nord_evasion_paragraphs_entity_bundle_info_alter(array &$bundles) {
+  $bundles['paragraph'][DynamicMapParagraphInterface::PARAGRAPH_TYPE]['class'] = DynamicMap::class;
+  $bundles['paragraph'][AgendaParagraphInterface::PARAGRAPH_TYPE]['class'] = Agenda::class;
+  $bundles['paragraph'][MediaParagraphInterface::PARAGRAPH_TYPE]['class'] = Media::class;
+  $bundles['paragraph'][PhotoAlbumParagraphInterface::PARAGRAPH_TYPE]['class'] = PhotoAlbum::class;
+  $bundles['paragraph'][SuggestedArticlesParagraphInterface::PARAGRAPH_TYPE]['class'] = SuggestedArticles::class;
+  $bundles['paragraph'][ThematicParagraphInterface::PARAGRAPH_TYPE]['class'] = Thematic::class;
+}
+
+function nord_evasion_global_preprocess_paragraph(array &$variables) {
+  /* @var ParagraphManager $paragraphManager */
+  $paragraphManager = \Drupal::service(ParagraphManager::class);
+  $variables = $paragraphManager->addParagraphVariablesToPreprocessParagraph($variables);
+}
+
+
+/**
+ * Implements hook_field_widget_WIDGET_TYPE_form_alter().
+ */
+function nord_evasion_global_field_widget_entity_reference_paragraphs_browser_form_alter(array &$element) {
+  /* @var ParagraphWidgetManager $paragraphWidgetManager */
+  $paragraphWidgetManager = \Drupal::service(ParagraphWidgetManager::class);
+  $element = $paragraphWidgetManager->alterWidget($element);
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK().
+ */
+function nord_evasion_paragraphs_theme_suggestions_media(array $variables) {
+  $suggestions = [];
+  $media = $variables['elements']['#media'];
+  $view_mode = $variables['elements']['#view_mode'];
+  if(str_contains($view_mode, "album_photos")) {
+    $suggestions[] = 'media__album_photos';
+  }
+
+  return $suggestions;
+}

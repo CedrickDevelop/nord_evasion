@@ -1,0 +1,16 @@
+nord_evasion_article.articles:
+  title: "Articles"
+  parent: contrib
+  menu_name: contrib
+  url: internal:/admin/content
+  options:
+    query:
+      type[0]: 'article'
+  weight: 5
+
+nord_evasion_article.article.add:
+  title: "Ajouter un article"
+  parent: nord_evasion_article.articles
+  menu_name: contrib
+  url: internal:/node/add/article
+  weight: 1

@@ -1,0 +1,29 @@
+uuid: c9f7252e-293e-46c9-94de-5cdb4e7ad071
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_destination
+    - paragraphs.paragraphs_type.agenda
+    - taxonomy.vocabulary.destination
+id: paragraph.agenda.field_destination
+field_name: field_destination
+entity_type: paragraph
+bundle: agenda
+label: Destination
+description: 'Si vous ajoutez plusieurs destinations, les événements affichés seront ceux comportant toutes les destinations sélectionnées (relation ET).'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      destination: destination
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

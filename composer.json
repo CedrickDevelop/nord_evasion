@@ -1,0 +1,167 @@
+{
+    "name": "drupal/recommended-project",
+    "description": "Project template for Drupal 9 projects with a relocated document root",
+    "type": "project",
+    "license": "GPL-2.0-or-later",
+    "homepage": "https://www.drupal.org/project/drupal",
+    "support": {
+        "docs": "https://www.drupal.org/docs/user_guide/en/index.html",
+        "chat": "https://www.drupal.org/node/314178"
+    },
+    "repositories": {
+        "adimeo_tools": {
+            "type": "vcs",
+            "url": "https://github.com/Core-Techs-Git/adimeo_tools"
+        },
+        "adimeo_abstractions": {
+            "type": "vcs",
+            "url": "https://github.com/Core-Techs-Git/adimeo_abstractions"
+        },
+        "adimeo_generators": {
+            "type": "vcs",
+            "url": "https://github.com/Core-Techs-Git/adimeo_generators"
+        },
+        "0": {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        }
+    },
+    "require": {
+        "php": ">=8.1",
+        "adimeo/adimeo_abstractions": "^0.1.2",
+        "adimeo/adimeo_tools": "^2.3",
+        "composer/installers": "^1.9",
+        "cweagans/composer-patches": "^1.7",
+        "drupal/admin_toolbar": "^3.0",
+        "drupal/antibot": "^1.5",
+        "drupal/better_exposed_filters": "^5.0",
+        "drupal/calendar_link": "^2.1",
+        "drupal/config_filter": "^2.2",
+        "drupal/content_lock": "^2.2",
+        "drupal/core-composer-scaffold": "^9.3",
+        "drupal/core-project-message": "^9.3",
+        "drupal/core-recommended": "^9.3",
+        "drupal/editor_advanced_link": "^2.0",
+        "drupal/editor_file": "^1.6",
+        "drupal/entity_browser": "^2.6",
+        "drupal/entity_embed": "^1.2",
+        "drupal/entity_print": "^2.4",
+        "drupal/entity_type_clone": "^1.7",
+        "drupal/field_group": "^3.0-rc2",
+        "drupal/form_options_attributes": "^1.2",
+        "drupal/google_map_field": "^1.14",
+        "drupal/inline_entity_form": "^1.0@RC",
+        "drupal/menu_link_attributes": "^1.2",
+        "drupal/metatag": "^1.19",
+        "drupal/migrate_plus": "^5.2",
+        "drupal/migrate_tools": "^5.1",
+        "drupal/paragraphs": "^1.12",
+        "drupal/paragraphs_browser": "^1.0",
+        "drupal/pathauto": "^1.8",
+        "drupal/rabbit_hole": "^1.0@beta",
+        "drupal/redirect": "^1.7",
+        "drupal/rename_admin_paths": "^2.1",
+        "drupal/scheduler": "^1.4",
+        "drupal/search_api": "^1.23",
+        "drupal/search_api_autocomplete": "^1.6",
+        "drupal/simple_sitemap": "^4.0",
+        "drupal/social_share": "^2.0@beta",
+        "drupal/svg_image_field": "^2.1",
+        "drupal/textfield_counter": "^2.0",
+        "drupal/twig_tweak": "^3.1",
+        "drupal/webform": "^6.1",
+        "drush/drush": "^11.0",
+        "symfony/dotenv": "^5.4",
+        "tecnickcom/tcpdf": "~6"
+    },
+    "conflict": {
+        "drupal/drupal": "*"
+    },
+    "minimum-stability": "beta",
+    "prefer-stable": true,
+    "config": {
+        "sort-packages": true,
+        "discard-changes": true,
+        "bin-dir": "bin",
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "composer/installers": true,
+            "cweagans/composer-patches": true,
+            "drupal/core-composer-scaffold": true,
+            "drupal/core-project-message": true
+        }
+    },
+    "extra": {
+        "patches": {
+            "drupal/core": {
+                "test": "https://www.drupal.org/files/issues/2021-12-22/3255637-3.patch",
+                "Make exposed filter values available as tokens for text areas": "https://www.drupal.org/files/issues/2021-07-02/2761273-39.patch"
+            },
+            "drupal/webform_ui": {
+                "test": "https://www.drupal.org/files/issues/2022-01-06/3257109-9.patch"
+            }
+        },
+        "drupal-scaffold": {
+            "locations": {
+                "web-root": "web/"
+            }
+        },
+        "installer-paths": {
+            "web/core": [
+                "type:drupal-core"
+            ],
+            "web/libraries/{$name}": [
+                "type:drupal-library"
+            ],
+            "web/modules/contrib/{$name}": [
+                "type:drupal-module"
+            ],
+            "web/profiles/contrib/{$name}": [
+                "type:drupal-profile"
+            ],
+            "web/themes/contrib/{$name}": [
+                "type:drupal-theme"
+            ],
+            "drush/Commands/contrib/{$name}": [
+                "type:drupal-drush"
+            ],
+            "web/modules/custom/{$name}": [
+                "type:drupal-custom-module"
+            ],
+            "web/profiles/custom/{$name}": [
+                "type:drupal-custom-profile"
+            ],
+            "web/themes/custom/{$name}": [
+                "type:drupal-custom-theme"
+            ]
+        },
+        "drupal-core-project-message": {
+            "include-keys": [
+                "homepage",
+                "support"
+            ],
+            "post-create-project-cmd-message": [
+                "<bg=blue;fg=white>                                                         </>",
+                "<bg=blue;fg=white>  Congratulations, you’ve installed the Drupal codebase  </>",
+                "<bg=blue;fg=white>  from the drupal/recommended-project template!          </>",
+                "<bg=blue;fg=white>                                                         </>",
+                "",
+                "<bg=yellow;fg=black>Next steps</>:",
+                "  * Install the site: https://www.drupal.org/docs/8/install",
+                "  * Read the user guide: https://www.drupal.org/docs/user_guide/en/index.html",
+                "  * Get support: https://www.drupal.org/support",
+                "  * Get involved with the Drupal community:",
+                "      https://www.drupal.org/getting-involved",
+                "  * Remove the plugin that prints this message:",
+                "      composer remove drupal/core-project-message"
+            ]
+        }
+    },
+    "require-dev": {
+        "drupal/core-dev": "^9.3",
+        "drupal/devel": "^4.1",
+        "drupal/stage_file_proxy": "^1.2",
+        "drupal/twig_xdebug": "^1.2",
+        "phpspec/prophecy-phpunit": "^2"
+    }
+}
